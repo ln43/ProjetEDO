@@ -32,7 +32,7 @@ Delta(1,2) = 2/h^2;
 Delta(end,end-1) = 2/h^2;
 
 % initial guess
-u = u0 * (x < -20 ) ;
+u = u0 * (-10<x & x<10 ) ;
 ustore(1,:) = u;
 counter=1;
 figure(1)
