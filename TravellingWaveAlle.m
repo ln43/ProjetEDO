@@ -11,10 +11,10 @@ close all;
 clear all;
 
 d=0.5;
-alpha=1;
-K=0.03;
-A=3;
+A=0.75;
 k=0.1;
+
+u0=0.03;
 
 a = -50;
 b = 50;
@@ -34,7 +34,7 @@ Delta(1,2) = 2/h^2;
 Delta(end,end-1) = 2/h^2;
 
 % initial guess
-u = K * (x < -20 ) ; %comprend pas si il faut changer ca !!
+u = u0 * (x < -20 ) ; %comprend pas si il faut changer ca !!
 ustore(1,:) = u;
 counter=1;
 figure(1)
@@ -80,7 +80,7 @@ for i=1:1:6
   title(strcat('u(t), x =', num2str(indX(i)/2-50)))
   xlabel('t')
   ylabel('u')
-  axis([0 tend+1 0 K+0.01]);
+  axis([0 tend+1 0 u0+0.01]);
 end
 
 

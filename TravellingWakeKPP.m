@@ -11,7 +11,8 @@ clear all;
 
 d=0.5;
 alpha=1;
-K=0.03;
+K=0.3;
+u0=0.03;
 
 a = -50;
 b = 50;
@@ -31,7 +32,7 @@ Delta(1,2) = 2/h^2;
 Delta(end,end-1) = 2/h^2;
 
 % initial guess
-u = K * (x < -20 ) ;
+u = u0 * (x < -20 ) ;
 ustore(1,:) = u;
 counter=1;
 figure(1)
@@ -66,7 +67,7 @@ ylabel('f(u)')
 figure(2)
 plot(x,u);
 title('Fronts d ondes pour différents temps');%tous les milles pas de temps
-xlabel('t')
+xlabel('x')
 ylabel('u')
 
 figure(3);
@@ -77,7 +78,7 @@ for i=1:1:6
   title(strcat('u(t), x =', num2str(indX(i)/2-50)))
   xlabel('t')
   ylabel('u')
-  axis([0 tend+1 0 K+0.01]);
+  axis([0 tend+1 0 K+0.1]);
 end
 
 
