@@ -1,4 +1,4 @@
-function sol=TravellingWaveKPP2D()
+function sol=TravellingWaveAllee2D()
 % Solver for the Fisher/KPP equation with homogeneous Neumann boundary conditions
 % in 1D using finite differences
 % 
@@ -9,10 +9,10 @@ function sol=TravellingWaveKPP2D()
 close all;
 clear all;
 
-d=0.5;
-alpha=0.2;
-K=0.3;
-u0=0.03;
+d=0.8;
+A=0.2;
+k=4/(1-A)^2;
+u0=0.5;
 
 a = -50;
 b = 50;
@@ -42,23 +42,22 @@ end
 counter=1;
 ind=1;
 figure(1)
+hold on;
 
-    % fonction KPP
-    function y=KPP(u)
-        y=alpha*u.*(1-u./K);
-    end    
+    % fonction Allee
+    function y=Allee(u)
+        y=k*u.*(1-u).*(u-A);
+    end   
 
 % explicit Euler scheme
 for t=dt:dt:tend
-    u = u + dt .* (d.*del2(u,h,h) +  KPP(u));
- 
+    u = u + dt .* (d.*del2(u,h,h) +  Allee(u));
     counter=counter+1;
     if(mod(counter,1000) == 0)
         subplot(2,3,ind)
         surf(x,y,u,'edgecolor','none');
         ind=ind+1;
     end
-    %ustore(counter,:) = u;
 end
 figure(1);
 subplot(2,3,ind)

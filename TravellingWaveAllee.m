@@ -40,7 +40,7 @@ counter=1;
 figure(1)
 hold on;
 
-    % fonction KPP
+    % fonction Allee
     function y=Allee(u)
         y=k*u.*(1-u).*(u-A);
     end    
