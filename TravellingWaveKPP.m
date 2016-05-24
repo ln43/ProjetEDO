@@ -1,4 +1,4 @@
-function sol=TravellingWakeKPP()
+function sol=TravellingWaveKPP()
 % Solver for the Fisher/KPP equation with homogeneous Neumann boundary conditions
 % in 1D using finite differences
 % 
