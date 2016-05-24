@@ -10,11 +10,11 @@ function sol=TravellingWaveAlle()
 close all;
 clear all;
 
-d=0.5;
-A=0.75;
-k=0.1;
+d=0.3;
+A=0.2;
+k=4/(1-A)^2;
 
-u0=0.03;
+u0=0.5;
 
 a = -50;
 b = 50;
@@ -34,7 +34,7 @@ Delta(1,2) = 2/h^2;
 Delta(end,end-1) = 2/h^2;
 
 % initial guess
-u = u0 * (x < -20 ) ; %comprend pas si il faut changer ca !!
+u = u0 * (-10<x & x<10 ) ; %comprend pas si il faut changer ca !!
 ustore(1,:) = u;
 counter=1;
 figure(1)
@@ -85,9 +85,6 @@ end
 
 
 figure(4)
-size(x)
-size(dt:dt:tend)
-size(ustore)
 surf(x,dt:dt:tend,ustore(2:length(ustore(:,1)),:),'edgecolor','none');
 
 xlabel('Distance x')
