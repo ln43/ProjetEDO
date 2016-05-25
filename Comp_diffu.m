@@ -37,18 +37,18 @@ v(:,M_max)=eqv;
 % Condition initial pour u et v 
 
 for i=1:M_max
-    if x(i)>=30
+    if x(i)>-30 & x(i)<30
        u(1,i)=equ;
-    elseif x(i)<=-30
+    elseif x(i)<=-30 | x(i)>=30
         u(1,i)=0;
     else u(1,i)=(equ/60)*x(i)+equ/2;
     end
 end
 
 for i=1:M_max
-    if x(i)>=30
+    if x(i)>-30 & x(i)<30
        v(1,i)=eqv;
-    elseif x(i)<=-30
+    elseif x(i)<=-30 | x(i)>=30
         v(1,i)=0;
     else v(1,i)=(eqv/60)*x(i)+eqv/2;
     end
@@ -132,5 +132,13 @@ wv=v(:,1:M_max-100);
 
 
 subplot(1,2,1);mesh(x(1:M_max-100),t,wu);
-subplot(1,2,2);mesh(x(1:M_max-100),t,wv);
+title('u');
+xlabel('x');
+ylabel('t');
+zlabel('u');
 
+subplot(1,2,2);mesh(x(1:M_max-100),t,wv);
+title('u');
+xlabel('x');
+ylabel('t');
+zlabel('u');
