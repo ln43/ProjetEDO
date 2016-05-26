@@ -1,20 +1,19 @@
 
 function sol=TravellingWaveAllee()
-% Solver for the Fisher/KPP equation with homogeneous Neumann boundary conditions
+% Solver for the Allee equation with homogeneous Neumann boundary conditions
 % in 1D using finite differences
 % 
 % u_t - \Delta u = ku(1-u)(u-A)
 %
 
-
 close all;
 clear all;
 
-d=0.05;
-A=0.3;
+d=0.005;
+A=0.25;
 k=4/(1-A)^2;
 
-u0=0.5;
+u0=0.1;
 
 a = -50;
 b = 50;
@@ -34,7 +33,7 @@ Delta(1,2) = 2/h^2;
 Delta(end,end-1) = 2/h^2;
 
 % initial guess
-u = u0 * (-10<x & x<10 ) ; %comprend pas si il faut changer ca !!
+u = u0 * (-10<=x & x<=10 ) ;
 ustore(1,:) = u;
 counter=1;
 figure(2)
@@ -58,30 +57,38 @@ for t=dt:dt:tend
         figure(2)
         plot(x,u);
         hold on
+        legendinfo{counter/1000+1}=strcat('t=', num2str(counter));
     end
 end
 
 figure(1);
-plot(linspace(0,1,50), Allee(linspace(0,1,50)),'g',[0 1], [0 0],'--');
+for A=[0.25,0.5,0.75]
+    plot(linspace(0,1,50), Allee(linspace(0,1,50)),[0 1], [0 0],'g--');
+    hold on
+end
 title('f(u)')
 xlabel('u')
 ylabel('f(u)')
+legend('A=0.25','A=0.5','A=0.75')
+hold off
 
 figure(2)
 plot(x,u);
-title('Fronts d ondes pour différents temps');%tous les milles pas de temps
-xlabel('t')
-ylabel('u')
-
+title('Fronts d ondes pour differents temps');%tous les milles pas de temps
+xlabel('t');
+ylabel('u');
+legend(legendinfo)
 figure(3);
-indX=[1,50,100,120,170,201];
-for i=1:1:6
-  subplot(2,3,i) 
+indX=[101,121,171,201];
+for i=1:1:4
+  %subplot(2,2,i) 
   plot(dt:dt:tend,ustore(2:length(ustore(:,indX(i))),indX(i)))
-  title(strcat('u(t), x =', num2str(indX(i)/2-50)))
+  hold on
+  title(strcat('u(t), x =', num2str(indX(i)/2-50.5)))
   xlabel('t')
   ylabel('u')
-  axis([0 tend+1 0 1]);
+  axis([0 tend+1 0 max(u)+0.1]);
+  %axis tight
 end
 
 
@@ -92,7 +99,6 @@ xlabel('Distance x')
 ylabel('Time t')
 zlabel('Specie u')
 
-%%Je ne sais pas ce que ça affiche ???
 % [xmesh, tmesh] = meshgrid(x,0:dt:tend);
 % zmesh = xmesh-2 * diag(0:dt:tend) * ones(size(xmesh));
 

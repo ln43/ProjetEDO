@@ -5,14 +5,13 @@ function sol=TravellingWaveAllee2D()
 % u_t - \Delta u = u (1-u)
 %
 
-
 close all;
 clear all;
 
-d=0.8;
-A=0.2;
+d=0.005;
+A=0.25;
 k=4/(1-A)^2;
-u0=0.5;
+u0=0.1;
 
 a = -50;
 b = 50;
@@ -42,7 +41,9 @@ end
 counter=1;
 ind=1;
 figure(1)
-hold on;
+subplot(4,3,ind);
+surf(x,y,u,'edgecolor','none');
+ind=ind+1;
 
     % fonction Allee
     function y=Allee(u)
@@ -50,17 +51,34 @@ hold on;
     end   
 
 % explicit Euler scheme
+
+%Version pour A>0.5 : tous les 2 pas de temps, au bout d'environ 25 déjà
+%plus rien
 for t=dt:dt:tend
     u = u + dt .* (d.*del2(u,h,h) +  Allee(u));
     counter=counter+1;
-    if(mod(counter,1000) == 0)
-        subplot(2,3,ind)
+    if(mod(counter,2) == 0 && ind <=12)
+        subplot(4,3,ind)
+        %figure(ind)
         surf(x,y,u,'edgecolor','none');
         ind=ind+1;
     end
 end
-figure(1);
-subplot(2,3,ind)
-surf(x,y,u,'edgecolor','none');
+
+%Version pour A<0.5 : tous les 500 pas de temps
+% for t=dt:dt:tend
+%     u = u + dt .* (d.*del2(u,h,h) +  Allee(u));
+%     counter=counter+1;
+%     if(mod(counter,500) == 0)
+%         subplot(4,3,ind)
+%         %figure(ind)
+%         surf(x,y,u,'edgecolor','none');
+%         ind=ind+1;
+%     end
+% end
+
+%figure(ind)
+%subplot(4,3,ind)
+%surf(x,y,u,'edgecolor','none');
 
 end

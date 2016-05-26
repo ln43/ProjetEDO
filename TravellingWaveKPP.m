@@ -58,7 +58,7 @@ for t=dt:dt:tend
         figure(2)
         plot(x,u);
         hold on
-        legendinfo{counter/1000+1}=['t=' num2str(counter)];
+        legendinfo{counter/1000+1}=strcat('t=', num2str(counter));
     end
 end
 
@@ -70,7 +70,7 @@ ylabel('f(u)')
 
 figure(2)
 plot(x,u);
-title('Fronts d ondes pour diff�rents temps');%tous les milles pas de temps
+title('Fronts d ondes pour differents temps');%tous les milles pas de temps
 xlabel('x')
 ylabel('u')
 legend(legendinfo)
