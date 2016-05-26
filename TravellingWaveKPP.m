@@ -22,7 +22,7 @@ nv = nel+1;% number of vertices
 
 x = a:h:b; % mesh
 dt = 0.01; % time steps
-tend = 500; 
+tend = 50; 
 
 e=ones(nv, 1);
 
@@ -38,7 +38,7 @@ counter=1;
 figure(2)
 plot(x,u);
 hold on
-legendinfo{counter}=['t=' num2str(counter)];
+legendInfo{counter}=['t=' num2str(counter)];
 
 
     % fonction KPP
@@ -58,7 +58,7 @@ for t=dt:dt:tend
         figure(2)
         plot(x,u);
         hold on
-        legendinfo{counter/1000+1}=strcat('t=', num2str(counter));
+        legendInfo{counter/1000+1}=['t=' num2str(counter)];
     end
 end
 
@@ -69,22 +69,22 @@ xlabel('u')
 ylabel('f(u)')
 
 figure(2)
-plot(x,u);
 title('Fronts d ondes pour differents temps');%tous les milles pas de temps
 xlabel('x')
 ylabel('u')
-legend(legendinfo)
+ylim([0 max(max(ustore))+0.05])
+legend(legendInfo)
 
 figure(3);
-indX=[1,50,100,120,170,201];
-for i=1:1:6
-  subplot(2,3,i) 
+indX=[101,121,171,201];
+for i=1:1:4
   plot(dt:dt:tend,ustore(2:length(ustore(:,indX(i))),indX(i)))
-  title(strcat('u(t), x =', num2str(indX(i)/2-50)))
-  xlabel('t')
-  ylabel('u')
-  axis([0 tend+1 0 1]);
+  hold on
 end
+hold off
+xlabel('t')
+ylabel('u')
+axis([0 tend+1 0 max(max(ustore))+0.05]);
 
 
 figure(4)
