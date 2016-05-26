@@ -10,9 +10,9 @@ close all;
 clear all;
 
 d=0.5;
-alpha=0.5;
+alpha=0.05;
 K=0.3;
-u0=0.03;
+u0=0.7;
 
 a = -50;
 b = 50;
@@ -22,7 +22,7 @@ nv = nel+1;% number of vertices
 
 x = a:h:b; % mesh
 dt = 0.01; % time steps
-tend = 50; 
+tend = 500; 
 
 e=ones(nv, 1);
 
@@ -35,8 +35,11 @@ Delta(end,end-1) = 2/h^2;
 u = u0 * (-10<x & x<10 ) ;
 ustore(1,:) = u;
 counter=1;
-figure(1)
-hold on;
+figure(2)
+plot(x,u);
+hold on
+legendinfo{counter}=['t=' num2str(counter)];
+
 
     % fonction KPP
     function y=KPP(u)
@@ -55,6 +58,7 @@ for t=dt:dt:tend
         figure(2)
         plot(x,u);
         hold on
+        legendinfo{counter/1000+1}=['t=' num2str(counter)];
     end
 end
 
@@ -66,9 +70,10 @@ ylabel('f(u)')
 
 figure(2)
 plot(x,u);
-title('Fronts d ondes pour différents temps');%tous les milles pas de temps
+title('Fronts d ondes pour diffï¿½rents temps');%tous les milles pas de temps
 xlabel('x')
 ylabel('u')
+legend(legendinfo)
 
 figure(3);
 indX=[1,50,100,120,170,201];
@@ -78,7 +83,7 @@ for i=1:1:6
   title(strcat('u(t), x =', num2str(indX(i)/2-50)))
   xlabel('t')
   ylabel('u')
-  axis([0 tend+1 0 K+0.1]);
+  axis([0 tend+1 0 1]);
 end
 
 
@@ -89,7 +94,7 @@ xlabel('Distance x')
 ylabel('Time t')
 zlabel('Specie u')
 
-%%Je ne sais pas ce que ça affiche ???
+%%Je ne sais pas ce que ï¿½a affiche ???
 % [xmesh, tmesh] = meshgrid(x,0:dt:tend);
 % zmesh = xmesh-2 * diag(0:dt:tend) * ones(size(xmesh));
 

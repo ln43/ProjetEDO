@@ -10,8 +10,8 @@ function sol=TravellingWaveAllee()
 close all;
 clear all;
 
-d=0.3;
-A=0.2;
+d=0.05;
+A=0.3;
 k=4/(1-A)^2;
 
 u0=0.5;
@@ -37,8 +37,9 @@ Delta(end,end-1) = 2/h^2;
 u = u0 * (-10<x & x<10 ) ; %comprend pas si il faut changer ca !!
 ustore(1,:) = u;
 counter=1;
-figure(1)
-hold on;
+figure(2)
+plot(x,u);
+hold on
 
     % fonction Allee
     function y=Allee(u)
@@ -68,7 +69,7 @@ ylabel('f(u)')
 
 figure(2)
 plot(x,u);
-title('Fronts d ondes pour différents temps');%tous les milles pas de temps
+title('Fronts d ondes pour diffÃ©rents temps');%tous les milles pas de temps
 xlabel('t')
 ylabel('u')
 
@@ -80,7 +81,7 @@ for i=1:1:6
   title(strcat('u(t), x =', num2str(indX(i)/2-50)))
   xlabel('t')
   ylabel('u')
-  axis([0 tend+1 0 u0+0.01]);
+  axis([0 tend+1 0 1]);
 end
 
 
@@ -91,7 +92,7 @@ xlabel('Distance x')
 ylabel('Time t')
 zlabel('Specie u')
 
-%%Je ne sais pas ce que ça affiche ???
+%%Je ne sais pas ce que Ã§a affiche ???
 % [xmesh, tmesh] = meshgrid(x,0:dt:tend);
 % zmesh = xmesh-2 * diag(0:dt:tend) * ones(size(xmesh));
 
