@@ -6,13 +6,16 @@
 
 clear all;
 clc;
-alpha1=0.9;
-alpha2=0.2;
-K1=1.2;
-K2=1;
-gama1=0.2;
-gama2=0.8; 
-d1=1; d2=0.5; 
+
+% parameters of the model
+alpha1=0.6;
+alpha2=0.6;
+K1=0.2;
+K2=0.2;
+gama1=0.5;
+gama2=1.5;
+d1=1;
+d2=0.5;
 
 % discritisation
 L=80; T=20;
