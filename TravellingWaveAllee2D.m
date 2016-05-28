@@ -8,10 +8,10 @@ function sol=TravellingWaveAllee2D()
 close all;
 clear all;
 
-d=0.005;
-A=0.25;
+d=0.5;
+A=0.5;
 k=4/(1-A)^2;
-u0=0.1;
+u0=0.9;
 
 a = -50;
 b = 50;
@@ -26,8 +26,6 @@ tend = 50;
 
 e=ones(nv, 1);
 
-% Discretization of the Laplace operator with Neumann bc
-
 
 % initial guess
 u = zeros(201,201);
@@ -41,8 +39,12 @@ end
 counter=1;
 ind=1;
 figure(1)
-subplot(4,3,ind);
 surf(x,y,u,'edgecolor','none');
+axis([a b a b 0 1])
+xlabel('x')
+ylabel('y')
+zlabel('u')
+saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
 ind=ind+1;
 
     % fonction Allee
@@ -52,33 +54,27 @@ ind=ind+1;
 
 % explicit Euler scheme
 
-%Version pour A>0.5 : tous les 2 pas de temps, au bout d'environ 25 déjà
-%plus rien
+%Version pour A<0.5 : tous les 500 pas de temps
 for t=dt:dt:tend
     u = u + dt .* (d.*del2(u,h,h) +  Allee(u));
     counter=counter+1;
-    if(mod(counter,2) == 0 && ind <=12)
-        subplot(4,3,ind)
-        %figure(ind)
+    %if(mod(counter,10) == 0 && ind <=12)
+    if(mod(counter,500) == 0)
         surf(x,y,u,'edgecolor','none');
+        axis([a b a b 0 1])
+        xlabel('x')
+        ylabel('y')
+        zlabel('u')
+        saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
         ind=ind+1;
     end
 end
-
-%Version pour A<0.5 : tous les 500 pas de temps
-% for t=dt:dt:tend
-%     u = u + dt .* (d.*del2(u,h,h) +  Allee(u));
-%     counter=counter+1;
-%     if(mod(counter,500) == 0)
-%         subplot(4,3,ind)
-%         %figure(ind)
-%         surf(x,y,u,'edgecolor','none');
-%         ind=ind+1;
-%     end
-% end
-
-%figure(ind)
-%subplot(4,3,ind)
-%surf(x,y,u,'edgecolor','none');
+% 
+% surf(x,y,u,'edgecolor','none');
+% axis([a b a b 0 1])
+% xlabel('x')
+% ylabel('y')
+% zlabel('u')
+% saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
 
 end
