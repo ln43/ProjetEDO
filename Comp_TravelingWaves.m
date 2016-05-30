@@ -13,14 +13,14 @@ function ppTravelingWaves
 close all;
 clear all;
 
-a = 0;
+a =-100; %pour enlever avance onde des deux cotés mettre a=0
 b = 100;
 nel = 200; % number of elements
 h = (b-a)/nel; % step size
 nv = nel+1;% number of vertices
 
 x = a:h:b; % mesh
-dt = 0.001; % time steps
+dt = 0.1; % time steps
 tend = 100; 
 
 e=ones(nv, 1);
@@ -40,18 +40,20 @@ d1=1;
 d2=0.5;
 
 % initial guess
-u = 0.03 * (x < 3);
-v = 0.2 * (x < 3);
+u = 0.03 * (x < 3).*(x>-3 ); %pour enlever avance onde des deux cotés enlever .*(x>-3 ) dans les deux
+v = 0.2 * (x < 3).* (x> -3) ;
 
 counter = 0;
-
+index1=1;
 % explicit Euler scheme
 for t=dt:dt:tend
-    
+    index1 = index1 + 1;
+    counter = counter +1 ;
+    ustore(counter,:) = u;
     u = u + dt * d1* ((Delta * u')') +  dt*alpha1.*u.*(1-u/K1-gamma1.*v/K1);
     v = v +  dt * d2* ((Delta * v')') + dt * alpha2.*v.*(1-v/K2-gamma2.*u/K2);
     
-    if(mod(counter,10000) == 0)
+    if(mod(counter,50) == 0)
         figure(1)
         plot(x,u);
         hold on;
@@ -61,14 +63,21 @@ for t=dt:dt:tend
         hold on; 
     end
     
-    counter = counter +1 ;
+    
 
     
-end
 
-%figure(1)
+
+%figure(3)
 %plot(x,u,x,v,'r');
-legend('u','v')
-title('Solution of the Fitz-Hugh-Nagumo system')
-
+%legend('u','v')
+figure(3);
+plot(u,'blue','LineWidth',2);
+hold on;
+plot(v,'green','LineWidth',2);
+hold off;
+axis([0 200 0 0.2]);                % echelle des axes
+drawnow;
+MOVI(index1) = getframe; % creation de l'animation
+end
 end
