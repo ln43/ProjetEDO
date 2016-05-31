@@ -9,10 +9,10 @@ function sol=TravellingWaveAllee()
 close all;
 clear all;
 
-d=0.05;
-A=0.75;
+d=0.5;
+A=0.25;
 k=4/(1-A)^2;
-u0=0.9;
+u0=0.5;
 
 a = -50;
 b = 50;
@@ -80,16 +80,16 @@ ylabel('u');
 ylim([0 max(max(ustore))+0.05])
 legend(legendInfo)
 
-figure(3);
-indX=[101,121,171,201];
-for i=1:1:4
-  plot(dt:dt:tend,ustore(2:length(ustore(:,indX(i))),indX(i)))
-  hold on
-end
-hold off
-xlabel('t')
-ylabel('u')
-axis([0 tend+1 0 max(max(ustore))+0.05]);
+% figure(3);
+% indX=[101,121,171,201];
+% for i=1:1:4
+%   plot(dt:dt:tend,ustore(2:length(ustore(:,indX(i))),indX(i)))
+%   hold on
+% end
+% hold off
+% xlabel('t')
+% ylabel('u')
+% axis([0 tend+1 0 max(max(ustore))+0.05]);
 
 figure(4)
 surf(x,dt:dt:tend,ustore(2:length(ustore(:,1)),:),'edgecolor','none');
@@ -97,10 +97,6 @@ surf(x,dt:dt:tend,ustore(2:length(ustore(:,1)),:),'edgecolor','none');
 xlabel('Distance x')
 ylabel('Time t')
 zlabel('Specie u')
-
-
-
-
 
 
 % [xmesh, tmesh] = meshgrid(x,0:dt:tend);

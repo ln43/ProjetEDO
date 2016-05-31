@@ -41,6 +41,7 @@ for i=1:1:201
 end
 counter=1;
 ind=1;
+index1=1;
 figure(1)
 surf(x,y,u,'edgecolor','none');
 axis([a b a b 0 1])
@@ -60,7 +61,9 @@ for t=dt:dt:tend
     u = u + dt .* (d.*del2(u,h,h) +  KPP(u));
     counter=counter+1;
     %if(mod(counter,10) == 0 && ind <=12)
+    index1=index1+1;
     if(mod(counter,1000) == 0)
+        figure(1)
         subplot(2,3,ind)
         surf(x,y,u,'edgecolor','none');
         axis([a b a b 0 1])
@@ -69,8 +72,15 @@ for t=dt:dt:tend
         zlabel('u')
         saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
         ind=ind+1;
-    end
-    %ustore(counter,:) = u;
+    end    
+    
+    %ajout animation
+    figure(2);
+    surf(x,y,u,'edgecolor','none');
+    axis([a b a b 0 1])
+    drawnow;
+    MOVI(index1) = getframe; % creation de l'animation
+    
 end
 % 
 % surf(x,y,u,'edgecolor','none');

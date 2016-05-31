@@ -6,13 +6,16 @@
 
 clear all;
 clc;
-alpha1=0.9;
-alpha2=0.2;
-K1=1.2;
-K2=1;
-gama1=0.2;
-gama2=0.8; 
-d1=1; d2=0.5; 
+
+% parameters of the model
+alpha1=0.6;
+alpha2=0.6;
+K1=0.5;
+K2=0.5;
+gama1=0.5;
+gama2=1.5;
+d1=1;
+d2=0.5;
 
 % discritisation
 L=80; T=20;
@@ -30,28 +33,30 @@ v=zeros(N_max,M_max);
 pqy=zeros(N_max,M_max);
 
 %equilibre aux bords
-u(:,M_max)=equ;
-v(:,M_max)=eqv;
+u(:,M_max)=0;
+v(:,M_max)=0;
 
 
 % Condition initial pour u et v 
 
 for i=1:M_max
-    if x(i)>-30 & x(i)<30
-       u(1,i)=equ;
-    elseif x(i)<=-30 | x(i)>=30
-        u(1,i)=0;
-    else u(1,i)=(equ/60)*x(i)+equ/2;
-    end
+    u(1,i)=exp(-0.01*x(i)^2);
+%     if x(i)>-30 & x(i)<30
+%        u(1,i)=equ;
+%     elseif x(i)<=-30 | x(i)>=30
+%         u(1,i)=0;
+%     else u(1,i)=(equ/60)*x(i)+equ/2;
+%     end
 end
 
 for i=1:M_max
-    if x(i)>-30 & x(i)<30
-       v(1,i)=eqv;
-    elseif x(i)<=-30 | x(i)>=30
-        v(1,i)=0;
-    else v(1,i)=(eqv/60)*x(i)+eqv/2;
-    end
+    v(1,i)=exp(-0.01*x(i)^2);
+%     if x(i)>-30 & x(i)<30
+%        v(1,i)=eqv;
+%     elseif x(i)<=-30 | x(i)>=30
+%         v(1,i)=0;
+%     else v(1,i)=(eqv/60)*x(i)+eqv/2;
+%     end
 end
 
 % tracer la condition initiale de u ou v
@@ -138,7 +143,7 @@ ylabel('t');
 zlabel('u');
 
 subplot(1,2,2);mesh(x(1:M_max-100),t,wv);
-title('u');
+title('v');
 xlabel('x');
 ylabel('t');
-zlabel('u');
+zlabel('v');
