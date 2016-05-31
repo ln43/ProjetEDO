@@ -21,7 +21,7 @@ nv = nel+1;% number of vertices
 
 x = a:h:b; % mesh
 dt = 0.1; % time steps
-tend = 100; 
+tend = 20; 
 
 e=ones(nv, 1);
 %Discretization of the Laplace operator
@@ -47,31 +47,26 @@ v = v0*exp(-0.01*(x.^2));
 %u = 0.03 * (x < 3).*(x>-3 ); %pour enlever avance onde des deux cotés enlever .*(x>-3 ) dans les deux
 %v = 0.2 * (x < 3).* (x> -3) ;
 
-counter = 0;
+counter = 1;
 index1=0;
 
-figure(3);
-legend('u','v')
-xlabel('Distance x')
-ylabel('Specie')
 
-figure(1);
-title('u')
-xlabel('Distance x')
-ylabel('Specie u')
-
-figure(2);
-title('v')
-xlabel('Distance x')
-ylabel('Specie v')
 
 figure(1)
 plot(x,u);
 hold on;
+legendInfo1{counter}=['t=' num2str(counter)];
         
 figure(2);
 plot(x,v);
 hold on; 
+
+
+% figure(3);
+% legend('u','v')
+% xlabel('Distance x')
+% ylabel('Specie')
+% title('Animation fronts d''ondes');
 
 
 % explicit Euler scheme
@@ -85,10 +80,14 @@ for t=dt:dt:tend
         figure(1)
         plot(x,u);
         hold on;
+        legendInfo1{counter/50+1}=['t=' num2str(counter)];
+        
+        
         
         figure(2);
         plot(x,v);
         hold on; 
+        
     end
     
     
@@ -100,12 +99,22 @@ plot(u,'blue','LineWidth',2);
 hold on;
 plot(v,'green','LineWidth',2);
 hold off;
+
 axis([0 200 0 0.2]);                % echelle des axes
 drawnow;
 MOVI(index1) = getframe; % creation de l'animation
 end
 
+figure(2);
+xlabel('Distance x')
+ylabel('Densité espèce Néandertal ')
+title('Fronts d'' onde à differents instants pour la population Néandertal ');
+legend(legendInfo1)
 
-
+figure(1);
+xlabel('Distance x')
+ylabel('Densité espèce Homo Sapiens')
+title('Fronts d'' onde à differents instants pour la population Homo Sapiens  ');
+legend(legendInfo1)
 
 end
