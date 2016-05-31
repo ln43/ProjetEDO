@@ -64,14 +64,14 @@ for t=dt:dt:tend
         legendInfo{counter/1000+1}=['t=' num2str(counter)];
     end
     
-    if(mod(counter,10) == 0)
-        figure(5);
-        plot(x,u,'green','LineWidth',2);
-        axis([-50 50 0 1])
-        drawnow;
-        MOVI(counter) = getframe; % creation de l'animation
-        hold off;
-    end    
+%     if(mod(counter,10) == 0)
+%         figure(5);
+%         plot(x,u,'green','LineWidth',2);
+%         axis([-50 50 0 1])
+%         drawnow;
+%         MOVI(counter) = getframe; % creation de l'animation
+%         hold off;
+%     end    
 
     
 end
@@ -89,42 +89,10 @@ ylabel('u')
 ylim([0 max(max(ustore))+0.05])
 legend(legendInfo)
 
-figure(3);
-indX=[101,121,171,201];
-for i=1:1:4
-  plot(dt:dt:tend,ustore(2:length(ustore(:,indX(i))),indX(i)))
-  hold on
-end
-hold off
-xlabel('t')
-ylabel('u')
-axis([0 tend+1 0 max(max(ustore))+0.05]);
-
-
 figure(4)
 surf(x,dt:dt:tend,ustore(2:length(ustore(:,1)),:),'edgecolor','none');
 
 xlabel('Distance x')
 ylabel('Time t')
 zlabel('Specie u')
-
-%%Je ne sais pas ce que �a affiche ???
-% [xmesh, tmesh] = meshgrid(x,0:dt:tend);
-% zmesh = xmesh-2 * diag(0:dt:tend) * ones(size(xmesh));
-
-% figure(2)
-% contour(xmesh,tmesh, ustore);
-% hold on
-% plot([10 20 20 10],[5 10 5 5],'--');
-% text(0,3,'Ref triangle with slope 2');
-% xlabel('x');
-% ylabel('t');
-% title('Contour plot of u(x,t)')
-% hold off
-
-%figure(3)
-%waterfall(zmesh, tmesh, ustore)
-%zlim([0 1])
-%xlim([-120,50])
-%view (50,30)
 end
