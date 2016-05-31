@@ -9,10 +9,10 @@ function sol=TravellingWaveAllee()
 close all;
 clear all;
 
-d=0.5;
-A=0.5;
+d=0.05;
+A=0.75;
 k=4/(1-A)^2;
-u0=0.5;
+u0=0.9;
 
 a = -50;
 b = 50;
@@ -22,7 +22,7 @@ nv = nel+1;% number of vertices
 
 x = a:h:b; % mesh
 dt = 0.01; % time steps
-tend = 50; 
+tend = 500; 
 
 e=ones(nv, 1);
 

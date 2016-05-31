@@ -9,7 +9,7 @@ close all;
 clear all;
 
 d=0.5;
-A=0.5;
+A=0.75;
 k=4/(1-A)^2;
 u0=0.9;
 
@@ -58,8 +58,8 @@ ind=ind+1;
 for t=dt:dt:tend
     u = u + dt .* (d.*del2(u,h,h) +  Allee(u));
     counter=counter+1;
-    %if(mod(counter,10) == 0 && ind <=12)
-    if(mod(counter,500) == 0)
+    if(mod(counter,10) == 0 && ind <=12)
+    %if(mod(counter,500) == 0)
         surf(x,y,u,'edgecolor','none');
         axis([a b a b 0 1])
         xlabel('x')

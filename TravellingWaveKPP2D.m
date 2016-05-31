@@ -42,6 +42,13 @@ end
 counter=1;
 ind=1;
 figure(1)
+surf(x,y,u,'edgecolor','none');
+axis([a b a b 0 1])
+xlabel('x')
+ylabel('y')
+zlabel('u')
+saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
+ind=ind+1;
 
     % fonction KPP
     function y=KPP(u)
@@ -51,17 +58,26 @@ figure(1)
 % explicit Euler scheme
 for t=dt:dt:tend
     u = u + dt .* (d.*del2(u,h,h) +  KPP(u));
- 
     counter=counter+1;
+    %if(mod(counter,10) == 0 && ind <=12)
     if(mod(counter,1000) == 0)
         subplot(2,3,ind)
         surf(x,y,u,'edgecolor','none');
+        axis([a b a b 0 1])
+        xlabel('x')
+        ylabel('y')
+        zlabel('u')
+        saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
         ind=ind+1;
     end
     %ustore(counter,:) = u;
 end
-figure(1);
-subplot(2,3,ind)
-surf(x,y,u,'edgecolor','none');
+% 
+% surf(x,y,u,'edgecolor','none');
+% axis([a b a b 0 1])
+% xlabel('x')
+% ylabel('y')
+% zlabel('u')
+% saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
 
 end
