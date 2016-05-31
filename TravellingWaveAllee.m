@@ -9,10 +9,10 @@ function sol=TravellingWaveAllee()
 close all;
 clear all;
 
-d=0.5;
-A=0.25;
+d=0.05;
+A=0.75;
 k=4/(1-A)^2;
-u0=0.5;
+u0=0.9;
 
 a = -50;
 b = 50;
@@ -22,7 +22,7 @@ nv = nel+1;% number of vertices
 
 x = a:h:b; % mesh
 dt = 0.01; % time steps
-tend = 500; 
+tend = 50; 
 
 e=ones(nv, 1);
 
@@ -32,9 +32,9 @@ Delta(1,2) = 2/h^2;
 Delta(end,end-1) = 2/h^2;
 
 % initial guess
-u = u0 * (-10<=x & x<=10 ) ;
+u = u0*exp(-0.01*(x.^2)) ;
 ustore(1,:) = u;
-counter=0;
+counter=1;
 index1=0;
 figure(2)
 plot(x,u);
@@ -60,13 +60,14 @@ for t=dt:dt:tend
         hold on
         legendInfo{counter/1000+1}=['t=' num2str(counter)];
     end
-    if(mod(counter,50) == 0)
-        figure(5);
-        plot(x,u,'green','LineWidth',2);
-        drawnow;
-        MOVI(index1) = getframe; % creation de l'animation
-        hold off;
-    end
+%     if(mod(counter,50) == 0)
+%         figure(4);
+%         plot(x,u,'green','LineWidth',2);
+%         axis([a b 0 1])
+%         drawnow;
+%         MOVI(index1) = getframe; % creation de l'animation
+%         hold off;
+%     end
     
 end
 hold off
@@ -89,41 +90,9 @@ ylabel('u');
 ylim([0 max(max(ustore))+0.05])
 legend(legendInfo)
 
-% figure(3);
-% indX=[101,121,171,201];
-% for i=1:1:4
-%   plot(dt:dt:tend,ustore(2:length(ustore(:,indX(i))),indX(i)))
-%   hold on
-% end
-% hold off
-% xlabel('t')
-% ylabel('u')
-% axis([0 tend+1 0 max(max(ustore))+0.05]);
-
 figure(4)
 surf(x,dt:dt:tend,ustore(2:length(ustore(:,1)),:),'edgecolor','none');
-
 xlabel('Distance x')
 ylabel('Time t')
 zlabel('Specie u')
-
-
-% [xmesh, tmesh] = meshgrid(x,0:dt:tend);
-% zmesh = xmesh-2 * diag(0:dt:tend) * ones(size(xmesh));
-
-% figure(2)
-% contour(xmesh,tmesh, ustore);
-% hold on
-% plot([10 20 20 10],[5 10 5 5],'--');
-% text(0,3,'Ref triangle with slope 2');
-% xlabel('x');
-% ylabel('t');
-% title('Contour plot of u(x,t)')
-% hold off
-
-%figure(3)
-%waterfall(zmesh, tmesh, ustore)
-%zlim([0 1])
-%xlim([-120,50])
-%view (50,30)
 end

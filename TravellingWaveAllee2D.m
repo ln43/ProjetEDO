@@ -8,10 +8,10 @@ function sol=TravellingWaveAllee2D()
 close all;
 clear all;
 
-d=0.5;
-A=0.25;
+d=0.05;
+A=0.75;
 k=4/(1-A)^2;
-u0=0.5;
+u0=0.9;
 
 a = -50;
 b = 50;
@@ -26,14 +26,14 @@ tend = 50;
 
 e=ones(nv, 1);
 
-
 % initial guess
 u = zeros(201,201);
 for i=1:1:201
     for j=1:1:201
-        if i>80 & i<120 & j<120 & j>80
-            u(i,j)=u0;
-        end
+        r= (i-100).^2 + (j-100).^2 ;
+        if (r<10) 
+            u(i,j)=u0* exp(-0.01*r);
+        end   
     end
 end
 counter=1;
@@ -54,14 +54,11 @@ ind=ind+1;
     end   
 
 % explicit Euler scheme
-
-%Version pour A<0.5 : tous les 500 pas de temps
 for t=dt:dt:tend
     u = u + dt .* (d.*del2(u,h,h) +  Allee(u));
     counter=counter+1;
     index1=index1+1;
-    %if(mod(counter,10) == 0 && ind <=12)
-    if(mod(counter,500) == 0)
+    if(mod(counter,500) == 0 && ind<3)
         surf(x,y,u,'edgecolor','none');
         axis([a b a b 0 1])
         xlabel('x')
@@ -70,14 +67,14 @@ for t=dt:dt:tend
         saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
         ind=ind+1;
     end 
-    if(mod(counter,10) == 0)
-        %ajout animation je sais pas trop si ca marche vraiment !!
-        figure(2);
-        surf(x,y,u,'edgecolor','none');
-        axis([a b a b 0 1]);
-        drawnow;
-        MOVI(index1) = getframe; % creation de l'animation
-    end    
+%     if(mod(counter,10) == 0)
+%         %ajout animation je sais pas trop si ca marche vraiment !!
+%         figure(2);
+%         surf(x,y,u,'edgecolor','none');
+%         axis([a b a b 0 1]);
+%         drawnow;
+%         MOVI(index1) = getframe; % creation de l'animation
+%     end    
 end
 
 surf(x,y,u,'edgecolor','none');
