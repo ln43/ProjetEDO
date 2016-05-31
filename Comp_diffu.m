@@ -33,14 +33,14 @@ v=zeros(N_max,M_max);
 pqy=zeros(N_max,M_max);
 
 %equilibre aux bords
-u(:,M_max)=equ;
-v(:,M_max)=eqv;
+u(:,M_max)=0;
+v(:,M_max)=0;
 
 
 % Condition initial pour u et v 
 
 for i=1:M_max
-    u(1,i)=exp(-0.001*x(i)^2);
+    u(1,i)=exp(-0.01*x(i)^2);
 %     if x(i)>-30 & x(i)<30
 %        u(1,i)=equ;
 %     elseif x(i)<=-30 | x(i)>=30
@@ -50,7 +50,7 @@ for i=1:M_max
 end
 
 for i=1:M_max
-    v(1,i)=exp(-0.001*x(i)^2);
+    v(1,i)=exp(-0.01*x(i)^2);
 %     if x(i)>-30 & x(i)<30
 %        v(1,i)=eqv;
 %     elseif x(i)<=-30 | x(i)>=30

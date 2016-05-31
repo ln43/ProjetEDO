@@ -44,7 +44,23 @@ u = 0.03 * (x < 3).*(x>-3 ); %pour enlever avance onde des deux cotés enlever .*
 v = 0.2 * (x < 3).* (x> -3) ;
 
 counter = 0;
-index1=1;
+index1=0;
+
+figure(3);
+legend('u','v')
+xlabel('Distance x')
+ylabel('Specie')
+
+figure(1);
+title('u')
+xlabel('Distance x')
+ylabel('Specie u')
+
+figure(2);
+title('v')
+xlabel('Distance x')
+ylabel('Specie v')
+
 % explicit Euler scheme
 for t=dt:dt:tend
     index1 = index1 + 1;
@@ -63,11 +79,6 @@ for t=dt:dt:tend
         hold on; 
     end
     
-    
-
-    
-
-
 %figure(3)
 %plot(x,u,x,v,'r');
 %legend('u','v')
@@ -80,4 +91,8 @@ axis([0 200 0 0.2]);                % echelle des axes
 drawnow;
 MOVI(index1) = getframe; % creation de l'animation
 end
+
+
+
+
 end

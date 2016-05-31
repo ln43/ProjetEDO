@@ -35,6 +35,7 @@ Delta(end,end-1) = 2/h^2;
 u = u0 * (-10<x & x<10 ) ;
 ustore(1,:) = u;
 counter=1;
+index1=0;
 figure(2)
 plot(x,u);
 hold on
@@ -52,6 +53,7 @@ for t=dt:dt:tend
     u = u + dt * (d*(Delta * u')' +  KPP(u));
  
     counter=counter+1;
+    index1=index1+1;
     ustore(counter,:) = u;   
     
     if(mod(counter,1000) == 0)
@@ -60,6 +62,15 @@ for t=dt:dt:tend
         hold on
         legendInfo{counter/1000+1}=['t=' num2str(counter)];
     end
+    
+   
+    figure(5);
+    plot(x,u,'green','LineWidth',2);
+    %surf(x,u,'edgecolor','none');
+    drawnow;
+    MOVI(index1) = getframe; % creation de l'animation
+    hold off;
+    
 end
 
 figure(1);

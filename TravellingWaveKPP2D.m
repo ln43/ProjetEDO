@@ -41,6 +41,7 @@ for i=1:1:201
 end
 counter=1;
 ind=1;
+index1=1;
 figure(1)
 
     % fonction KPP
@@ -53,12 +54,21 @@ for t=dt:dt:tend
     u = u + dt .* (d.*del2(u,h,h) +  KPP(u));
  
     counter=counter+1;
+    index1=index1+1;
     if(mod(counter,1000) == 0)
         subplot(2,3,ind)
         surf(x,y,u,'edgecolor','none');
         ind=ind+1;
     end
     %ustore(counter,:) = u;
+    
+    
+    %ajout animation
+    figure(2);
+    surf(x,y,u,'edgecolor','none');
+    drawnow;
+    MOVI(index1) = getframe; % creation de l'animation
+    
 end
 figure(1);
 subplot(2,3,ind)

@@ -37,6 +37,7 @@ for i=1:1:201
     end
 end
 counter=1;
+index1=1;
 ind=1;
 figure(1)
 surf(x,y,u,'edgecolor','none');
@@ -58,6 +59,7 @@ ind=ind+1;
 for t=dt:dt:tend
     u = u + dt .* (d.*del2(u,h,h) +  Allee(u));
     counter=counter+1;
+    index1=index1+1;
     %if(mod(counter,10) == 0 && ind <=12)
     if(mod(counter,500) == 0)
         surf(x,y,u,'edgecolor','none');
@@ -67,14 +69,20 @@ for t=dt:dt:tend
         zlabel('u')
         saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
         ind=ind+1;
-    end
+    end 
+    
+    %ajout animation je sais pas trop si ca marche vraiment !!
+    figure(2);
+    surf(x,y,u,'edgecolor','none');
+    drawnow;
+    MOVI(index1) = getframe; % creation de l'animation
 end
-% 
-% surf(x,y,u,'edgecolor','none');
-% axis([a b a b 0 1])
-% xlabel('x')
-% ylabel('y')
-% zlabel('u')
-% saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
+
+surf(x,y,u,'edgecolor','none');
+axis([a b a b 0 1])
+xlabel('x')
+ylabel('y')
+zlabel('u')
+saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
 
 end
