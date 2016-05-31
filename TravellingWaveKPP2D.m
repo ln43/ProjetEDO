@@ -73,13 +73,14 @@ for t=dt:dt:tend
         saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
         ind=ind+1;
     end    
-    
-    %ajout animation
-    figure(2);
-    surf(x,y,u,'edgecolor','none');
-    axis([a b a b 0 1])
-    drawnow;
-    MOVI(index1) = getframe; % creation de l'animation
+    if(mod(counter,100) == 0)
+        %ajout animation je sais pas trop si ca marche vraiment !!
+        figure(2);
+        surf(x,y,u,'edgecolor','none');
+        axis([a b a b 0 1]);
+        drawnow;
+        MOVI(index1) = getframe; % creation de l'animation
+    end    
     
 end
 % 

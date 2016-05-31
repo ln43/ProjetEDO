@@ -63,13 +63,15 @@ for t=dt:dt:tend
         legendInfo{counter/1000+1}=['t=' num2str(counter)];
     end
     
-   
-    figure(5);
-    plot(x,u,'green','LineWidth',2);
-    %surf(x,u,'edgecolor','none');
-    drawnow;
-    MOVI(index1) = getframe; % creation de l'animation
-    hold off;
+    if(mod(counter,10) == 0)
+        figure(5);
+        plot(x,u,'green','LineWidth',2);
+        axis([-50 50 0 1])
+        drawnow;
+        MOVI(counter) = getframe; % creation de l'animation
+        hold off;
+    end    
+
     
 end
 

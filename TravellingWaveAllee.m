@@ -34,7 +34,8 @@ Delta(end,end-1) = 2/h^2;
 % initial guess
 u = u0 * (-10<=x & x<=10 ) ;
 ustore(1,:) = u;
-counter=1;
+counter=0;
+index1=0;
 figure(2)
 plot(x,u);
 legendInfo{1}=['t=' num2str(0)];
@@ -52,13 +53,21 @@ for t=dt:dt:tend
  
     counter=counter+1;
     ustore(counter,:) = u;   
-    
+    index1=index1+1;
     if(mod(counter,1000) == 0)
         figure(2)
         plot(x,u);
         hold on
         legendInfo{counter/1000+1}=['t=' num2str(counter)];
     end
+    if(mod(counter,50) == 0)
+        figure(5);
+        plot(x,u,'green','LineWidth',2);
+        drawnow;
+        MOVI(index1) = getframe; % creation de l'animation
+        hold off;
+    end
+    
 end
 hold off
 
