@@ -10,9 +10,9 @@ close all;
 clear all;
 
 d=0.5;
-alpha=0.2;
-K=0.3;
-u0=0.7;
+alpha=0.5;
+K=0.8;
+u0=0.5;
 
 a = -50;
 b = 50;
@@ -34,9 +34,13 @@ e=ones(nv, 1);
 u = zeros(201,201);
 for i=1:1:201
     for j=1:1:201
-        if i>80 & i<120 & j<120 & j>80
-            u(i,j)=u0;
-        end
+        r= (i-100).^2 + (j-100).^2 ;
+        if (r<10) 
+            u(i,j)=u0* exp(-0.01*r);%*((i-100).^2 + (j-100).^2 ) ;
+        end   
+%         if i>80 & i<120 & j<120 & j>80
+%             u(i,j)=u0*(i.^2 + j.^2 ) ;
+%         end
     end
 end
 counter=1;

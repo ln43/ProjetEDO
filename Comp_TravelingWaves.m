@@ -40,8 +40,12 @@ d1=1;
 d2=0.5;
 
 % initial guess
-u = 0.03 * (x < 3).*(x>-3 ); %pour enlever avance onde des deux cotés enlever .*(x>-3 ) dans les deux
-v = 0.2 * (x < 3).* (x> -3) ;
+u0=0.03;
+v0=0.2;
+u = u0*exp(-0.01*(x.^2));
+v = v0*exp(-0.01*(x.^2));
+%u = 0.03 * (x < 3).*(x>-3 ); %pour enlever avance onde des deux cotés enlever .*(x>-3 ) dans les deux
+%v = 0.2 * (x < 3).* (x> -3) ;
 
 counter = 0;
 index1=0;
@@ -61,6 +65,15 @@ title('v')
 xlabel('Distance x')
 ylabel('Specie v')
 
+figure(1)
+plot(x,u);
+hold on;
+        
+figure(2);
+plot(x,v);
+hold on; 
+
+
 % explicit Euler scheme
 for t=dt:dt:tend
     index1 = index1 + 1;
@@ -68,7 +81,6 @@ for t=dt:dt:tend
     ustore(counter,:) = u;
     u = u + dt * d1* ((Delta * u')') +  dt*alpha1.*u.*(1-u/K1-gamma1.*v/K1);
     v = v +  dt * d2* ((Delta * v')') + dt * alpha2.*v.*(1-v/K2-gamma2.*u/K2);
-    
     if(mod(counter,50) == 0)
         figure(1)
         plot(x,u);
@@ -78,6 +90,7 @@ for t=dt:dt:tend
         plot(x,v);
         hold on; 
     end
+    
     
 %figure(3)
 %plot(x,u,x,v,'r');
