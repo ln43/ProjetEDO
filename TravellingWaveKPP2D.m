@@ -12,7 +12,7 @@ clear all;
 d=0.5;
 alpha=0.5;
 K=0.8;
-u0=0.5;
+u0=1;
 
 a = -50;
 b = 50;
@@ -23,7 +23,7 @@ nv = nel+1;% number of vertices
 x = a:h:b; % mesh
 y = a:h:b;
 dt = 0.01; % time steps
-tend = 50; 
+tend = 100; 
 
 e=ones(nv, 1);
 
@@ -36,7 +36,7 @@ for i=1:1:201
     for j=1:1:201
         r= (i-100).^2 + (j-100).^2 ;
         if (r<10) 
-            u(i,j)=u0* exp(-0.01*r);%*((i-100).^2 + (j-100).^2 ) ;
+            u(i,j)=u0* exp(-0.04*r);%*((i-100).^2 + (j-100).^2 ) ;
         end   
 %         if i>80 & i<120 & j<120 & j>80
 %             u(i,j)=u0*(i.^2 + j.^2 ) ;
@@ -47,11 +47,13 @@ counter=1;
 ind=1;
 index1=1;
 figure(1)
+subplot(2,3,ind)
 surf(x,y,u,'edgecolor','none');
 axis([a b a b 0 1])
 xlabel('x')
 ylabel('y')
 zlabel('u')
+title('Condition initiale');
 saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
 ind=ind+1;
 
@@ -66,7 +68,7 @@ for t=dt:dt:tend
     counter=counter+1;
     %if(mod(counter,10) == 0 && ind <=12)
     index1=index1+1;
-    if(mod(counter,1000) == 0)
+    if(mod(counter,2000) ==0 )
         figure(1)
         subplot(2,3,ind)
         surf(x,y,u,'edgecolor','none');
@@ -74,6 +76,7 @@ for t=dt:dt:tend
         xlabel('x')
         ylabel('y')
         zlabel('u')
+        title(['t=' num2str(t+0.01)]);
         saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
         ind=ind+1;
     end    
@@ -82,11 +85,15 @@ for t=dt:dt:tend
         figure(2);
         surf(x,y,u,'edgecolor','none');
         axis([a b a b 0 1]);
+        title(['Propagation de l''onde avec une croissance logistique K =', num2str(K),' \alpha =', num2str(alpha)])
         drawnow;
         MOVI(index1) = getframe; % creation de l'animation
     end    
     
 end
+
+
+
 % 
 % surf(x,y,u,'edgecolor','none');
 % axis([a b a b 0 1])
@@ -94,5 +101,8 @@ end
 % ylabel('y')
 % zlabel('u')
 % saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
+
+figure(1)
+title('ok');
 
 end
