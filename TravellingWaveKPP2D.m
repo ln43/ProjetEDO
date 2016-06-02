@@ -36,7 +36,7 @@ for i=1:1:201
     for j=1:1:201
         r= (i-100).^2 + (j-100).^2 ;
         if (r<10) 
-            u(i,j)=u0* exp(-0.04*r);%*((i-100).^2 + (j-100).^2 ) ;
+            u(i,j)=u0* exp(-0.01*r);%*((i-100).^2 + (j-100).^2 ) ;
         end   
 %         if i>80 & i<120 & j<120 & j>80
 %             u(i,j)=u0*(i.^2 + j.^2 ) ;
@@ -71,6 +71,7 @@ for t=dt:dt:tend
     if(mod(counter,2000) ==0 )
         figure(1)
         subplot(2,3,ind)
+       
         surf(x,y,u,'edgecolor','none');
         axis([a b a b 0 1])
         xlabel('x')
@@ -85,14 +86,15 @@ for t=dt:dt:tend
         figure(2);
         surf(x,y,u,'edgecolor','none');
         axis([a b a b 0 1]);
-        title(['Propagation de l''onde avec une croissance logistique K =', num2str(K),' \alpha =', num2str(alpha)])
+        title(['Propagation de l''onde avec une croissance logistique K =', num2str(K),', \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)])
         drawnow;
         MOVI(index1) = getframe; % creation de l'animation
     end    
     
 end
 
-
+figure(1)
+suplabel(['Propagation de l''onde avec une croissance logistique K =', num2str(K),', \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)])
 
 % 
 % surf(x,y,u,'edgecolor','none');
@@ -101,8 +103,5 @@ end
 % ylabel('y')
 % zlabel('u')
 % saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
-
-figure(1)
-title('ok');
 
 end

@@ -64,26 +64,29 @@ for t=dt:dt:tend
         legendInfo{counter/1000+1}=['t=' num2str(counter)];
     end
     
-%     if(mod(counter,10) == 0)
-%         figure(5);
-%         plot(x,u,'green','LineWidth',2);
-%         axis([-50 50 0 1])
-%         drawnow;
-%         MOVI(counter) = getframe; % creation de l'animation
-%         hold off;
-%     end    
+    if(mod(counter,10) == 0)
+        figure(5);
+        plot(x,u,'green','LineWidth',2);
+        title(['Propagation de l''onde avec une croissance logistique K =', num2str(K),', \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)])
+        xlabel('x')
+        ylabel('u')
+        axis([-50 50 0 1])
+        drawnow;
+        MOVI(counter) = getframe; % creation de l'animation
+        hold off;
+    end    
 
     
 end
 
 figure(1);
 plot(linspace(0,1,50), KPP(linspace(0,1,50)),'g',[0 1], [0 0],'--');
-title('f(u)')
-xlabel('u')
 ylabel('f(u)')
+xlabel('u')
+title(['f(u) avec une croissance logistique K =', num2str(K),', \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)]);%tous les milles pas de temps
 
 figure(2)
-title('Fronts d ondes pour differents temps');%tous les milles pas de temps
+title(['Fronts d''ondes avec une croissance logistique K =', num2str(K),', \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)]);%tous les milles pas de temps
 xlabel('x')
 ylabel('u')
 ylim([0 max(max(ustore))+0.05])
@@ -95,4 +98,6 @@ surf(x,dt:dt:tend,ustore(2:length(ustore(:,1)),:),'edgecolor','none');
 xlabel('Distance x')
 ylabel('Time t')
 zlabel('Specie u')
+title(['Fronts d''onde avec une croissance logistique K =', num2str(K),', \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)]);%tous les milles pas de temps
+
 end

@@ -98,13 +98,14 @@ figure(3);
 plot(u,'blue','LineWidth',2);
 hold on;
 plot(v,'green','LineWidth',2);
-hold off;
-
+ title(['Propagation de l''onde avec compétition  \alpha_1=', num2str(alpha1),',  \alpha_2=', num2str(alpha2),',  \gamma_1=', num2str(gamma1),',  \gamma_2=', num2str(gamma2),',  K_1=', num2str(K1),',  K_2=', num2str(K2),',  d_1=', num2str(d1),' et  d_2=', num2str(d2)])
+ hold off;
 axis([0 200 0 0.2]);                % echelle des axes
+%legend('u','v');%si on l'enlève ca va plus vite
 drawnow;
 MOVI(index1) = getframe; % creation de l'animation
-end
 
+end
 figure(2);
 xlabel('Distance x')
 ylabel('Densité espèce Néandertal ')
@@ -116,5 +117,6 @@ xlabel('Distance x')
 ylabel('Densité espèce Homo Sapiens')
 title('Fronts d'' onde à differents instants pour la population Homo Sapiens  ');
 legend(legendInfo1)
+
 
 end

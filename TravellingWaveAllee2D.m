@@ -67,14 +67,15 @@ for t=dt:dt:tend
         saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
         ind=ind+1;
     end 
-%     if(mod(counter,10) == 0)
+    if(mod(counter,10) == 0)
 %         %ajout animation je sais pas trop si ca marche vraiment !!
 %         figure(2);
 %         surf(x,y,u,'edgecolor','none');
 %         axis([a b a b 0 1]);
 %         drawnow;
+%         title(['Propagation de l''onde avec effet Allee A =', num2str(A),', d =', num2str(d),', u_0 =', num2str(u0),' et k =', num2str(k)])
 %         MOVI(index1) = getframe; % creation de l'animation
-%     end    
+    end    
 end
 
 surf(x,y,u,'edgecolor','none');

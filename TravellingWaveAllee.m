@@ -60,14 +60,15 @@ for t=dt:dt:tend
         hold on
         legendInfo{counter/1000+1}=['t=' num2str(counter)];
     end
-%     if(mod(counter,50) == 0)
-%         figure(4);
-%         plot(x,u,'green','LineWidth',2);
-%         axis([a b 0 1])
-%         drawnow;
-%         MOVI(index1) = getframe; % creation de l'animation
-%         hold off;
-%     end
+    if(mod(counter,50) == 0)
+        figure(4);
+        plot(x,u,'green','LineWidth',2);
+        axis([a b 0 1])
+        title(['Propagation de l''onde avec effet Allee A =', num2str(A),', d =', num2str(d),', u_0 =', num2str(u0),' et k =', num2str(k)])
+        drawnow;
+        MOVI(index1) = getframe; % creation de l'animation
+        hold off;
+    end
     
 end
 hold off
