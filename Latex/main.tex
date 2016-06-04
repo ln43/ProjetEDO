@@ -277,14 +277,14 @@ f possède deux équilibres $0$ et $K$ tels que $0 < K$ :\\
 
 Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le probleme \ref{PbKPP } a une solution, et donc une infinite de solutions (U,c). Plus precisesement, pour le cas KPP et monostable, il existe un vitesse minimale c$_0 >0$ unique telle que quelque soit $c  \geqslant c_0$ l'equation \ref{PbKPP } a une solution $U_c$ unique a translation près.
 
-    Il existe donc une vitesse minimale $c_0$ telle que pour toute vitesse supérieure, on a existence d'un front d'onde U(z) monotone, solution de l'EDO avec les conditions aux bords $\lim_{z \to +\infty} U(z)=u_+$ et $\lim_{z \to -\infty} U(z)=u_-$. \\
+    Il existe donc une vitesse minimale $c_0$ telle que pour toute vitesse supérieure, on a existence d'un front d'onde U(z) monotone, solution de l'EDO avec les conditions aux bords $\lim_{z \to +\infty} U(z)=0$ et $\lim_{z \to -\infty} U(z)=K$. \\
     
-    De plus comme $ f^\prime(u)< f^\prime(u_+)$ pour un voisinnage de $u_+$ alors : \\
-    $c_0=2 \sqrt{f^\prime(u_+)}= 2 \sqrt{\alpha - 2 \frac{\alpha}{K} \times 0} = 2 \sqrt{\alpha}$
+    De plus comme $ f^\prime(u)< f^\prime(0)$ pour un voisinnage de $0$ alors : \\
+    $c_0=2 \sqrt{f^\prime(0)}= 2 \sqrt{\alpha - 2 \frac{\alpha}{K} \times 0} = 2 \sqrt{\alpha}$
     On peut donc déterminer la vitesse de cette propagation. \\
     
     
-        D'autre part, comme l'équation est monostable avec aucun équilibre entre $u_+$ et $u_-$, si on prend comme condition initiale l'équilibre instable $u_+$ avec une perturbation à support borné, alors la solution tend vers deux fronts de vitesse minimale $c_0$. \\
+        D'autre part, comme l'équation est monostable avec aucun autre équilibre entre $0$ et $K$, si on prend comme condition initiale l'équilibre instable $0$ avec une perturbation à support borné, alors la solution tend vers deux fronts de vitesse minimale $c_0$. \\
 		On appelle cet effet l'effet "hair trigger effect". Ainsi, dans le cas KPP et monostable il suffit que
 		la condition initiale soit non équivalente à 0 , c'est à dire décolle légèrement de 0, pour que la solution
 		converge vers K à la vitesse c$_0$. 
@@ -553,13 +553,30 @@ En pratique, nous n'avons pas accès à ces valeurs. Nous testerons donc différ
 \subsection{Type de simulations réalisées}
 \paragraph{Modélisation 1D}
 On considère la diffusion selon une seule dimension. L'espace est donc représenté par une droite x allant de -50 à 50.\\
-On considère comme condition initiale une population $u_0$ pour $x\in[-10,10]$ et 0 sinon. (On fait varier $u_0$ en fonction des simulations).
+On sait que la population se répartie souvent selon une gaussienne à un endroit. Pour cela, on considère comme condition initiale une population $u_0$ pour $x\in[-10,10]$ et 0 sinon. (On fait varier $u_0$ en fonction des simulations).
 On a choisi  de représenter les fronts d'ondes pour différents temps ainsi que de réaliser le graphique 3D de u en fonction de x et t
 
 \paragraph{Modélisation 2D}
 On considère la diffusion selon 2 dimensions x et y. L'espace est donc représenté par un plan x et y compris entre -50 et 50.\\
 On considère comme condition initiale une population $u_0$ pour $x,y\in[-10,10]$ et 0 sinon. (On fait varier $u_0$ en fonction des simulations).
+
+
+
 \subsection{Croissance Logistique}
+\subsubsection{Simulation propagation fronts d'onde}
+\paragraph{Cas 1.1 : d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.5$}
+\noindent
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\linewidth]{SimulationKPP/KPP11}\hfill
+	\includegraphics[width=0.45\linewidth]{SimulationKPP/KPP12.jpg}
+	\includegraphics[width=0.45\linewidth]{SimulationKPP/KPP14.jpg}
+	\caption{Diffusion 1D}
+\end{figure}
+\noindent
+
+
+\subsubsection{Simulation de l'effet hair trigger}
 
 \subsubsection{Constante de diffusion d=0.5}
 On réalise une première série de simulations avec une constante de diffusion égale à 0.5 :
@@ -567,7 +584,6 @@ On réalise une première série de simulations avec une constante de diffusion 
 \noindent
 \begin{figure}[H]
 	\centering
-
 	\includegraphics[width=0.45\linewidth]{SimulationKPP/KPP11}\hfill
 	\includegraphics[width=0.45\linewidth]{SimulationKPP/KPP12.jpg}
     \includegraphics[width=0.45\linewidth]{SimulationKPP/KPP14.jpg}
