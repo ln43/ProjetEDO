@@ -10,9 +10,9 @@ close all;
 clear all;
 
 d=0.5;
-alpha=0.5;
+alpha=0.02;
 K=0.5;
-u0=0.9;
+u0=0.01;
 
 a = -50;
 b = 50;
@@ -32,8 +32,8 @@ Delta(1,2) = 2/h^2;
 Delta(end,end-1) = 2/h^2;
 
 % initial guess
-u = u0*exp(-0.01*(x.^2)) ; %u0 * (-10<x & x<10 ) ;
-  
+ u = u0*exp(-0.01*(x.^2)) ; %
+%u= u0 * ( x<-10 ) ;  
 ustore(1,:) = u;
 counter=1;
 index1=0;

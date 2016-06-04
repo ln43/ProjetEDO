@@ -553,12 +553,12 @@ En pratique, nous n'avons pas accès à ces valeurs. Nous testerons donc différ
 \subsection{Type de simulations réalisées}
 \paragraph{Modélisation 1D}
 On considère la diffusion selon une seule dimension. L'espace est donc représenté par une droite x allant de -50 à 50.\\
-On sait que la population se répartie souvent selon une gaussienne à un endroit. Pour cela, on considère comme condition initiale une population $u_0$ pour $x\in[-10,10]$ et 0 sinon. (On fait varier $u_0$ en fonction des simulations).
+On sait que la population se répartie souvent selon une gaussienne à un endroit. Pour cela, on considère comme condition initiale une population qui se répartit selon une loi :  $u_0 e^{-0.01*x^2}$ . (On fait varier $u_0$ en fonction des simulations).
 On a choisi  de représenter les fronts d'ondes pour différents temps ainsi que de réaliser le graphique 3D de u en fonction de x et t
 
 \paragraph{Modélisation 2D}
 On considère la diffusion selon 2 dimensions x et y. L'espace est donc représenté par un plan x et y compris entre -50 et 50.\\
-On considère comme condition initiale une population $u_0$ pour $x,y\in[-10,10]$ et 0 sinon. (On fait varier $u_0$ en fonction des simulations).
+On considère comme condition initiale une population qui suit la loi : $u_0 e^{-0.01 r}$ pour $-10 >r>0$ tel que $r^2=x^2+y^2$ et 0 sinon. (On fait varier $u_0$ en fonction des simulations).
 
 
 
@@ -568,15 +568,32 @@ On considère comme condition initiale une population $u_0$ pour $x,y\in[-10,10]
 \noindent
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.45\linewidth]{SimulationKPP/KPP11}\hfill
-	\includegraphics[width=0.45\linewidth]{SimulationKPP/KPP12.jpg}
-	\includegraphics[width=0.45\linewidth]{SimulationKPP/KPP14.jpg}
-	\caption{Diffusion 1D}
+	\includegraphics[width=0.45\linewidth]{SimulationKPP/figures1/fu}\hfill
+	\caption{Fonction de type KPP}
 \end{figure}
 \noindent
 
+On observe comme prévu dans la partie analytique un équilibre 0 instable et un équilibre K= 0.5 stable. La fonction est de type monostable.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\linewidth]{SimulationKPP/figures1/FrontOnde2}\hfill
+	\includegraphics[width=0.40\linewidth]{SimulationKPP/figures1/FrontOnde1}\hfill
+	\caption{Diffusion 1D de propagation de front d'ondes}
+\end{figure}
+\noindent
+
+On observe la propagation du front d'onde.
 
 \subsubsection{Simulation de l'effet hair trigger}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\linewidth]{SimulationKPP/Trigger/Fig2}\hfill
+	\includegraphics[width=0.55\linewidth]{SimulationKPP/Trigger/fig1}\hfill
+	\caption{Diffusion 1D de propagation de front d'ondes}
+\end{figure}
+\noindent
+
 
 \subsubsection{Constante de diffusion d=0.5}
 On réalise une première série de simulations avec une constante de diffusion égale à 0.5 :
