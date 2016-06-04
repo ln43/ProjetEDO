@@ -9,26 +9,26 @@
 \contentsline {subsection}{\numberline {3.1}Croissance Logistique}{4}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Analyse de la partie r\IeC {\'e}action}{4}{subsubsection.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.2}Analyse de la r\IeC {\'e}action-diffusion}{5}{subsubsection.3.1.2}
-\contentsline {subsection}{\numberline {3.2}Effet Allee}{7}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Analyse de la partie r\IeC {\'e}action}{7}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Analyse de la r\IeC {\'e}action-diffusion}{7}{subsubsection.3.2.2}
-\contentsline {subsection}{\numberline {3.3}Syst\IeC {\`e}me de Lotka-Volterra}{9}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Analyse pr\IeC {\'e}liminaire}{9}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Fronts d'ondes}{10}{subsubsection.3.3.2}
-\contentsline {section}{\numberline {4}Simulations num\IeC {\'e}riques}{12}{section.4}
-\contentsline {subsection}{\numberline {4.1}Valeurs des param\IeC {\`e}tres}{12}{subsection.4.1}
-\contentsline {paragraph}{Densit\IeC {\'e}}{12}{section*.4}
-\contentsline {paragraph}{Taux de f\IeC {\'e}condit\IeC {\'e}}{12}{section*.5}
-\contentsline {paragraph}{Taux de mortalit\IeC {\'e}}{12}{section*.6}
-\contentsline {paragraph}{Taux de croissance}{12}{section*.7}
+\contentsline {subsection}{\numberline {3.2}Effet Allee}{8}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Analyse de la partie r\IeC {\'e}action}{8}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Analyse de la r\IeC {\'e}action-diffusion}{8}{subsubsection.3.2.2}
+\contentsline {subsection}{\numberline {3.3}Syst\IeC {\`e}me de Lotka-Volterra}{10}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Analyse pr\IeC {\'e}liminaire}{10}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Fronts d'ondes}{11}{subsubsection.3.3.2}
+\contentsline {section}{\numberline {4}Simulations num\IeC {\'e}riques}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}Valeurs des param\IeC {\`e}tres}{13}{subsection.4.1}
+\contentsline {paragraph}{Densit\IeC {\'e}}{13}{section*.4}
+\contentsline {paragraph}{Taux de f\IeC {\'e}condit\IeC {\'e}}{13}{section*.5}
+\contentsline {paragraph}{Taux de mortalit\IeC {\'e}}{13}{section*.6}
+\contentsline {paragraph}{Taux de croissance}{13}{section*.7}
 \contentsline {paragraph}{Constante de diffusion}{13}{section*.8}
-\contentsline {paragraph}{Capacit\IeC {\'e} de soutien K}{13}{section*.9}
-\contentsline {subsection}{\numberline {4.2}Type de simulations r\IeC {\'e}alis\IeC {\'e}es}{13}{subsection.4.2}
-\contentsline {paragraph}{Mod\IeC {\'e}lisation 1D}{13}{section*.10}
-\contentsline {paragraph}{Mod\IeC {\'e}lisation 2D}{13}{section*.11}
-\contentsline {subsection}{\numberline {4.3}Croissance Logistique}{13}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Constante de diffusion d=0.5}{13}{subsubsection.4.3.1}
-\contentsline {paragraph}{Cas 1.1 : d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.5$}{13}{section*.12}
+\contentsline {paragraph}{Capacit\IeC {\'e} de soutien K}{14}{section*.9}
+\contentsline {subsection}{\numberline {4.2}Type de simulations r\IeC {\'e}alis\IeC {\'e}es}{14}{subsection.4.2}
+\contentsline {paragraph}{Mod\IeC {\'e}lisation 1D}{14}{section*.10}
+\contentsline {paragraph}{Mod\IeC {\'e}lisation 2D}{14}{section*.11}
+\contentsline {subsection}{\numberline {4.3}Croissance Logistique}{14}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Constante de diffusion d=0.5}{14}{subsubsection.4.3.1}
+\contentsline {paragraph}{Cas 1.1 : d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.5$}{14}{section*.12}
 \contentsline {subsubsection}{\numberline {4.3.2}Effets de barri\IeC {\`e}res g\IeC {\'e}ographiques ou variations environnementales}{15}{subsubsection.4.3.2}
 \contentsline {subsection}{\numberline {4.4}Effet Allee}{16}{subsection.4.4}
 \contentsline {subsubsection}{\numberline {4.4.1}Constante de diffusion d=0.5}{16}{subsubsection.4.4.1}

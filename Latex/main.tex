@@ -160,22 +160,46 @@ $$f^\prime(u)= \alpha - 2 \alpha \dfrac{u}{K} $$
 
 
 \subsubsection{Analyse de la réaction-diffusion}
+\setcounter{equation}{0}
 L'idee est de representer la solution de notre equation de
 reaction-diusion sous forme d'un front qui se deplace dans l'espace a une vitesse constante.
 Soit u la solution de notre équation de reaction-diffusion dans $\mathbb{R}$.
 
 \noindent On pose $z=x-ct$, $U:z\rightarrow U(z)$.\\
 On ecrit alors notre solution sous la forme
-\begin{equation}
+\begin{equation*}
 u(t,x)=U(x-ct)=U(z)
-\label{Eq1}
-\end{equation}
+\end{equation*}
 U est la forme de l'onde et c sa vitesse.\\
+
 On peut montrer (Voir Annexe 1) que ~\eqref{Eq1} est équivalent à :
-\begin{equation}
-dU"(z)+c U'(z)+\alpha U(z)(1-\dfrac{U(Z)}{K})=0
-\label{Eq2}
-\end{equation} 
+\begin{equation*}
+dU"(z)+c U'(z)+\alpha U(z)(1-\dfrac{U(Z)}{K})=0\\
+\end{equation*} 
+
+On a donc (U, c) solution du problème suivant :
+\begin{equation} 
+\left\{
+\begin{array}{lcl}
+dU"(z)+c U'(z)+\alpha U(z)(1-\dfrac{U(Z)}{K})=0 \\
+U( - \infty )= K ,\quad U( + \infty )=0
+\end{array}
+\right.
+\label{PbKPP }
+\end{equation}
+On dira que c est la vitesse de propagation. Ces solutions décrivent donc l'invasion de l'état K
+sur 0 si $c > 0$ ou de l'état 0 sur K si $c< 0$, selon un profil constant qui se déplace à la vitesse
+$|c|$.\\
+\newline
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.40\linewidth]{SimulationKPP/FrontOnde}\hfill
+	\caption{Profil U se déplacant à la vitesse c}
+\end{figure}
+
+
+
 On pose $V=U' \Rightarrow V'=U"$:
 \[
 \left\{
@@ -235,6 +259,13 @@ Dans un premier temps on a $$ f(u) - f'(0)u = \alpha u (1 - \dfrac{u}{K}) - \alp
 
 On donc a  $f(u) < f'(0)u$, $f(0) = f(K) = 0$ et f est positive sur [0,K]. Cette fonction est donc de classe KPP.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.40\linewidth]{SimulationKPP/fu}\hfill
+	\caption{Fonction de type KPP}
+\end{figure}
+
+
 f possède deux équilibres $0$ et $K$ tels que $0 < K$ :\\
 	\begin{itemize}
     	\item[*] $f^\prime(0)= \alpha >0 \Rightarrow $ instable
@@ -244,25 +275,22 @@ f possède deux équilibres $0$ et $K$ tels que $0 < K$ :\\
     
     Le plus petit équilibre $0$ est instable et le plus grand $K$ est stable donc l'équation de réaction-diffusion est \textbf{monostable}. \\
 
-Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le probleme (1) a une solution, et donc une infinite de solutions (U,c); cq de (1). Plus precisesement, pour le cas KPP et monostable, il existe un vitesse minimale c$_0$ unique telle que quelque soit $c > c_0$ l'equation (1) a une
-solution c (unique a translation pres).
+Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le probleme \ref{PbKPP } a une solution, et donc une infinite de solutions (U,c). Plus precisesement, pour le cas KPP et monostable, il existe un vitesse minimale c$_0 >0$ unique telle que quelque soit $c  \geqslant c_0$ l'equation \ref{PbKPP } a une solution $U_c$ unique a translation près.
 
-
-    Donc il existe une vitesse minimale $c_0$ telle que  $\forall c>=c_0, \exists!U(z)$ monotone, solution de l'EDO avec les conditions aux bords $\lim_{z \to +\infty} U(z)=u_+$ et $\lim_{z \to -\infty} U(z)=u_-$. \\
-Ces  ondes  progressives  représentent  l’invasion  de l’état  0  par l’état  1  et  consistent  en
-la propagation d’un profil constant à vitesse c.
-
-    De plus comme l'équation est monostable avec aucun équilibre entre $u_+$ et $u_-$, si on prend comme condition initiale l'équilibre instable $u_+$ avec une perturbation à support borné, alors la solution tend vers deux fronts de vitesse minimale $c_0$. \\
+    Il existe donc une vitesse minimale $c_0$ telle que pour toute vitesse supérieure, on a existence d'un front d'onde U(z) monotone, solution de l'EDO avec les conditions aux bords $\lim_{z \to +\infty} U(z)=u_+$ et $\lim_{z \to -\infty} U(z)=u_-$. \\
     
-    D'autre part comme l'équation est monostable avec aucun équilibre entre $u_+$ et $u_- $ et si $ f^\prime(u)< f^\prime(u_+)$ pour un voisinnage de $u_+$ alors : \\
-    
+    De plus comme $ f^\prime(u)< f^\prime(u_+)$ pour un voisinnage de $u_+$ alors : \\
     $c_0=2 \sqrt{f^\prime(u_+)}= 2 \sqrt{\alpha - 2 \frac{\alpha}{K} \times 0} = 2 \sqrt{\alpha}$
- 
-Ce problème possède une solution si et seulement si $c\geqslant c_0$.
+    On peut donc déterminer la vitesse de cette propagation. \\
     
-    On peut donc déterminer la vitesse de cette propagation. Il y a ici, cependant, une question importante. Nous avons démontré l’existence d’onde pour toutes les vitesses supérieures ou égales à la vitesse minimale $c_0$. Quelle est donc la vitesse de propagation
-qu’on observe dans notre application, est-ce $c_0$ ou une autre vitesse plus grande ?
-
+    
+        D'autre part, comme l'équation est monostable avec aucun équilibre entre $u_+$ et $u_-$, si on prend comme condition initiale l'équilibre instable $u_+$ avec une perturbation à support borné, alors la solution tend vers deux fronts de vitesse minimale $c_0$. \\
+		On appelle cet effet l'effet "hair trigger effect". Ainsi, dans le cas KPP et monostable il suffit que
+		la condition initiale soit non équivalente à 0 , c'est à dire décolle légèrement de 0, pour que la solution
+		converge vers K à la vitesse c$_0$. 
+		
+		
+		
 \subsection{Effet Allee}
 \subsubsection{Analyse de la partie réaction}
 On étudie d'abord les points d'équilibre et leur stabilité pour l'équation sans diffusion : $$\frac{du}{dt}=ku(1-u)(u-A)$$
@@ -291,6 +319,7 @@ On a alors :
 \begin{equation}
 u(t,x)=U(x-ct)=U(z)
 \tag{1}
+\label{Eq1}
 \end{equation}
 U est la forme de l'onde et c sa vitesse.\\
 On peut montrer (Voir Annexe 1) que ~\eqref{Eq1} est équivalent à :

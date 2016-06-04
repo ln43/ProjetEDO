@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.18)  4 JUN 2016 13:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.18)  4 JUN 2016 14:30
 entering extended mode
 **main.tex
 (main.tex
@@ -577,13 +577,13 @@ LaTeX Info: Redefining \nameref on input line 16.
 
 (main.out) (main.out)
 \@outlinefile=\write3
- <logo_insa.png, id=99, 441.0879pt x 99.4917pt>
+ <logo_insa.png, id=123, 441.0879pt x 99.4917pt>
 File: logo_insa.png Graphic file (type png)
 
 <use logo_insa.png>
 Package pdftex.def Info: logo_insa.png used on input line 26.
 (pdftex.def)             Requested size: 113.24197pt x 25.54234pt.
- <neanderthal-sapiens.jpg, id=101, 238.8925pt x 275.0275pt>
+ <neanderthal-sapiens.jpg, id=125, 238.8925pt x 275.0275pt>
 File: neanderthal-sapiens.jpg Graphic file (type jpg)
 
 <use neanderthal-sapiens.jpg>
@@ -602,14 +602,18 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+
+LaTeX Warning: Reference `Eq2' on page 1 undefined on input line 50.
+
+)
 \tf@toc=\write4
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.45 \newpage
-              [1] <SiteArche.jpg, id=145, 370.38374pt x 179.92218pt>
+              [1] <SiteArche.jpg, id=175, 370.38374pt x 179.92218pt>
 File: SiteArche.jpg Graphic file (type jpg)
 
 <use SiteArche.jpg>
@@ -671,37 +675,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--143
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 187--192
+Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--207
+Underfull \hbox (badness 10000) in paragraph at lines 189--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--209
+Underfull \hbox (badness 10000) in paragraph at lines 189--194
+
+ []
+
+<SimulationKPP/FrontOnde.png, id=207, 374.14781pt x 233.37187pt>
+File: SimulationKPP/FrontOnde.png Graphic file (type png)
+
+<use SimulationKPP/FrontOnde.png>
+Package pdftex.def Info: SimulationKPP/FrontOnde.png used on input line 197.
+(pdftex.def)             Requested size: 181.18439pt x 113.01073pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--216
+
+ []
+
+[5 <./SimulationKPP/FrontOnde.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 226--231
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--212
+Underfull \hbox (badness 10000) in paragraph at lines 231--233
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--216
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
@@ -716,22 +726,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 241--242
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+
+ []
+
+<SimulationKPP/fu.png, id=217, 311.66437pt x 271.76532pt>
+File: SimulationKPP/fu.png Graphic file (type png)
+
+<use SimulationKPP/fu.png>
+Package pdftex.def Info: SimulationKPP/fu.png used on input line 264.
+(pdftex.def)             Requested size: 181.18439pt x 157.9889pt.
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 269--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
-[6]
-Overfull \hbox (8.37076pt too wide) in paragraph at lines 309--317
+
+Overfull \hbox (8.14037pt too wide) in paragraph at lines 280--281
+\T1/cmr/m/n/10.95 d'un front d'onde U(z) mo-no-tone, so-lu-tion de l'EDO avec l
+es condi-tions aux bords $[][] \OML/cmm/m/it/10.95 U\OT1/cmr/m/n/10.95 (\OML/cm
+m/m/it/10.95 z\OT1/cmr/m/n/10.95 ) =$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--285
+
+ []
+
+[7 <./SimulationKPP/fu.png>]
+Overfull \hbox (8.37076pt too wide) in paragraph at lines 335--343
 \T1/cmr/m/n/10.95 On a donc : $\OML/cmm/m/it/10.95 W[] \OT1/cmr/m/n/10.95 = \OM
 L/cmm/m/it/10.95 F\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 W\OT1/cmr/m/n/10.95 )
 $ \T1/cmr/m/n/10.95 avec $\OML/cmm/m/it/10.95 W \OT1/cmr/m/n/10.95 = []$ \T1/cm
@@ -740,557 +778,556 @@ OT1/cmr/m/n/10.95 ) = [] = []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--317
+Underfull \hbox (badness 10000) in paragraph at lines 335--343
 
  []
 
-[7pdfTeX warning (ext4): destination with the same identifier (name{equation.3.
-6}) has been already used, duplicate ignored
+[8pdfTeX warning (ext4): destination with the same identifier (name{equation.3.
+2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.317 	\item
-             $A<1$, le système admet trois équilibres $(0,0)$, $(A,0)$ et ...
-]
-Underfull \hbox (badness 10000) in paragraph at lines 322--324
+l.348 ...-2k(1+A)+kA & -\frac{c}{d}\end{pmatrix}$$
+                                                  ]
+Underfull \hbox (badness 10000) in paragraph at lines 348--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--327
+Underfull \hbox (badness 10000) in paragraph at lines 351--353
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
+Underfull \hbox (badness 10000) in paragraph at lines 355--357
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--340
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 383--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 386--398
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 399--402
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 403--405
+Underfull \hbox (badness 10000) in paragraph at lines 364--366
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 413--416
+Underfull \hbox (badness 10000) in paragraph at lines 409--411
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--418
+Underfull \hbox (badness 10000) in paragraph at lines 412--424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--422
+Underfull \hbox (badness 10000) in paragraph at lines 425--428
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--430
+Underfull \hbox (badness 10000) in paragraph at lines 429--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--433
+Underfull \hbox (badness 10000) in paragraph at lines 439--442
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.6}
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 446--448
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--459
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.2}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.437 \begin{equation}
+l.463 \begin{equation}
                       pdfTeX warning (ext4): destination with the same identifi
-er (name{equation.3.6}) has been already used, duplicate ignored
+er (name{equation.3.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.437 \begin{equation}
+l.463 \begin{equation}
                       pdfTeX warning (ext4): destination with the same identifi
-er (name{equation.3.6}) has been already used, duplicate ignored
+er (name{equation.3.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.437 \begin{equation}
+l.463 \begin{equation}
                       pdfTeX warning (ext4): destination with the same identifi
-er (name{equation.3.6}) has been already used, duplicate ignored
+er (name{equation.3.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.437 \begin{equation}
-                       [10]
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+l.463 \begin{equation}
+                      
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+Underfull \hbox (badness 10000) in paragraph at lines 484--485
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 490--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--466
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
+Underfull \hbox (badness 10000) in paragraph at lines 512--515
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 486--489
-
- []
-
-[11] [12] <SimulationKPP/KPP11.jpg, id=238, 1371.1225pt x 653.44125pt>
+[12] [13] <SimulationKPP/KPP11.jpg, id=280, 1371.1225pt x 653.44125pt>
 File: SimulationKPP/KPP11.jpg Graphic file (type jpg)
 
 <use SimulationKPP/KPP11.jpg>
-Package pdftex.def Info: SimulationKPP/KPP11.jpg used on input line 542.
+Package pdftex.def Info: SimulationKPP/KPP11.jpg used on input line 568.
 (pdftex.def)             Requested size: 203.83417pt x 97.13454pt.
 
-<SimulationKPP/KPP12.jpg, id=239, 1371.1225pt x 653.44125pt>
+<SimulationKPP/KPP12.jpg, id=281, 1371.1225pt x 653.44125pt>
 File: SimulationKPP/KPP12.jpg Graphic file (type jpg)
 
 <use SimulationKPP/KPP12.jpg>
-Package pdftex.def Info: SimulationKPP/KPP12.jpg used on input line 543.
+Package pdftex.def Info: SimulationKPP/KPP12.jpg used on input line 569.
 (pdftex.def)             Requested size: 203.83417pt x 97.13454pt.
 
-<SimulationKPP/KPP14.jpg, id=240, 1371.1225pt x 653.44125pt>
+<SimulationKPP/KPP14.jpg, id=282, 1371.1225pt x 653.44125pt>
 File: SimulationKPP/KPP14.jpg Graphic file (type jpg)
 
 <use SimulationKPP/KPP14.jpg>
-Package pdftex.def Info: SimulationKPP/KPP14.jpg used on input line 544.
+Package pdftex.def Info: SimulationKPP/KPP14.jpg used on input line 570.
 (pdftex.def)             Requested size: 203.83417pt x 97.13454pt.
- [13]
-<SimulationKPP/KPP13.jpg, id=250, 1371.1225pt x 653.44125pt>
+
+<SimulationKPP/KPP13.jpg, id=283, 1371.1225pt x 653.44125pt>
 File: SimulationKPP/KPP13.jpg Graphic file (type jpg)
 
 <use SimulationKPP/KPP13.jpg>
-Package pdftex.def Info: SimulationKPP/KPP13.jpg used on input line 552.
+Package pdftex.def Info: SimulationKPP/KPP13.jpg used on input line 578.
 (pdftex.def)             Requested size: 452.9679pt x 215.87556pt.
 
-<SimulationKPP/KPP15.jpg, id=251, 1371.1225pt x 653.44125pt>
+<SimulationKPP/KPP15.jpg, id=284, 1371.1225pt x 653.44125pt>
 File: SimulationKPP/KPP15.jpg Graphic file (type jpg)
 
 <use SimulationKPP/KPP15.jpg>
-Package pdftex.def Info: SimulationKPP/KPP15.jpg used on input line 553.
+Package pdftex.def Info: SimulationKPP/KPP15.jpg used on input line 579.
 (pdftex.def)             Requested size: 452.9679pt x 215.87556pt.
  [14 <./SimulationKPP/KPP11.jpg> <./SimulationKPP/KPP12.jpg> <./SimulationKPP/K
 PP14.jpg>] [15 <./SimulationKPP/KPP13.jpg> <./SimulationKPP/KPP15.jpg>] <Allee/
-F2311.jpg, id=262, 562.1pt x 421.575pt>
+F2311.jpg, id=299, 562.1pt x 421.575pt>
 File: Allee/F2311.jpg Graphic file (type jpg)
 
 <use Allee/F2311.jpg>
-Package pdftex.def Info: Allee/F2311.jpg used on input line 582.
+Package pdftex.def Info: Allee/F2311.jpg used on input line 608.
 (pdftex.def)             Requested size: 181.18439pt x 135.88452pt.
- <Allee/F4311.jpg, id=263, 562.1pt x 421.575pt>
+ <Allee/F4311.jpg, id=300, 562.1pt x 421.575pt>
 File: Allee/F4311.jpg Graphic file (type jpg)
 
 <use Allee/F4311.jpg>
-Package pdftex.def Info: Allee/F4311.jpg used on input line 583.
+Package pdftex.def Info: Allee/F4311.jpg used on input line 609.
 (pdftex.def)             Requested size: 249.13371pt x 186.85086pt.
- <Allee/311__1_.jpg, id=264, 1204.5pt x 903.375pt>
+ <Allee/311__1_.jpg, id=301, 1204.5pt x 903.375pt>
 File: Allee/311__1_.jpg Graphic file (type jpg)
 
 <use Allee/311__1_.jpg>
-Package pdftex.def Info: Allee/311__1_.jpg used on input line 589.
+Package pdftex.def Info: Allee/311__1_.jpg used on input line 615.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/311__2_.jpg, id=265, 1204.5pt x 903.375pt>
+ <Allee/311__2_.jpg, id=302, 1204.5pt x 903.375pt>
 File: Allee/311__2_.jpg Graphic file (type jpg)
 
 <use Allee/311__2_.jpg>
-Package pdftex.def Info: Allee/311__2_.jpg used on input line 590.
+Package pdftex.def Info: Allee/311__2_.jpg used on input line 616.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/311__3_.jpg, id=266, 1204.5pt x 903.375pt>
+ <Allee/311__3_.jpg, id=303, 1204.5pt x 903.375pt>
 File: Allee/311__3_.jpg Graphic file (type jpg)
 
 <use Allee/311__3_.jpg>
-Package pdftex.def Info: Allee/311__3_.jpg used on input line 591.
+Package pdftex.def Info: Allee/311__3_.jpg used on input line 617.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
  [16 <./Allee/F2311.jpg> <./Allee/F4311.jpg> <./Allee/311__1_.jpg> <./Allee/311
 __2_.jpg> <./Allee/311__3_.jpg>]
-<Allee/F2312.jpg, id=274, 1606.0pt x 785.93625pt>
+<Allee/F2312.jpg, id=311, 1606.0pt x 785.93625pt>
 File: Allee/F2312.jpg Graphic file (type jpg)
  <use Allee/F2312.jpg>
-Package pdftex.def Info: Allee/F2312.jpg used on input line 600.
+Package pdftex.def Info: Allee/F2312.jpg used on input line 626.
 (pdftex.def)             Requested size: 181.18439pt x 88.65985pt.
 
-<Allee/F4312.jpg, id=275, 562.1pt x 421.575pt>
+<Allee/F4312.jpg, id=312, 562.1pt x 421.575pt>
 File: Allee/F4312.jpg Graphic file (type jpg)
  <use Allee/F4312.jpg>
-Package pdftex.def Info: Allee/F4312.jpg used on input line 601.
+Package pdftex.def Info: Allee/F4312.jpg used on input line 627.
 (pdftex.def)             Requested size: 249.13371pt x 186.85086pt.
 
-<Allee/312__1_.jpg, id=276, 1204.5pt x 903.375pt>
+<Allee/312__1_.jpg, id=313, 1204.5pt x 903.375pt>
 File: Allee/312__1_.jpg Graphic file (type jpg)
  <use Allee/312__1_.jpg>
-Package pdftex.def Info: Allee/312__1_.jpg used on input line 608.
+Package pdftex.def Info: Allee/312__1_.jpg used on input line 634.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/312__2_.jpg, id=277, 1204.5pt x 903.375pt>
+<Allee/312__2_.jpg, id=314, 1204.5pt x 903.375pt>
 File: Allee/312__2_.jpg Graphic file (type jpg)
  <use Allee/312__2_.jpg>
-Package pdftex.def Info: Allee/312__2_.jpg used on input line 609.
+Package pdftex.def Info: Allee/312__2_.jpg used on input line 635.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/312__3_.jpg, id=278, 1204.5pt x 903.375pt>
+<Allee/312__3_.jpg, id=315, 1204.5pt x 903.375pt>
 File: Allee/312__3_.jpg Graphic file (type jpg)
  <use Allee/312__3_.jpg>
-Package pdftex.def Info: Allee/312__3_.jpg used on input line 610.
+Package pdftex.def Info: Allee/312__3_.jpg used on input line 636.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/F2322.jpg, id=281, 562.1pt x 421.575pt>
+<Allee/F2322.jpg, id=318, 562.1pt x 421.575pt>
 File: Allee/F2322.jpg Graphic file (type jpg)
  <use Allee/F2322.jpg>
-Package pdftex.def Info: Allee/F2322.jpg used on input line 620.
+Package pdftex.def Info: Allee/F2322.jpg used on input line 646.
 (pdftex.def)             Requested size: 181.18439pt x 135.88452pt.
 
-<Allee/F4322.jpg, id=282, 562.1pt x 421.575pt>
+<Allee/F4322.jpg, id=319, 562.1pt x 421.575pt>
 File: Allee/F4322.jpg Graphic file (type jpg)
  <use Allee/F4322.jpg>
-Package pdftex.def Info: Allee/F4322.jpg used on input line 621.
+Package pdftex.def Info: Allee/F4322.jpg used on input line 647.
 (pdftex.def)             Requested size: 249.13371pt x 186.85086pt.
  [17 <./Allee/F2312.jpg> <./Allee/F4312.jpg> <./Allee/312__1_.jpg> <./Allee/312
-__2_.jpg> <./Allee/312__3_.jpg>] <Allee/322__1_.jpg, id=292, 1204.5pt x 903.375
+__2_.jpg> <./Allee/312__3_.jpg>] <Allee/322__1_.jpg, id=329, 1204.5pt x 903.375
 pt>
 File: Allee/322__1_.jpg Graphic file (type jpg)
 
 <use Allee/322__1_.jpg>
-Package pdftex.def Info: Allee/322__1_.jpg used on input line 627.
+Package pdftex.def Info: Allee/322__1_.jpg used on input line 653.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/322__2_.jpg, id=293, 1204.5pt x 903.375pt>
+ <Allee/322__2_.jpg, id=330, 1204.5pt x 903.375pt>
 File: Allee/322__2_.jpg Graphic file (type jpg)
 
 <use Allee/322__2_.jpg>
-Package pdftex.def Info: Allee/322__2_.jpg used on input line 628.
+Package pdftex.def Info: Allee/322__2_.jpg used on input line 654.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/322__3_.jpg, id=294, 1204.5pt x 903.375pt>
+ <Allee/322__3_.jpg, id=331, 1204.5pt x 903.375pt>
 File: Allee/322__3_.jpg Graphic file (type jpg)
 
 <use Allee/322__3_.jpg>
-Package pdftex.def Info: Allee/322__3_.jpg used on input line 629.
+Package pdftex.def Info: Allee/322__3_.jpg used on input line 655.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/F2323.jpg, id=295, 562.1pt x 421.575pt>
+ <Allee/F2323.jpg, id=332, 562.1pt x 421.575pt>
 File: Allee/F2323.jpg Graphic file (type jpg)
 
 <use Allee/F2323.jpg>
-Package pdftex.def Info: Allee/F2323.jpg used on input line 638.
+Package pdftex.def Info: Allee/F2323.jpg used on input line 664.
 (pdftex.def)             Requested size: 181.18439pt x 135.88452pt.
- <Allee/F4323.jpg, id=296, 562.1pt x 421.575pt>
+ <Allee/F4323.jpg, id=333, 562.1pt x 421.575pt>
 File: Allee/F4323.jpg Graphic file (type jpg)
 
 <use Allee/F4323.jpg>
-Package pdftex.def Info: Allee/F4323.jpg used on input line 639.
+Package pdftex.def Info: Allee/F4323.jpg used on input line 665.
 (pdftex.def)             Requested size: 249.13371pt x 186.85086pt.
  [18 <./Allee/F2322.jpg> <./Allee/F4322.jpg> <./Allee/322__1_.jpg> <./Allee/322
 __2_.jpg> <./Allee/322__3_.jpg>]
-<Allee/323__1_.jpg, id=304, 1204.5pt x 903.375pt>
+<Allee/323__1_.jpg, id=341, 1204.5pt x 903.375pt>
 File: Allee/323__1_.jpg Graphic file (type jpg)
  <use Allee/323__1_.jpg>
-Package pdftex.def Info: Allee/323__1_.jpg used on input line 645.
+Package pdftex.def Info: Allee/323__1_.jpg used on input line 671.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/323__2_.jpg, id=305, 1204.5pt x 903.375pt>
+<Allee/323__2_.jpg, id=342, 1204.5pt x 903.375pt>
 File: Allee/323__2_.jpg Graphic file (type jpg)
  <use Allee/323__2_.jpg>
-Package pdftex.def Info: Allee/323__2_.jpg used on input line 646.
+Package pdftex.def Info: Allee/323__2_.jpg used on input line 672.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/323__3_.jpg, id=306, 1204.5pt x 903.375pt>
+<Allee/323__3_.jpg, id=343, 1204.5pt x 903.375pt>
 File: Allee/323__3_.jpg Graphic file (type jpg)
  <use Allee/323__3_.jpg>
-Package pdftex.def Info: Allee/323__3_.jpg used on input line 647.
+Package pdftex.def Info: Allee/323__3_.jpg used on input line 673.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/F2331.jpg, id=307, 562.1pt x 421.575pt>
+<Allee/F2331.jpg, id=344, 562.1pt x 421.575pt>
 File: Allee/F2331.jpg Graphic file (type jpg)
  <use Allee/F2331.jpg>
-Package pdftex.def Info: Allee/F2331.jpg used on input line 656.
+Package pdftex.def Info: Allee/F2331.jpg used on input line 682.
 (pdftex.def)             Requested size: 181.18439pt x 135.88452pt.
 
-<Allee/F4331.jpg, id=308, 562.1pt x 421.575pt>
+<Allee/F4331.jpg, id=345, 562.1pt x 421.575pt>
 File: Allee/F4331.jpg Graphic file (type jpg)
  <use Allee/F4331.jpg>
-Package pdftex.def Info: Allee/F4331.jpg used on input line 657.
+Package pdftex.def Info: Allee/F4331.jpg used on input line 683.
 (pdftex.def)             Requested size: 249.13371pt x 186.85086pt.
  [19 <./Allee/F2323.jpg> <./Allee/F4323.jpg> <./Allee/323__1_.jpg> <./Allee/323
-__2_.jpg> <./Allee/323__3_.jpg>] <Allee/331__1_.jpg, id=316, 1204.5pt x 903.375
+__2_.jpg> <./Allee/323__3_.jpg>] <Allee/331__1_.jpg, id=353, 1204.5pt x 903.375
 pt>
 File: Allee/331__1_.jpg Graphic file (type jpg)
 
 <use Allee/331__1_.jpg>
-Package pdftex.def Info: Allee/331__1_.jpg used on input line 663.
+Package pdftex.def Info: Allee/331__1_.jpg used on input line 689.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/331__2_.jpg, id=317, 1204.5pt x 903.375pt>
+ <Allee/331__2_.jpg, id=354, 1204.5pt x 903.375pt>
 File: Allee/331__2_.jpg Graphic file (type jpg)
 
 <use Allee/331__2_.jpg>
-Package pdftex.def Info: Allee/331__2_.jpg used on input line 664.
+Package pdftex.def Info: Allee/331__2_.jpg used on input line 690.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/331__3_.jpg, id=318, 1204.5pt x 903.375pt>
+ <Allee/331__3_.jpg, id=355, 1204.5pt x 903.375pt>
 File: Allee/331__3_.jpg Graphic file (type jpg)
 
 <use Allee/331__3_.jpg>
-Package pdftex.def Info: Allee/331__3_.jpg used on input line 665.
+Package pdftex.def Info: Allee/331__3_.jpg used on input line 691.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/F2333.jpg, id=319, 562.1pt x 421.575pt>
+ <Allee/F2333.jpg, id=356, 562.1pt x 421.575pt>
 File: Allee/F2333.jpg Graphic file (type jpg)
 
 <use Allee/F2333.jpg>
-Package pdftex.def Info: Allee/F2333.jpg used on input line 674.
+Package pdftex.def Info: Allee/F2333.jpg used on input line 700.
 (pdftex.def)             Requested size: 181.18439pt x 135.88452pt.
- <Allee/F4333.jpg, id=320, 562.1pt x 421.575pt>
+ <Allee/F4333.jpg, id=357, 562.1pt x 421.575pt>
 File: Allee/F4333.jpg Graphic file (type jpg)
 
 <use Allee/F4333.jpg>
-Package pdftex.def Info: Allee/F4333.jpg used on input line 675.
+Package pdftex.def Info: Allee/F4333.jpg used on input line 701.
 (pdftex.def)             Requested size: 249.13371pt x 186.85086pt.
  [20 <./Allee/F2331.jpg> <./Allee/F4331.jpg> <./Allee/331__1_.jpg> <./Allee/331
 __2_.jpg> <./Allee/331__3_.jpg>]
-<Allee/333__1_.jpg, id=328, 1204.5pt x 903.375pt>
+<Allee/333__1_.jpg, id=365, 1204.5pt x 903.375pt>
 File: Allee/333__1_.jpg Graphic file (type jpg)
  <use Allee/333__1_.jpg>
-Package pdftex.def Info: Allee/333__1_.jpg used on input line 681.
+Package pdftex.def Info: Allee/333__1_.jpg used on input line 707.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/333__2_.jpg, id=329, 1204.5pt x 903.375pt>
+<Allee/333__2_.jpg, id=366, 1204.5pt x 903.375pt>
 File: Allee/333__2_.jpg Graphic file (type jpg)
  <use Allee/333__2_.jpg>
-Package pdftex.def Info: Allee/333__2_.jpg used on input line 682.
+Package pdftex.def Info: Allee/333__2_.jpg used on input line 708.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/333__3_.jpg, id=330, 1204.5pt x 903.375pt>
+<Allee/333__3_.jpg, id=367, 1204.5pt x 903.375pt>
 File: Allee/333__3_.jpg Graphic file (type jpg)
  <use Allee/333__3_.jpg>
-Package pdftex.def Info: Allee/333__3_.jpg used on input line 683.
+Package pdftex.def Info: Allee/333__3_.jpg used on input line 709.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/F2211.jpg, id=331, 562.1pt x 421.575pt>
+<Allee/F2211.jpg, id=368, 562.1pt x 421.575pt>
 File: Allee/F2211.jpg Graphic file (type jpg)
  <use Allee/F2211.jpg>
-Package pdftex.def Info: Allee/F2211.jpg used on input line 695.
+Package pdftex.def Info: Allee/F2211.jpg used on input line 721.
 (pdftex.def)             Requested size: 181.18439pt x 135.88452pt.
 
-<Allee/F4211.jpg, id=332, 562.1pt x 421.575pt>
+<Allee/F4211.jpg, id=369, 562.1pt x 421.575pt>
 File: Allee/F4211.jpg Graphic file (type jpg)
  <use Allee/F4211.jpg>
-Package pdftex.def Info: Allee/F4211.jpg used on input line 696.
+Package pdftex.def Info: Allee/F4211.jpg used on input line 722.
 (pdftex.def)             Requested size: 249.13371pt x 186.85086pt.
  [21 <./Allee/F2333.jpg> <./Allee/F4333.jpg> <./Allee/333__1_.jpg> <./Allee/333
-__2_.jpg> <./Allee/333__3_.jpg>] <Allee/211__1_.jpg, id=341, 1204.5pt x 903.375
+__2_.jpg> <./Allee/333__3_.jpg>] <Allee/211__1_.jpg, id=377, 1204.5pt x 903.375
 pt>
 File: Allee/211__1_.jpg Graphic file (type jpg)
 
 <use Allee/211__1_.jpg>
-Package pdftex.def Info: Allee/211__1_.jpg used on input line 702.
+Package pdftex.def Info: Allee/211__1_.jpg used on input line 728.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/211__2_.jpg, id=342, 1204.5pt x 903.375pt>
+ <Allee/211__2_.jpg, id=378, 1204.5pt x 903.375pt>
 File: Allee/211__2_.jpg Graphic file (type jpg)
 
 <use Allee/211__2_.jpg>
-Package pdftex.def Info: Allee/211__2_.jpg used on input line 703.
+Package pdftex.def Info: Allee/211__2_.jpg used on input line 729.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/211__3_.jpg, id=343, 1204.5pt x 903.375pt>
+ <Allee/211__3_.jpg, id=379, 1204.5pt x 903.375pt>
 File: Allee/211__3_.jpg Graphic file (type jpg)
 
 <use Allee/211__3_.jpg>
-Package pdftex.def Info: Allee/211__3_.jpg used on input line 704.
+Package pdftex.def Info: Allee/211__3_.jpg used on input line 730.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/F2212.jpg, id=344, 562.1pt x 421.575pt>
+ <Allee/F2212.jpg, id=380, 562.1pt x 421.575pt>
 File: Allee/F2212.jpg Graphic file (type jpg)
 
 <use Allee/F2212.jpg>
-Package pdftex.def Info: Allee/F2212.jpg used on input line 713.
+Package pdftex.def Info: Allee/F2212.jpg used on input line 739.
 (pdftex.def)             Requested size: 181.18439pt x 135.88452pt.
- <Allee/F4212.jpg, id=345, 562.1pt x 421.575pt>
+ <Allee/F4212.jpg, id=381, 562.1pt x 421.575pt>
 File: Allee/F4212.jpg Graphic file (type jpg)
 
 <use Allee/F4212.jpg>
-Package pdftex.def Info: Allee/F4212.jpg used on input line 714.
+Package pdftex.def Info: Allee/F4212.jpg used on input line 740.
 (pdftex.def)             Requested size: 249.13371pt x 186.85086pt.
  [22 <./Allee/F2211.jpg> <./Allee/F4211.jpg> <./Allee/211__1_.jpg> <./Allee/211
 __2_.jpg> <./Allee/211__3_.jpg>]
-<Allee/212__1_.jpg, id=353, 1204.5pt x 903.375pt>
+<Allee/212__1_.jpg, id=389, 1204.5pt x 903.375pt>
 File: Allee/212__1_.jpg Graphic file (type jpg)
  <use Allee/212__1_.jpg>
-Package pdftex.def Info: Allee/212__1_.jpg used on input line 720.
+Package pdftex.def Info: Allee/212__1_.jpg used on input line 746.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/212__2_.jpg, id=354, 1204.5pt x 903.375pt>
+<Allee/212__2_.jpg, id=390, 1204.5pt x 903.375pt>
 File: Allee/212__2_.jpg Graphic file (type jpg)
  <use Allee/212__2_.jpg>
-Package pdftex.def Info: Allee/212__2_.jpg used on input line 721.
+Package pdftex.def Info: Allee/212__2_.jpg used on input line 747.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/212__3_.jpg, id=355, 1204.5pt x 903.375pt>
+<Allee/212__3_.jpg, id=391, 1204.5pt x 903.375pt>
 File: Allee/212__3_.jpg Graphic file (type jpg)
  <use Allee/212__3_.jpg>
-Package pdftex.def Info: Allee/212__3_.jpg used on input line 722.
+Package pdftex.def Info: Allee/212__3_.jpg used on input line 748.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/F2222.jpg, id=356, 562.1pt x 421.575pt>
+<Allee/F2222.jpg, id=392, 562.1pt x 421.575pt>
 File: Allee/F2222.jpg Graphic file (type jpg)
  <use Allee/F2222.jpg>
-Package pdftex.def Info: Allee/F2222.jpg used on input line 731.
+Package pdftex.def Info: Allee/F2222.jpg used on input line 757.
 (pdftex.def)             Requested size: 181.18439pt x 135.88452pt.
 
-<Allee/F4222.jpg, id=357, 562.1pt x 421.575pt>
+<Allee/F4222.jpg, id=393, 562.1pt x 421.575pt>
 File: Allee/F4222.jpg Graphic file (type jpg)
  <use Allee/F4222.jpg>
-Package pdftex.def Info: Allee/F4222.jpg used on input line 732.
+Package pdftex.def Info: Allee/F4222.jpg used on input line 758.
 (pdftex.def)             Requested size: 249.13371pt x 186.85086pt.
  [23 <./Allee/F2212.jpg> <./Allee/F4212.jpg> <./Allee/212__1_.jpg> <./Allee/212
-__2_.jpg> <./Allee/212__3_.jpg>] <Allee/222__1_.jpg, id=366, 1204.5pt x 903.375
+__2_.jpg> <./Allee/212__3_.jpg>] <Allee/222__1_.jpg, id=402, 1204.5pt x 903.375
 pt>
 File: Allee/222__1_.jpg Graphic file (type jpg)
 
 <use Allee/222__1_.jpg>
-Package pdftex.def Info: Allee/222__1_.jpg used on input line 738.
+Package pdftex.def Info: Allee/222__1_.jpg used on input line 764.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/222__2_.jpg, id=367, 1204.5pt x 903.375pt>
+ <Allee/222__2_.jpg, id=403, 1204.5pt x 903.375pt>
 File: Allee/222__2_.jpg Graphic file (type jpg)
 
 <use Allee/222__2_.jpg>
-Package pdftex.def Info: Allee/222__2_.jpg used on input line 739.
+Package pdftex.def Info: Allee/222__2_.jpg used on input line 765.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/222__3_.jpg, id=368, 1204.5pt x 903.375pt>
+ <Allee/222__3_.jpg, id=404, 1204.5pt x 903.375pt>
 File: Allee/222__3_.jpg Graphic file (type jpg)
 
 <use Allee/222__3_.jpg>
-Package pdftex.def Info: Allee/222__3_.jpg used on input line 740.
+Package pdftex.def Info: Allee/222__3_.jpg used on input line 766.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
- <Allee/F2223.jpg, id=369, 562.1pt x 421.575pt>
+ <Allee/F2223.jpg, id=405, 562.1pt x 421.575pt>
 File: Allee/F2223.jpg Graphic file (type jpg)
 
 <use Allee/F2223.jpg>
-Package pdftex.def Info: Allee/F2223.jpg used on input line 749.
+Package pdftex.def Info: Allee/F2223.jpg used on input line 775.
 (pdftex.def)             Requested size: 181.18439pt x 135.88452pt.
- <Allee/F4223.jpg, id=370, 562.1pt x 421.575pt>
+ <Allee/F4223.jpg, id=406, 562.1pt x 421.575pt>
 File: Allee/F4223.jpg Graphic file (type jpg)
 
 <use Allee/F4223.jpg>
-Package pdftex.def Info: Allee/F4223.jpg used on input line 750.
+Package pdftex.def Info: Allee/F4223.jpg used on input line 776.
 (pdftex.def)             Requested size: 249.13371pt x 186.85086pt.
  [24 <./Allee/F2222.jpg> <./Allee/F4222.jpg> <./Allee/222__1_.jpg> <./Allee/222
 __2_.jpg> <./Allee/222__3_.jpg>]
-<Allee/223__1_.jpg, id=378, 1204.5pt x 903.375pt>
+<Allee/223__1_.jpg, id=414, 1204.5pt x 903.375pt>
 File: Allee/223__1_.jpg Graphic file (type jpg)
  <use Allee/223__1_.jpg>
-Package pdftex.def Info: Allee/223__1_.jpg used on input line 756.
+Package pdftex.def Info: Allee/223__1_.jpg used on input line 782.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/223__2_.jpg, id=379, 1204.5pt x 903.375pt>
+<Allee/223__2_.jpg, id=415, 1204.5pt x 903.375pt>
 File: Allee/223__2_.jpg Graphic file (type jpg)
  <use Allee/223__2_.jpg>
-Package pdftex.def Info: Allee/223__2_.jpg used on input line 757.
+Package pdftex.def Info: Allee/223__2_.jpg used on input line 783.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-<Allee/223__3_.jpg, id=380, 1204.5pt x 903.375pt>
+<Allee/223__3_.jpg, id=416, 1204.5pt x 903.375pt>
 File: Allee/223__3_.jpg Graphic file (type jpg)
  <use Allee/223__3_.jpg>
-Package pdftex.def Info: Allee/223__3_.jpg used on input line 758.
+Package pdftex.def Info: Allee/223__3_.jpg used on input line 784.
 (pdftex.def)             Requested size: 135.89174pt x 101.90788pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 765--767
+Underfull \hbox (badness 10000) in paragraph at lines 791--793
 
  []
 
 [25 <./Allee/F2223.jpg> <./Allee/F4223.jpg> <./Allee/223__1_.jpg> <./Allee/223_
 _2_.jpg> <./Allee/223__3_.jpg>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 773.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 799.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (10.10173pt too wide) in paragraph at lines 773--774
+Overfull \hbox (10.10173pt too wide) in paragraph at lines 799--800
 []$\T1/cmtt/m/n/10.95 https : / / www . researchgate . net / publication / 2994
 11516 _ Reponse _ demographique _ des _$
  []
 
 
-Overfull \hbox (44.05196pt too wide) in paragraph at lines 773--774
+Overfull \hbox (44.05196pt too wide) in paragraph at lines 799--800
 $\T1/cmtt/m/n/10.95 Neandertaliens _ face _ aux _ pressions _ environnementales
  _ du _ stade _ isotopique _ 3 _ approche _$
  []
 
 
-Overfull \hbox (32.75407pt too wide) in paragraph at lines 776--777
+Overfull \hbox (32.75407pt too wide) in paragraph at lines 802--803
 []\T1/cmr/m/n/10.95 A.KANDLER R.UNGER. Po-pu-la-tion Dis-per-sal Via Diffusion-
 reaction Equa-tions [en ligne].Techn.
  []
 
 
-Overfull \hbox (29.07684pt too wide) in paragraph at lines 776--777
+Overfull \hbox (29.07684pt too wide) in paragraph at lines 802--803
 $\T1/cmtt/m/n/10.95 de / ~uro / publications / Kandler-[]Unger-[]-[]Population 
 _ dispersal _ via _ diffusion-[]reaction _$
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 780.
+LaTeX Warning: Reference `Eq2' on page 26 undefined on input line 806.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 780.
+(hyperref)                removing `\hbox' on input line 806.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 780.
+(hyperref)                removing `\mathsurround' on input line 806.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\unskip' on input line 780.
+(hyperref)                removing `\z@' on input line 806.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@italiccorr' on input line 780.
+(hyperref)                removing `\unskip' on input line 806.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 802.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@italiccorr' on input line 806.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 828.
 [26]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 802.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 828.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 802.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 802.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 828.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 828.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: C24B266110DDF54EFBED829EB37CEBAB;2303.
 
 
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 7B92440B933D1A7D09D56230F23DA6E1;1889
-(rerunfilecheck)             After:  CFD6C6BBFFD50F1FFE31748647AABC74;2302.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 802.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 828.
  ) 
 Here is how much of TeX's memory you used:
- 8111 strings out of 493673
- 116049 string characters out of 3141526
- 208235 words of memory out of 3000000
- 11176 multiletter control sequences out of 15000+200000
+ 8125 strings out of 493673
+ 116346 string characters out of 3141526
+ 208227 words of memory out of 3000000
+ 11187 multiletter control sequences out of 15000+200000
  19827 words of font info for 52 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 29i,11n,31p,901b,796s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,11n,31p,901b,584s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\yadimy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ectt1095.pk> <C:\Users\yadimy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ecti1095.pk> <C:\Users\yadimy\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
@@ -1318,9 +1355,9 @@ cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
 s/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb>
-Output written on main.pdf (28 pages, 2339098 bytes).
+Output written on main.pdf (28 pages, 2358389 bytes).
 PDF statistics:
- 870 PDF objects out of 1000 (max. 8388607)
- 112 named destinations out of 1000 (max. 500000)
- 483 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 901 PDF objects out of 1000 (max. 8388607)
+ 113 named destinations out of 1000 (max. 500000)
+ 541 words of extra memory for PDF output out of 10000 (max. 10000000)
 
