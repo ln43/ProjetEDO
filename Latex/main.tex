@@ -161,23 +161,24 @@ $$f^\prime(u)= \alpha - 2 \alpha \dfrac{u}{K} $$
 
 \subsubsection{Analyse de la réaction-diffusion}
 \setcounter{equation}{0}
-L'idee est de representer la solution de notre equation de
-reaction-diusion sous forme d'un front qui se deplace dans l'espace a une vitesse constante.
-Soit u la solution de notre équation de reaction-diffusion dans $\mathbb{R}$.
+L'idée est de représenter la solution de notre équation de
+réaction-diffusion sous forme d'un front d'onde qui se deplace dans l'espace à vitesse constante.
+Soit u la solution de notre équation de réaction-diffusion dans $\mathbb{R}$.
 
 \noindent On pose $z=x-ct$, $U:z\rightarrow U(z)$.\\
-On ecrit alors notre solution sous la forme
+On écrit alors notre solution sous la forme 
 \begin{equation*}
 u(t,x)=U(x-ct)=U(z)
 \end{equation*}
 U est la forme de l'onde et c sa vitesse.\\
 
-On peut montrer (Voir Annexe 1) que ~\eqref{Eq1} est équivalent à :
+\noindent On peut montrer (Voir Annexe 1) que ~\eqref{Eq1} est équivalent à :
+
 \begin{equation*}
-dU"(z)+c U'(z)+\alpha U(z)(1-\dfrac{U(Z)}{K})=0\\
+dU"(z)+c U'(z)+\alpha U(z)(1-\dfrac{U(Z)}{K})=0
 \end{equation*} 
 
-On a donc (U, c) solution du problème suivant :
+\noindent On a donc (U, c) solution du problème suivant :
 \begin{equation} 
 \left\{
 \begin{array}{lcl}
@@ -275,11 +276,11 @@ f possède deux équilibres $0$ et $K$ tels que $0 < K$ :\\
     
     Le plus petit équilibre $0$ est instable et le plus grand $K$ est stable donc l'équation de réaction-diffusion est \textbf{monostable}. \\
 
-Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le probleme \ref{PbKPP } a une solution, et donc une infinite de solutions (U,c). Plus precisesement, pour le cas KPP et monostable, il existe un vitesse minimale c$_0 >0$ unique telle que quelque soit $c  \geqslant c_0$ l'equation \ref{PbKPP } a une solution $U_c$ unique a translation près.
+Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le problème \ref{PbKPP } a une solution, et donc une infinité de solutions (U,c). Plus precisément, pour le cas KPP et monostable, il existe un vitesse minimale c$_0 >0$ unique telle que quelque soit $c  \geqslant c_0$ l'equation \ref{PbKPP } a une solution $U_c$ unique à translation près.
 
     Il existe donc une vitesse minimale $c_0$ telle que pour toute vitesse supérieure, on a existence d'un front d'onde U(z) monotone, solution de l'EDO avec les conditions aux bords $\lim_{z \to +\infty} U(z)=0$ et $\lim_{z \to -\infty} U(z)=K$. \\
     
-    De plus comme $ f^\prime(u)< f^\prime(0)$ pour un voisinnage de $0$ alors : \\
+    De plus comme $ f^\prime(u)< f^\prime(0)$ pour un voisinage de $0$ alors : \\
     $c_0=2 \sqrt{f^\prime(0)}= 2 \sqrt{\alpha - 2 \frac{\alpha}{K} \times 0} = 2 \sqrt{\alpha}$
     On peut donc déterminer la vitesse de cette propagation. \\
     
@@ -860,7 +861,7 @@ Les processus ayant mené à l'extinction de Néandertal ne sont pas encore parf
 De plus, les interactions de Néandertal avec Homo Sapiens sont complexes et pas encore bien connues. On sait que les deux espèces se sont croisées, hybridées, et que Néandertal a transmis à l'Homme Moderne une partie de son génôme.\\
 Les modèles logistique et Allee permettent, sous réserve que les paramètres vérifient certaines conditions, de faire apparaître l'extinction de la population Néandertalienne. \\
 Cependant, l'hypothèse la plus couramment invoquée pour expliquer l'extinction de \textit{Homo Neanderthalensis} est celle de la compétition avec \textit{Homo Sapiens}, qui aurait forcé Néandertal à reculer dans des zones plus isolées.\\
-Bien que le modèle de compétition choisi dans ce projet ne rende pas compte de la complexité du monde vivant à cette époque ni des pressions de l'environnement qui ont influencé l'évolution de toutes les populations d'Homme, il nous permet de visualiser une évolution simplifiée des populations, qui conduit à l'extinction définitive de \textit{Homo Neanderthalensis}
+Bien que le modèle de compétition choisi dans ce projet ne rende pas compte de la complexité du monde vivant à cette époque ni des pressions de l'environnement qui ont influencé l'évolution de toutes les populations d'Homme, il nous permet de visualiser une évolution simplifiée des populations, qui conduit à l'extinction définitive de \textit{Homo Neanderthalensis}.
 \section{Bibliographie}
 \begin{itemize}
     \item MURRAY J.D. Mathematical Biology, II : Spatial Models and Biomedical Applications. Springer.
