@@ -48,6 +48,6 @@
 \contentsline {paragraph}{Cas 2.4 : $d=0.05, A=0.75 (k=7.1), u_0=0.9$}{26}{section*.23}
 \contentsline {subsection}{\numberline {4.5}Syst\IeC {\`e}me de Lotka-Volterra}{27}{subsection.4.5}
 \contentsline {section}{\numberline {5}Interpr\IeC {\'e}tation biologique}{28}{section.5}
-\contentsline {section}{\numberline {6}Bibliographie}{28}{section.6}
-\contentsline {section}{\numberline {7}Annexe}{28}{section.7}
-\contentsline {subsection}{\numberline {7.1}D\IeC {\'e}monstration Equation ~\textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {Eq2}\unskip \@@italiccorr )}}}{28}{subsection.7.1}
+\contentsline {section}{\numberline {6}Bibliographie}{29}{section.6}
+\contentsline {section}{\numberline {7}Annexe}{29}{section.7}
+\contentsline {subsection}{\numberline {7.1}D\IeC {\'e}monstration Equation ~\textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {Eq2}\unskip \@@italiccorr )}}}{29}{subsection.7.1}
