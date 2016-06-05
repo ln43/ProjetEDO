@@ -10,9 +10,9 @@ close all;
 clear all;
 
 d=0.5;
-alpha=0.5;
-K=0.8;
-u0=1;
+alpha=0.02;
+K=0.5;
+u0=0.01;
 
 a = -50;
 b = 50;
@@ -49,7 +49,7 @@ index1=1;
 figure(1)
 subplot(2,3,ind)
 surf(x,y,u,'edgecolor','none');
-axis([a b a b 0 1])
+axis([a b a b 0 0.3])
 xlabel('x')
 ylabel('y')
 zlabel('u')
