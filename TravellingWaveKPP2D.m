@@ -25,37 +25,27 @@ y = a:h:b;
 dt = 0.01; % time steps
 tend = 100; 
 
-e=ones(nv, 1);
-
-% Discretization of the Laplace operator with Neumann bc
-
-
 % initial guess
 u = zeros(201,201);
 for i=1:1:201
     for j=1:1:201
         r= (i-100).^2 + (j-100).^2 ;
         if (r<10) 
-            u(i,j)=u0* exp(-0.01*r);%*((i-100).^2 + (j-100).^2 ) ;
+            u(i,j)=u0* exp(-0.01*r);
         end   
-%         if i>80 & i<120 & j<120 & j>80
-%             u(i,j)=u0*(i.^2 + j.^2 ) ;
-%         end
     end
 end
 counter=1;
-ind=1;
+% ind=1;
 index1=1;
-figure(1)
-subplot(2,3,ind)
-surf(x,y,u,'edgecolor','none');
-axis([a b a b 0 0.3])
-xlabel('x')
-ylabel('y')
-zlabel('u')
-title('Condition initiale');
-saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
-ind=ind+1;
+% figure(1)
+% surf(x,y,u,'edgecolor','none');
+% axis([a b a b 0 1])
+% xlabel('x')
+% ylabel('y')
+% zlabel('u')
+% saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
+% ind=ind+1;
 
     % fonction KPP
     function y=KPP(u)
@@ -66,23 +56,19 @@ ind=ind+1;
 for t=dt:dt:tend
     u = u + dt .* (d.*del2(u,h,h) +  KPP(u));
     counter=counter+1;
-    %if(mod(counter,10) == 0 && ind <=12)
     index1=index1+1;
-    if(mod(counter,2000) ==0 )
-        figure(1)
-        subplot(2,3,ind)
-       
-        surf(x,y,u,'edgecolor','none');
-        axis([a b a b 0 1])
-        xlabel('x')
-        ylabel('y')
-        zlabel('u')
-        title(['t=' num2str(t+0.01)]);
-        saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
-        ind=ind+1;
-    end    
+%     if(mod(counter,1000) == 0)
+%         figure(1)
+%         subplot(2,3,ind)
+%         surf(x,y,u,'edgecolor','none');
+%         axis([a b a b 0 1])
+%         xlabel('x')
+%         ylabel('y')
+%         zlabel('u')
+%         saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
+%         ind=ind+1;
+%     end    
     if(mod(counter,100) == 0)
-        %ajout animation je sais pas trop si ca marche vraiment !!
         figure(2);
         surf(x,y,u,'edgecolor','none');
         axis([a b a b 0 1]);
