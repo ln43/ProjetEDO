@@ -28,26 +28,25 @@
 \contentsline {paragraph}{Mod\IeC {\'e}lisation 2D}{14}{section*.11}
 \contentsline {subsection}{\numberline {4.3}Croissance Logistique}{14}{subsection.4.3}
 \contentsline {subsubsection}{\numberline {4.3.1}Simulation propagation fronts d'onde}{14}{subsubsection.4.3.1}
-\contentsline {paragraph}{Cas 1.1 : d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.5$}{14}{section*.12}
-\contentsline {subsubsection}{\numberline {4.3.2}Simulation de l'effet hair trigger}{15}{subsubsection.4.3.2}
-\contentsline {subsubsection}{\numberline {4.3.3}Constante de diffusion d=0.5}{15}{subsubsection.4.3.3}
-\contentsline {paragraph}{Cas 1.1 : d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.5$}{15}{section*.13}
-\contentsline {subsubsection}{\numberline {4.3.4}Effets de barri\IeC {\`e}res g\IeC {\'e}ographiques ou variations environnementales}{17}{subsubsection.4.3.4}
+\contentsline {paragraph}{On prend comme valeur des param\IeC {\`e}tres d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.5$}{14}{section*.12}
+\contentsline {subsubsection}{\numberline {4.3.2}Simulation de l'effet "hair trigger"}{15}{subsubsection.4.3.2}
+\contentsline {paragraph}{Cas 1.1 : d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.1$}{15}{figure.6}
+\contentsline {subsubsection}{\numberline {4.3.3}Effets de barri\IeC {\`e}res g\IeC {\'e}ographiques ou variations environnementales}{16}{subsubsection.4.3.3}
 \contentsline {subsection}{\numberline {4.4}Effet Allee}{18}{subsection.4.4}
 \contentsline {subsubsection}{\numberline {4.4.1}Constante de diffusion d=0.5}{18}{subsubsection.4.4.1}
 \contentsline {paragraph}{Cas 1.1 : $d=0.5, A=0.25 (k=64), u_0=0.1$}{18}{section*.14}
 \contentsline {paragraph}{Cas 1.2 : $d=0.5, A=0.25 (k=64), u_0=0.5$}{19}{section*.15}
-\contentsline {paragraph}{Cas 1.3 : $d=0.5, A=0.75 (k=7.1), u_0=0.5$}{19}{section*.16}
-\contentsline {paragraph}{Cas 1.4 : $d=0.5, A=0.75 (k=7.1), u_0=0.9$}{20}{section*.17}
-\contentsline {paragraph}{Cas 1.5 : $d=0.5, A=0.5 (k=16), u_0=0.1$}{21}{section*.18}
-\contentsline {paragraph}{Cas 1.6 : $d=0.5, A=0.5 (k=16), u_0=0.9$}{22}{section*.19}
-\contentsline {subsubsection}{\numberline {4.4.2}Constante de diffusion d=0.05}{23}{subsubsection.4.4.2}
-\contentsline {paragraph}{Cas 2.1 : $d=0.05, A=0.25 (k=64), u_0=0.1$}{23}{section*.20}
-\contentsline {paragraph}{Cas 2.2 : $d=0.05, A=0.25 (k=64), u_0=0.5$}{24}{section*.21}
-\contentsline {paragraph}{Cas 2.3 : $d=0.05, A=0.75 (k=7.1), u_0=0.5$}{25}{section*.22}
-\contentsline {paragraph}{Cas 2.4 : $d=0.05, A=0.75 (k=7.1), u_0=0.9$}{26}{section*.23}
-\contentsline {subsection}{\numberline {4.5}Syst\IeC {\`e}me de Lotka-Volterra}{27}{subsection.4.5}
-\contentsline {section}{\numberline {5}Interpr\IeC {\'e}tation biologique}{28}{section.5}
-\contentsline {section}{\numberline {6}Bibliographie}{28}{section.6}
-\contentsline {section}{\numberline {7}Annexe}{28}{section.7}
-\contentsline {subsection}{\numberline {7.1}D\IeC {\'e}monstration Equation ~\textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {Eq2}\unskip \@@italiccorr )}}}{28}{subsection.7.1}
+\contentsline {paragraph}{Cas 1.3 : $d=0.5, A=0.75 (k=7.1), u_0=0.5$}{20}{section*.16}
+\contentsline {paragraph}{Cas 1.4 : $d=0.5, A=0.75 (k=7.1), u_0=0.9$}{21}{section*.17}
+\contentsline {paragraph}{Cas 1.5 : $d=0.5, A=0.5 (k=16), u_0=0.1$}{22}{section*.18}
+\contentsline {paragraph}{Cas 1.6 : $d=0.5, A=0.5 (k=16), u_0=0.9$}{23}{section*.19}
+\contentsline {subsubsection}{\numberline {4.4.2}Constante de diffusion d=0.05}{24}{subsubsection.4.4.2}
+\contentsline {paragraph}{Cas 2.1 : $d=0.05, A=0.25 (k=64), u_0=0.1$}{24}{section*.20}
+\contentsline {paragraph}{Cas 2.2 : $d=0.05, A=0.25 (k=64), u_0=0.5$}{25}{section*.21}
+\contentsline {paragraph}{Cas 2.3 : $d=0.05, A=0.75 (k=7.1), u_0=0.5$}{26}{section*.22}
+\contentsline {paragraph}{Cas 2.4 : $d=0.05, A=0.75 (k=7.1), u_0=0.9$}{27}{section*.23}
+\contentsline {subsection}{\numberline {4.5}Syst\IeC {\`e}me de Lotka-Volterra}{28}{subsection.4.5}
+\contentsline {section}{\numberline {5}Interpr\IeC {\'e}tation biologique}{29}{section.5}
+\contentsline {section}{\numberline {6}Bibliographie}{29}{section.6}
+\contentsline {section}{\numberline {7}Annexe}{29}{section.7}
+\contentsline {subsection}{\numberline {7.1}D\IeC {\'e}monstration Equation ~\textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {Eq2}\unskip \@@italiccorr )}}}{29}{subsection.7.1}

@@ -12,7 +12,7 @@ clear all;
 d=0.5;
 alpha=0.5;
 K=0.8;
-u0=0.9;
+u0=0.1;
 
 a = -100;
 b = 100;
@@ -111,7 +111,7 @@ for t=dt:dt:tend
         subplot(2,4,ind)
        
         surf(x,y,u,'edgecolor','none');
-        axis([a b a b 0 1])
+        axis([a b a b 0 0.5])
         xlabel('x')
         ylabel('y')
         zlabel('u')
@@ -123,8 +123,11 @@ for t=dt:dt:tend
         %ajout animation je sais pas trop si ca marche vraiment !!
         figure(2);
         surf(x,y,u,'edgecolor','none');
+        xlabel('x')
+        ylabel('y')
+        zlabel('u')
         axis([a b a b 0 1]);
-        title(['Propagation de l''onde avec une croissance logistique K =', num2str(K),', \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)])
+        title(['Propagation de l''onde avec une croissance logistique K variable,  \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)])
         drawnow;
         MOVI(index1) = getframe; % creation de l'animation
     end    
@@ -132,7 +135,7 @@ for t=dt:dt:tend
 end
 
 figure(1)
-suplabel(['Propagation de l''onde avec une croissance logistique K =', num2str(K),', \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)])
+suplabel(['Propagation de l''onde avec une croissance logistique K variable,  \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)])
 
 % 
 % surf(x,y,u,'edgecolor','none');
