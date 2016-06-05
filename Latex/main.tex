@@ -560,7 +560,7 @@ En pratique, nous n'avons pas accès à ces valeurs. Nous testerons donc différ
 \subsection{Type de simulations réalisées}
 \paragraph{Modélisation 1D}
 On considère la diffusion selon une seule dimension. L'espace est donc représenté par une droite x allant de -50 à 50.\\
-On sait que la population se répartie souvent selon une gaussienne à un endroit. Pour cela, on considère comme condition initiale une population qui se répartit selon une loi :  $u_0 e^{-0.01*x^2}$ . (On fait varier $u_0$ en fonction des simulations).
+On sait que la population se répartit souvent selon une gaussienne à un endroit. Pour cela, on considère comme condition initiale une population qui se répartit selon une loi :  $u_0 e^{-0.01*x^2}$ . (On fait varier $u_0$ en fonction des simulations).
 On a choisi  de représenter les fronts d'ondes pour différents temps ainsi que de réaliser le graphique 3D de u en fonction de x et t
 
 \paragraph{Modélisation 2D}
@@ -636,10 +636,15 @@ On décide de modéliser l'effet d'une barrière géographique franchissable com
 	\label{MontagneBis}
 \end{figure}
 
-On observe que la présence de la montagne n'a pas d'effets sur la population, qui arrive à la dépasser pour rejoindre une autre zone. Une fois la population de l'autre côté elle arrive à croitre sans problème.
+On observe que la présence de la montagne n'a pas d'effets sur la population, qui arrive à la dépasser pour rejoindre une autre zone. Une fois la population de l'autre côté elle arrive à croître sans problème.
 
+<<<<<<< HEAD
 \textbf{Effet d'une barrière géographique infranchissable}
 On modélise ici par exemple un océan ou le pôle nord qui par un changement de climat entre les deux zones rend la vie impossible. En effet la température y est plus faible et les ressources moins importantes. En prend donc un K très petit sur une large zone, à gauche de la diagonale. 
+=======
+\textbf{Effet d'un changement de climat}
+On modélise ici le changement de climat entre deux zones, par exemple avec le pôle nord où la température est plus faible et les ressources moins importantes. On prend donc un K très petit sur une large zone. 
+>>>>>>> refs/remotes/origin/master
 
 \begin{figure}[H]
 	\centering
@@ -660,6 +665,10 @@ On observe que la population se répend dans la zone où elle peut survivre.
 Toutefois, on vois que le modèle de croissance logique ne prend pas en compte l'effet d'une toute petite population sur sa survie. 
 
 
+<<<<<<< HEAD
+=======
+Toutefois, on vois que le modèle de croissance logistique ne prend pas en compte l'effet d'une toute petite population sur sa survie. 
+>>>>>>> refs/remotes/origin/master
 \subsection{Effet Allee}
 
 \subsubsection{Constante de diffusion d=0.5}
@@ -853,15 +862,35 @@ On se situe enfin dans le cas où $A>0.5$ et $u_0>A$. Comme dans le cas 1.4, la 
 
 Dans cette simulation, les paramètres sont choisis de façon à vérifier les hypothèses énoncées lors de l'analyse mathématique, à savoir : $\gamma_1 < \frac{K_1}{K_2}$ et $\gamma_2 > \frac{K_2}{K_1}$. On supposera de plus que $\alpha_1 = \alpha_2 = 0.6$ et que $K_1 = K_2 = 0.2$. On choisit donc $\gamma_1 = 0.5$ et $\gamma_2 = 1.5$.\\
 Les constantes de diffusion sont $d_1 = 0.5$ (pour les Hommes Modernes) et $d_2 = 0.05$ (pour Néandertal).\\
+On prend des densités de population initiales $u(0,0) = 0.03$ et $v(0,0) = K = 0.2$.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\linewidth]{Comp/neand.png}
+\includegraphics[width=0.45\linewidth]{Comp/homo.png}
+\caption{Evolution des fronts d'onde au cours du temps}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{Comp/CompDiff2.png}
+\caption{Diffusion 1D}
+\end{figure}
+
+La population d'Homo Sapiens croît très rapidement au cours du temps jusqu'à atteindre la capacité de soutien $K$, et grâce au phénomène de diffusion colonise également l'espace, ici représenté par une droite. La constante de diffusion choisie très faible pour Néandertal est responsable de la diminution rapide de la population.
 
 \section{Interprétation biologique}
+
+Les processus ayant mené à l'extinction de Néandertal ne sont pas encore parfaitement compris. Les données biologiques disponibles sont encore insuffisantes pour construire un modèle mathématique parfaitement pertinent.
+De plus, les interactions de Néandertal avec Homo Sapiens sont complexes et pas encore bien connues. On sait que les deux espèces se sont croisées, hybridées, et que Néandertal a transmis à l'Homme Moderne une partie de son génôme.\\
+Si le modèle de compétition choisi dans ce projet semble le plus pertinent, il ne rend pas compte de toute la complexité du monde vivant à cette époque, et des pressions de l'environnement qui ont influencé l'évolution de toutes les populations d'Homme.
 \section{Bibliographie}
 \begin{itemize}
-    \item J.D. MURRAY. \textit{Mathematical Biology, II : Spatial Models and Biomedical Applications}. Springer.
+    \item MURRAY J.D. Mathematical Biology, II : Spatial Models and Biomedical Applications. Springer.
+    \item CURRAT M. EXCOFFIER L. (2004) Modern Humans Did Not Admix with Neanderthals during Their Range Expansion into Europe. PLoS Biol 2(12): e421. Disponible sur : \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC532389/}
 	\item V FABRE. Réponse démographique des Néandertaliens face aux pressions environnementales du stade isotopique3 : approche par modélisation écologique.[en ligne] Thèse Anthropologie Biologique. Aix-Marseille : Université d'Aix Marseille, 2011, 395p. Disponible sur : \url{ https://www.researchgate.net/publication/299411516_Reponse_demographique_des_Neandertaliens_face_aux_pressions_environnementales_du_stade_isotopique_3_approche_par_modelisation_ecologique}
-	\item STEELE, James (2009) "Human Dispersals: Mathematical Models and the Archaeological Record," Human Biology: Vol. 81: Iss. 2-3, Article 2. Disponible sur: \url{http://digitalcommons.wayne.edu/humbiol/vol81/iss2/2}
-    \item UNIVERSITY OF CAMBRIDGE. Teaching Reaction diffusion equations Michaelmas  2011 [en ligne]. Disponible sur : \url{https://homepage.univie.ac.at/marie-therese.wolfram/teaching.html} (consulté le 26.05.2016)
+	\item STEELE J. (2009). Human Dispersals: Mathematical Models and the Archaeological Record. Human Biology: Vol. 81: Iss. 2-3, Article 2. Disponible sur: \url{http://digitalcommons.wayne.edu/humbiol/vol81/iss2/2}
+    \item UNIVERSITY OF CAMBRIDGE (2011) Teaching Reaction diffusion equations Michaelmas [en ligne]. Disponible sur : \url{https://homepage.univie.ac.at/marie-therese.wolfram/teaching.html} (consulté le 26.05.2016)
     \item A.KANDLER R.UNGER. Population Dispersal Via Diffusion-reaction Equations [en ligne].Techn. Univ., Fak. für Mathematik, 2010, 62p. Disponible sur \url{https://www-user.tu-chemnitz.de/~uro/publications/Kandler-Unger--Population_dispersal_via_diffusion-reaction_equations.pdf}
 \end{itemize}
 

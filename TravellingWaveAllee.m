@@ -54,12 +54,12 @@ for t=dt:dt:tend
     counter=counter+1;
     ustore(counter,:) = u;   
     index1=index1+1;
-    if(mod(counter,1000) == 0)
-        figure(2)
-        plot(x,u);
-        hold on
-        legendInfo{counter/1000+1}=['t=' num2str(counter)];
-    end
+%     if(mod(counter,1000) == 0)
+%         figure(2)
+%         plot(x,u);
+%         hold on
+%         legendInfo{counter/1000+1}=['t=' num2str(counter)];
+%     end
     if(mod(counter,50) == 0)
         figure(4);
         plot(x,u,'green','LineWidth',2);

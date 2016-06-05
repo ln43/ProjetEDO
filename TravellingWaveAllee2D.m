@@ -8,10 +8,10 @@ function sol=TravellingWaveAllee2D()
 close all;
 clear all;
 
-d=0.05;
-A=0.75;
+d=0.5;
+A=0.25;
 k=4/(1-A)^2;
-u0=0.9;
+u0=0.6;
 
 a = -50;
 b = 50;
@@ -22,7 +22,7 @@ nv = nel+1;% number of vertices
 x = a:h:b; % mesh
 y = a:h:b;
 dt = 0.01; % time steps
-tend = 50; 
+tend = 100; 
 
 e=ones(nv, 1);
 
@@ -38,15 +38,15 @@ for i=1:1:201
 end
 counter=1;
 index1=1;
-ind=1;
-figure(1)
-surf(x,y,u,'edgecolor','none');
-axis([a b a b 0 1])
-xlabel('x')
-ylabel('y')
-zlabel('u')
-saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
-ind=ind+1;
+% ind=1;
+% figure(1)
+% surf(x,y,u,'edgecolor','none');
+% axis([a b a b 0 1])
+% xlabel('x')
+% ylabel('y')
+% zlabel('u')
+% saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
+% ind=ind+1;
 
     % fonction Allee
     function y=Allee(u)
@@ -58,31 +58,30 @@ for t=dt:dt:tend
     u = u + dt .* (d.*del2(u,h,h) +  Allee(u));
     counter=counter+1;
     index1=index1+1;
-    if(mod(counter,500) == 0 && ind<3)
-        surf(x,y,u,'edgecolor','none');
-        axis([a b a b 0 1])
-        xlabel('x')
-        ylabel('y')
-        zlabel('u')
-        saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
-        ind=ind+1;
-    end 
-    if(mod(counter,10) == 0)
-%         %ajout animation je sais pas trop si ca marche vraiment !!
-%         figure(2);
+%     if(mod(counter,500) == 0 && ind<3)
 %         surf(x,y,u,'edgecolor','none');
-%         axis([a b a b 0 1]);
-%         drawnow;
-%         title(['Propagation de l''onde avec effet Allee A =', num2str(A),', d =', num2str(d),', u_0 =', num2str(u0),' et k =', num2str(k)])
-%         MOVI(index1) = getframe; % creation de l'animation
+%         axis([a b a b 0 1])
+%         xlabel('x')
+%         ylabel('y')
+%         zlabel('u')
+%         saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
+%         ind=ind+1;
+%     end 
+    if(mod(counter,10) == 0)
+        %ajout animation je sais pas trop si ca marche vraiment !!
+        figure(2);
+        surf(x,y,u,'edgecolor','none');
+        axis([a b a b 0 1]);
+        drawnow;
+        MOVI(index1) = getframe; % creation de l'animation
     end    
 end
 
-surf(x,y,u,'edgecolor','none');
-axis([a b a b 0 1])
-xlabel('x')
-ylabel('y')
-zlabel('u')
-saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
+% surf(x,y,u,'edgecolor','none');
+% axis([a b a b 0 1])
+% xlabel('x')
+% ylabel('y')
+% zlabel('u')
+% saveas(figure(1),strcat('F',num2str(ind)),'jpeg')
 
 end

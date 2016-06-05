@@ -1,0 +1,101 @@
+\documentclass[10pt]{beamer}
+
+\usetheme[]{JuanLesPins}
+\setbeamercolor{structure}{fg=brown}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+%-------------------------------------------------------
+% INCLUDE PACKAGES
+%-------------------------------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{cases}
+
+%-------------------------------------------------------
+% INFORMATION IN THE TITLE PAGE
+%-------------------------------------------------------
+
+\title[Population Néanderthal]{\textbf{Evolution de la population d'Homo Néanderthal}}
+\author[Y. Adimy M. Simon H. Vassal]{Y. Adimy M. Simon H. Vassal}
+\institute[]{INSA Lyon - Bioinformatique et Modélisation}
+\date{13 Juin 2016}
+\titlegraphic{\includegraphics[width=3cm]{neanderthal-sapiens.jpg}}
+\logo{\includegraphics[scale=0.1]{logo_insa.png}}
+
+%-------------------------------------------------------
+% THE BODY OF THE PRESENTATION
+%-------------------------------------------------------
+
+\begin{document}
+
+%-------------------------------------------------------
+% THE TITLEPAGE
+%-------------------------------------------------------
+
+\begin{frame}[plain,noframenumbering] 
+   \titlepage
+   \insertlogo
+\end{frame}
+
+\begin{frame}{Contexte biologique}{}
+\end{frame}
+
+\begin{frame}{Présentation des modèles étudiés}{Cadre général}
+\begin{block}{Modèle général}
+	\begin{equation}
+		\frac{\partial u(t,x)}{\partial t}=f(u(t,x))+d\Delta u(t,x), \quad t \in \mathbb{R}, x \in \mathbb{R}
+	\end{equation}
+\end{block}
+\begin{itemize}
+	\item u(t,x) : Densité de population  $\ \in[0,1]$ 
+    \item $d$ : Constante de diffusion 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Présentation des modèles étudiés}{Croissance logistique}
+\begin{block}{Croissance Logistique}
+	$$\frac{\partial u(t,x)}{\partial t}=f(u(t,x))+d\Delta u(t,x)$$
+	$$f(u(t,x))=\alpha u (1 - \dfrac{u}{K}) $$
+\end{block}
+\begin{itemize}
+    \item $K$ : Capacité de transport 
+    \item $\alpha$ : Taux de croissance maximum
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Présentation des modèles étudiés}{Modèle Allee}
+\begin{block}{Modèle Allee}
+	$$\frac{\partial u(t,x)}{\partial t}=f(u(t,x))+d\Delta u(t,x)$$
+	$$f(u(t,x))=ku(1-u)(u-A)$$
+\end{block}
+\begin{itemize}
+    \item $k$ : Taux de croissance normalisé constant 
+    \item $A$ : Densité critique
+\end{itemize}
+$$k=\frac{4}{(1-A)^2}$$
+\end{frame}
+
+\begin{frame}{Présentation des modèles étudiés}{Système de Lolkta-Volterra}
+\begin{block}{Modèle de compétition}
+	$$\begin{cases} \frac{\partial u(t,x)}{\partial t} = f(u,v) + d_1\Delta u\\ \frac{\partial v(t,x)}{\partial t} = g(u,v) + d_2 \Delta v \\ 
+\end{cases}$$
+	$$f(u,v) = \alpha_1 u\left(1-\frac{u}{K_1}-\gamma_1\frac{v}{K_1}\right) \text{, } g(u,v) = \alpha_2 v\left(1-\frac{v}{K_2}-\gamma_2\frac{u}{K_2}\right)$$
+\end{block}
+\begin{itemize}
+	\item u(t,x) : Densité de population des Hommes Modernes 
+    \item v(t,x) : Densité de population des Hommes de Néanderthal 
+    \item $K_1$ et $K_2$ : Capacités d'accueil du milieu
+    \item $\gamma_1$ et $\gamma_2$ : Coefficients de compétition
+    \item $\alpha_1$ et $\alpha_2$ : Taux de croissance
+\end{itemize}
+\end{frame}
+
+\end{document}
