@@ -137,13 +137,16 @@ wv=v(:,1:M_max-100);
 
 
 subplot(1,2,1);mesh(x(1:M_max-100),t,wu);
-title('u');
-xlabel('x');
 ylabel('t');
-zlabel('u');
+xlabel('Distance x')
+zlabel('Densité espèce Homo Sapiens')
+title(' Homo Sapiens  ');
 
 subplot(1,2,2);mesh(x(1:M_max-100),t,wv);
-title('v');
-xlabel('x');
+xlabel('Distance x');
 ylabel('t');
-zlabel('v');
+zlabel('Densité espèce Néandertal ');
+title(' Néandertal ');
+
+suplabel(['Propagation de l''onde avec compétition  \alpha_1=', num2str(alpha1),',  \alpha_2=', num2str(alpha2),',  \gamma_1=', num2str(gama1),',  \gamma_2=', num2str(gama2),',  K_1=', num2str(K1),',  K_2=', num2str(K2),',  d_1=', num2str(d1),' et  d_2=', num2str(d2)])
+

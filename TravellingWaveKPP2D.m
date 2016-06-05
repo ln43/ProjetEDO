@@ -10,9 +10,9 @@ close all;
 clear all;
 
 d=0.5;
-alpha=0.5;
-K=0.8;
-u0=0.5;
+alpha=0.02;
+K=0.5;
+u0=0.01;
 
 a = -50;
 b = 50;
@@ -23,7 +23,7 @@ nv = nel+1;% number of vertices
 x = a:h:b; % mesh
 y = a:h:b;
 dt = 0.01; % time steps
-tend = 50; 
+tend = 100; 
 
 % initial guess
 u = zeros(201,201);
@@ -72,11 +72,16 @@ for t=dt:dt:tend
         figure(2);
         surf(x,y,u,'edgecolor','none');
         axis([a b a b 0 1]);
+        title(['Propagation de l''onde avec une croissance logistique K =', num2str(K),', \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)])
         drawnow;
         MOVI(index1) = getframe; % creation de l'animation
     end    
     
 end
+
+figure(1)
+suplabel(['Propagation de l''onde avec une croissance logistique K =', num2str(K),', \alpha =', num2str(alpha),', u_0 =', num2str(u0),' et d =', num2str(d)])
+
 % 
 % surf(x,y,u,'edgecolor','none');
 % axis([a b a b 0 1])
