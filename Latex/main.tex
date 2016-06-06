@@ -167,24 +167,30 @@ $$f^\prime(u)= \alpha - 2 \alpha \dfrac{u}{K} $$
 
 \subsubsection{Analyse de la réaction-diffusion}
 \setcounter{equation}{0}
-L'idee est de representer la solution de notre equation de
-reaction-diusion sous forme d'un front qui se deplace dans l'espace a une vitesse constante.
-Soit u la solution de notre équation de reaction-diffusion dans $\mathbb{R}$.
+L'idée est de représenter la solution de notre équation de
+réaction-diffusion sous forme d'un front d'onde qui se deplace dans l'espace à vitesse constante.
+Soit u la solution de notre équation de réaction-diffusion dans $\mathbb{R}$.
 
 \noindent On pose $z=x-ct$, $U:z\rightarrow U(z)$.\\
+<<<<<<< HEAD
 On ecrit alors notre solution sous la forme
 \begin{equation}
+=======
+On écrit alors notre solution sous la forme 
+\begin{equation*}
+>>>>>>> 0684e3a7e56e4f1ca11278bb0c9c091e3506b87f
 u(t,x)=U(x-ct)=U(z)
 \label{Eq1}
 \end{equation}
 U est la forme de l'onde et c sa vitesse.\\
 
-On peut montrer (Voir Annexe 1) que ~\eqref{Eq1} est équivalent à :
+\noindent On peut montrer (Voir Annexe 1) que ~\eqref{Eq1} est équivalent à :
+
 \begin{equation*}
-dU"(z)+c U'(z)+\alpha U(z)(1-\dfrac{U(Z)}{K})=0\\
+dU"(z)+c U'(z)+\alpha U(z)(1-\dfrac{U(Z)}{K})=0
 \end{equation*} 
 
-On a donc (U, c) solution du problème suivant :
+\noindent On a donc (U, c) solution du problème suivant :
 \begin{equation} 
 \left\{
 \begin{array}{lcl}
@@ -282,12 +288,21 @@ f possède deux équilibres $0$ et $K$ tels que $0 < K$ :\\
     
     Le plus petit équilibre $0$ est instable et le plus grand $K$ est stable donc l'équation de réaction-diffusion est \textbf{monostable}. \\
 
+<<<<<<< HEAD
 Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le probleme (\ref{PbKPP }) a une solution, et donc une infinite de solutions (U,c). Plus precisesement, pour le cas KPP et monostable, il existe un vitesse minimale c$_0 >0$ unique telle que quelque soit $c  \geqslant c_0$ l'equation (\ref{PbKPP }) a une solution $U_c$ unique a translation près.
 
     Il existe donc une vitesse minimale $c_0$ telle que pour toute vitesse supérieure, on a existence d'un front d'onde U(z) monotone, solution de l'EDO avec les conditions aux bords $\lim_{z \to +\infty} U(z)=0$ et $\lim_{z \to -\infty} U(z)=K$. \\
     
     De plus comme $ f^\prime(u)< f^\prime(0)$ pour un voisinnage de $0$ alors : \\
     $c_0=2 \sqrt{f^\prime(0)}= 2 \sqrt{\alpha - 2 \frac{\alpha}{K} \times 0} = 2 \sqrt{\alpha}$\\
+=======
+Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le problème \ref{PbKPP } a une solution, et donc une infinité de solutions (U,c). Plus precisément, pour le cas KPP et monostable, il existe un vitesse minimale c$_0 >0$ unique telle que quelque soit $c  \geqslant c_0$ l'equation \ref{PbKPP } a une solution $U_c$ unique à translation près.
+
+    Il existe donc une vitesse minimale $c_0$ telle que pour toute vitesse supérieure, on a existence d'un front d'onde U(z) monotone, solution de l'EDO avec les conditions aux bords $\lim_{z \to +\infty} U(z)=0$ et $\lim_{z \to -\infty} U(z)=K$. \\
+    
+    De plus comme $ f^\prime(u)< f^\prime(0)$ pour un voisinage de $0$ alors : \\
+    $c_0=2 \sqrt{f^\prime(0)}= 2 \sqrt{\alpha - 2 \frac{\alpha}{K} \times 0} = 2 \sqrt{\alpha}$
+>>>>>>> 0684e3a7e56e4f1ca11278bb0c9c091e3506b87f
     On peut donc déterminer la vitesse de cette propagation. \\
     
     
@@ -618,6 +633,7 @@ On observe que la population grandit jusqu'à atteindre sa capacité maximale, e
 On décide ici de modéliser des barrières géographiques tels que des montagnes ou le pôle nord qui pourrait avoir une influence sur la survie et la diffusion des population.
 Pour cela on considère alors notre environnement comme hétérogène. On fait varier la capacité du milieu en fonction de la position dans l'espace.\\
 
+<<<<<<< HEAD
 \textbf{Effet d'une barrière géographique franchissable}
 On décide de modéliser l'effet d'une barrière géographique franchissable comme une montagne. La montagne est représentée par la diagonale. Plus on s'éloigne de la diagonale, c'est à dire de la montagne, plus le coefficient K est élevé car les ressources y sont plus importantes. On initialise une petite population à droite de la montagne et on observe une évolution et une dispersion de la population sur les graphiques  \ref{Montagne} et \ref{MontagneBis} : 
 \begin{figure}[H]
@@ -635,9 +651,17 @@ On décide de modéliser l'effet d'une barrière géographique franchissable com
 	\caption{Diffusion 2D de la population face à une montagne vue de haut}
 	\label{MontagneBis}
 \end{figure}
+=======
+\subsubsection{Effets de barrières géographiques ou variations environnementales}
+On décide ici de modéliser des barrières géographiques telles que des montagnes, le pôle Nord qui pourrait avoir une influence sur la survie et la diffusion des population.
+Pour cela on considère notre environnement comme hétérogène. On fait varier la capacité du milieu en fonction de la position dans l'espace.\\
+\textbf{Effet d'une montagne}\\
+On décide de modéliser l'effet d'une montagne. La montagne est représentée par la diagonale. Plus on s'éloigne de la diagonale, c'est-à-dire de la montagne, plus le coefficient K est élevé. On initialise une petite population et on observe une évolution et une dispersion de la population comme suit : 
+>>>>>>> 0684e3a7e56e4f1ca11278bb0c9c091e3506b87f
 
-On observe que la présence de la montagne n'a pas d'effets sur la population, qui arrive à la dépasser pour rejoindre une autre zone. Une fois la population de l'autre côté elle arrive à croître sans problème.
+On observe que la présence de la montagne n'a pas d'effet sur la population, qui parvient à la franchir pour rejoindre une autre zone. Une fois la population de l'autre côté elle peut croître à nouveau.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 \textbf{Effet d'une barrière géographique infranchissable}
 On modélise ici par exemple un océan ou le pôle nord qui par un changement de climat entre les deux zones rend la vie impossible. En effet la température y est plus faible et les ressources moins importantes. En prend donc un K très petit sur une large zone, à gauche de la diagonale. 
@@ -645,6 +669,10 @@ On modélise ici par exemple un océan ou le pôle nord qui par un changement de
 \textbf{Effet d'un changement de climat}
 On modélise ici le changement de climat entre deux zones, par exemple avec le pôle nord où la température est plus faible et les ressources moins importantes. On prend donc un K très petit sur une large zone. 
 >>>>>>> refs/remotes/origin/master
+=======
+\noindent \textbf{Effet d'un changement de climat}
+On modélise ici le changement de climat entre deux zones, par exemple avec le pôle Nord où la température est plus faible et les ressources moins importantes. On prend donc un K très petit sur une large zone. 
+>>>>>>> 0684e3a7e56e4f1ca11278bb0c9c091e3506b87f
 
 \begin{figure}[H]
 	\centering
@@ -666,9 +694,13 @@ Toutefois, on vois que le modèle de croissance logique ne prend pas en compte l
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Toutefois, on vois que le modèle de croissance logistique ne prend pas en compte l'effet d'une toute petite population sur sa survie. 
 >>>>>>> refs/remotes/origin/master
+=======
+Toutefois, on voit que le modèle de croissance logistique ne prend pas en compte l'effet d'une toute petite population sur sa survie. 
+>>>>>>> 0684e3a7e56e4f1ca11278bb0c9c091e3506b87f
 \subsection{Effet Allee}
 
 \subsubsection{Constante de diffusion d=0.5}
@@ -862,7 +894,17 @@ On se situe enfin dans le cas où $A>0.5$ et $u_0>A$. Comme dans le cas 1.4, la 
 
 Dans cette simulation, les paramètres sont choisis de façon à vérifier les hypothèses énoncées lors de l'analyse mathématique, à savoir : $\gamma_1 < \frac{K_1}{K_2}$ et $\gamma_2 > \frac{K_2}{K_1}$. On supposera de plus que $\alpha_1 = \alpha_2 = 0.6$ et que $K_1 = K_2 = 0.2$. On choisit donc $\gamma_1 = 0.5$ et $\gamma_2 = 1.5$.\\
 Les constantes de diffusion sont $d_1 = 0.5$ (pour les Hommes Modernes) et $d_2 = 0.05$ (pour Néandertal).\\
-On prend des densités de population initiales $u(0,0) = 0.03$ et $v(0,0) = K = 0.2$.
+On prend des densités de population initiales $u(0,0) = 0.03$ et $v(0,0) = K = 0.2$.\\
+
+D'après les paramètres choisis, l'évolution des populations sans diffusion est représentée en figure
+\ref{pop}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{Comp/pop.png}
+\caption{Evolution des populations au cours du temps}
+\label{pop}
+\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -877,13 +919,16 @@ On prend des densités de population initiales $u(0,0) = 0.03$ et $v(0,0) = K = 
 \caption{Diffusion 1D}
 \end{figure}
 
-La population d'Homo Sapiens croît très rapidement au cours du temps jusqu'à atteindre la capacité de soutien $K$, et grâce au phénomène de diffusion colonise également l'espace, ici représenté par une droite. La constante de diffusion choisie très faible pour Néandertal est responsable de la diminution rapide de la population.
+La population d'\textit{Homo Sapiens} croît très rapidement au cours du temps jusqu'à atteindre la capacité de soutien $K$, et grâce au phénomène de diffusion colonise également l'espace, ici représenté par une droite. La constante de diffusion choisie très faible pour Néandertal rend sa disparition rapide, mais n'influence pas l'état d'équilibre final. La croissance rapide d'\textit{Homo Sapiens} contraint Néandertal à reculer vers des zones moins peuplées, puis à disparaître.
+Finalement, la supplantation progressive de Néandertal par l'Homme Moderne s'explique surtout par la valeur des coefficients de compétition, qu'on avait choisis de façon à favoriser Homo Sapiens dans le modèle de compétition. Les résultats obtenus correspondent donc aux résultats prévus par l'analyse mathématique.
 
-\section{Interprétation biologique}
+\section{Conclusion}
 
 Les processus ayant mené à l'extinction de Néandertal ne sont pas encore parfaitement compris. Les données biologiques disponibles sont encore insuffisantes pour construire un modèle mathématique parfaitement pertinent.
 De plus, les interactions de Néandertal avec Homo Sapiens sont complexes et pas encore bien connues. On sait que les deux espèces se sont croisées, hybridées, et que Néandertal a transmis à l'Homme Moderne une partie de son génôme.\\
-Si le modèle de compétition choisi dans ce projet semble le plus pertinent, il ne rend pas compte de toute la complexité du monde vivant à cette époque, et des pressions de l'environnement qui ont influencé l'évolution de toutes les populations d'Homme.
+Les modèles logistique et Allee permettent, sous réserve que les paramètres vérifient certaines conditions, de faire apparaître l'extinction de la population Néandertalienne. \\
+Cependant, l'hypothèse la plus couramment invoquée pour expliquer l'extinction de \textit{Homo Neanderthalensis} est celle de la compétition avec \textit{Homo Sapiens}, qui aurait forcé Néandertal à reculer dans des zones plus isolées.\\
+Bien que le modèle de compétition choisi dans ce projet ne rende pas compte de la complexité du monde vivant à cette époque ni des pressions de l'environnement qui ont influencé l'évolution de toutes les populations d'Homme, il nous permet de visualiser une évolution simplifiée des populations, qui conduit à l'extinction définitive de \textit{Homo Neanderthalensis}.
 \section{Bibliographie}
 \begin{itemize}
     \item MURRAY J.D. Mathematical Biology, II : Spatial Models and Biomedical Applications. Springer.
