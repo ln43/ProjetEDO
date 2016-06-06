@@ -21,7 +21,7 @@ nv = nel+1;% number of vertices
 
 x = a:h:b; % mesh
 dt = 0.1; % time steps
-tend = 20; 
+tend = 50; 
 
 e=ones(nv, 1);
 %Discretization of the Laplace operator
@@ -36,8 +36,8 @@ K1=0.2;
 K2=0.2;
 gamma1=0.5;
 gamma2=1.5;
-d1=1;
-d2=0.5;
+d1=0.5;
+d2=0.05;
 
 % initial guess
 u0=0.03;

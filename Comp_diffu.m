@@ -10,22 +10,22 @@ clc;
 % parameters of the model
 alpha1=0.6;
 alpha2=0.6;
-K1=0.5;
-K2=0.5;
-gama1=0.5;
-gama2=1.5;
-d1=1;
+K1=0.2;
+K2=0.2;
+gamma1=0.5;
+gamma2=1.5;
+d1=0.5;
 d2=0.5;
 
-% discritisation
-L=80; T=20;
-dx=0.1;dt=0.05;
-x=-L:dx:L;M_max=length(x);
-t=0:dt:T;N_max=length(t);
+% discretisation
+L=80; T=80;
+dx=0.1; dt=0.05;
+x=-L:dx:L; M_max=length(x);
+t=0:dt:T; N_max=length(t);
 
 % Equilibres
- equ=(K1-gama1*K2)/(1-gama1*gama2);
- eqv=(K2-gama2*K1)/(1-gama1*gama2);
+ %equ=(K1-gama1*K2)/(1-gama1*gama2);
+ %eqv=(K2-gama2*K1)/(1-gama1*gama2);
  
 % initiation 
 u=zeros(N_max,M_max);
@@ -37,10 +37,10 @@ u(:,M_max)=0;
 v(:,M_max)=0;
 
 
-% Condition initial pour u et v 
+% Condition initiale pour u et v 
 
 for i=1:M_max
-    u(1,i)=exp(-0.01*x(i)^2);
+    u(1,i)=0.03*exp(-0.01*x(i)^2);
 %     if x(i)>-30 & x(i)<30
 %        u(1,i)=equ;
 %     elseif x(i)<=-30 | x(i)>=30
@@ -50,7 +50,7 @@ for i=1:M_max
 end
 
 for i=1:M_max
-    v(1,i)=exp(-0.01*x(i)^2);
+    v(1,i)=K2*exp(-0.01*x(i)^2);
 %     if x(i)>-30 & x(i)<30
 %        v(1,i)=eqv;
 %     elseif x(i)<=-30 | x(i)>=30
@@ -103,8 +103,8 @@ for i=1:M_max-2
 
     % non linearité 
     
- z1=alpha1*u(n-1,i+1)*(1-u(n-1,i+1)/K1-gama1*v(n-1,i+1)/K1);
- z2=alpha2*v(n-1,i+1)*(1-v(n-1,i+1)/K2-gama2*u(n-1,i+1)/K2);
+ z1=alpha1*u(n-1,i+1)*(1-u(n-1,i+1)/K1-gamma1*v(n-1,i+1)/K1);
+ z2=alpha2*v(n-1,i+1)*(1-v(n-1,i+1)/K2-gamma2*u(n-1,i+1)/K2);
        
           if i==1   
               b1(i)=dt*z1+u(n-1,i+1)+d1*dt/power(dx,2)*0 ;
@@ -148,5 +148,5 @@ ylabel('t');
 zlabel('Densité espèce Néandertal ');
 title(' Néandertal ');
 
-suplabel(['Propagation de l''onde avec compétition  \alpha_1=', num2str(alpha1),',  \alpha_2=', num2str(alpha2),',  \gamma_1=', num2str(gama1),',  \gamma_2=', num2str(gama2),',  K_1=', num2str(K1),',  K_2=', num2str(K2),',  d_1=', num2str(d1),' et  d_2=', num2str(d2)])
+suplabel(['Propagation de l''onde avec compétition  \alpha_1=', num2str(alpha1),',  \alpha_2=', num2str(alpha2),',  \gamma_1=', num2str(gamma1),',  \gamma_2=', num2str(gamma2),',  K_1=', num2str(K1),',  K_2=', num2str(K2),',  d_1=', num2str(d1),' et  d_2=', num2str(d2)])
 

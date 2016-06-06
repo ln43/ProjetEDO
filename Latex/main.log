@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.9)  6 JUN 2016 13:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.9)  6 JUN 2016 13:22
 entering extended mode
 **main.tex
 (main.tex
@@ -1360,15 +1360,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 871.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 871.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 871.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D4AA6A9686C87BF9707E4E761D005680;2579.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 1E872868E7C75288515309EB4C5AD963;2596
-(rerunfilecheck)             After:  D4AA6A9686C87BF9707E4E761D005680;2579.
 
 LaTeX Warning: There were undefined references.
 
@@ -1409,7 +1403,7 @@ cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
 s/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb>
-Output written on main.pdf (31 pages, 2583091 bytes).
+Output written on main.pdf (31 pages, 2583067 bytes).
 PDF statistics:
  943 PDF objects out of 1000 (max. 8388607)
  124 named destinations out of 1000 (max. 500000)

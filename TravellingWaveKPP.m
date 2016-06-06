@@ -10,9 +10,9 @@ close all;
 clear all;
 
 d=0.5;
-alpha=0.02;
+alpha=0.5;
 K=0.5;
-u0=0.01;
+u0=0.1;
 
 a = -50;
 b = 50;
@@ -22,7 +22,7 @@ nv = nel+1;% number of vertices
 
 x = a:h:b; % mesh
 dt = 0.01; % time steps
-tend = 50; 
+tend = 100; 
 
 e=ones(nv, 1);
 
