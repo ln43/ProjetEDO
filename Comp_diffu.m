@@ -13,12 +13,12 @@ alpha2=0.6;
 K1=0.2;
 K2=0.2;
 gamma1=0.5;
-gamma2=1.5;
+gamma2=0.5;
 d1=0.5;
-d2=0.5;
+d2=0.05;
 
 % discretisation
-L=80; T=80;
+L=80; T=50;
 dx=0.1; dt=0.05;
 x=-L:dx:L; M_max=length(x);
 t=0:dt:T; N_max=length(t);

@@ -10,12 +10,13 @@
 \usepackage{enumitem}
 \usepackage{float}
 \usepackage{hyperref}
+
 \renewcommand{\baselinestretch}{1.2}
 
 \begin{document}
 \author{Adimy Y.  Simon M.  Vassal H.}
 %Proposition de titre?
-\title{\Huge\textbf{ Evolution de la population \\ \vspace{0.5cm} d'\textit{Homo Neanderthalensis}} \vspace{0.5cm}}
+\title{\Huge\textbf{Equations de réaction-diffusion}}
 \date{Juin 2016}
 
 \makeatletter
@@ -29,14 +30,14 @@
     \vfill
       \textbf{\Huge\@title}\\
     \vspace{0.3cm}
-      \textbf{\Large Equations de réaction-diffusion}\\
+      \textbf{\Large Evolution de la population\\ d'\textit{Homo Neanderthalensis}}\\
     \vspace{0.3cm}
        {\large \@author} \\
     \vspace{0.3cm}
         {\large\textbf{\@date}}\\
     \vfill
     	\centering
-        \includegraphics[scale=1]{neanderthal-sapiens.jpg}
+        \includegraphics[scale=0.8]{neanderthal-sapiens.jpg}
   \end{titlepage}
 \makeatother
 \newpage
@@ -46,14 +47,7 @@
 \setcounter{page}{1}
 
 \section{Contexte biologique}
-\begin{center}
-	\textbf{\textit{Pourquoi l'homme de Néandertal a-t-il disparu ? }}
-\end{center}
-
-Il s'agit là de la disparition la plus fascinante de l’histoire de l’humanité. Pourquoi, après avoir vécu 120 000 ans, l'homme de Néandertal a-t-il mystérieusement disparu, au moment-même de sa cohabitation avec les Hommes modernes en Europe?  Comment s'est passé cette extinction et pourquoi Néandertal n'a-t-il pas continué de vivre en cohabitation avec Sapiens ? 
-	 
-Nous nous sommes donc intéressées à l'évolution de la population de l'Homme de Néandertal, durant le stade isotopique 3 (période interglacière d'environ -60 000 à -30 000). Cette étude porte en fait sur la période de la transition entre le paléolithique moyen (de -300 000 à -30 000 ans avant le présent) et  le paléolithique supérieur (entre -45 000 et -10 000 ans avant le présent). A cette période l'Homme de Néandertal avait colonisé une grande partie de l'Europe ce qui a pu être constaté par la découverte de nombreux sites archéologiques présentant des traces de l'Homme de Néandertal. La carte ci-dessous (Figure \ref{C1}) permet de situer ceux présentant des traces datant de -50000 à -40000. \\
- 
+	Nous avons souhaité nous intéresser à l'évolution de la population de l'Homme de Néandertal, durant le stade isotopique 3 (période interglaciaire d'environ -60 000 à -30 000). Cette étude porte en fait sur la période de la transition entre le paléolithique moyen (de -300 000 à -30 000 ans avant le présent) et  le paléolithique supérieur (entre -45 000 et -10 000 ans avant le présent). A cette période l'Homme de Néandertal avait colonisé une grande partie de l'Europe ce qui a pu être constaté par la découverte de nombreux sites archéologiques présentant des traces de l'Homme de Néandertal. La carte ci-dessous (Figure \ref{C1}) permet de situer ceux présentant des traces datant de -50000 à -40000. De nombreux restes ont également été trouvés sur ces sites ou sur d'autres sur des périodes variant de -120000 à -30000 an environ.\\ 
 \begin{figure}[H]
 	\centering
     \includegraphics[width=10cm]{SiteArche.jpg}
@@ -61,26 +55,26 @@ Nous nous sommes donc intéressées à l'évolution de la population de l'Homme 
     \label{C1}
 \end{figure}
 La période étudiée ici correspond à l'arrivée de \textit{Homo Sapiens} en Europe et à la disparition progressive de \textit{Homo Neanderthalensis}. Nous avons ainsi tenté de comprendre quelles pouvaient êtres les causes de cette extinction. Parmi les hypothèses possibles figurent le climat et la compétition avec l'Homme Moderne. Ce dernier aurait finalement survécu face à l'Homme de Néandertal grâce à un régime alimentaire moins restreint, une agressivité plus développée et des innovations techniques plus performantes, ce qui lui aurait permis de faire face au stress climatique.\\
-Nous avons d'abord souhaité étudier plusieurs modèles permettant d'étudier la population de  l'Homme de Néandertal sans compétition avec l'Homme Moderne (modèle de la croissance Logistique et modèle avec effet Allee). Nous avons ensuite tenté de développer un modèle de compétition à deux populations (Lotka-Volterra) afin de modéliser l'interaction entre les deux populations d'Homme à cette époque. D'autres modèles, plus compliqués à étudier, pourraient être appliqués prenant en compte l'âge des populations, ou le climat par exemple.
+Nous avons d'abord souhaité étudier plusieurs modèles permettant d'étudier la population de  l'Homme de Néandertal sans compétition avec l'Homme Moderne (modèle de la croissance Logistique et modèle avec effet Allee). Nous avons ensuite tenté de développer un modèle de compétition à deux populations (Lotka-Volterra) afin de modéliser l'interaction entre les deux populations d'Homme à cette époque. D'autres modèles, plus compliqués à étudier, pourraient être appliqués prenant en compte l'âge des populations, ou le  climat par exemple.
 
 
 \section{Présentation des modèles étudiés}
 \subsection{Cadre général}
-Le but de notre projet est d'étudier l'évolution de la population de Néandertal en la modélisant par une équation de réction-diffusion du type : \\
-\begin{equation}
+Le but de notre projet est d'étudier l'évolution de la population de Néandertal en la modélisant par une équation de réaction-diffusion du type : \\
+\begin{equation}\label{EqGen}
 \frac{\partial u(t,x)}{\partial t}=f(u(t,x))+d\Delta u(t,x), \quad t \in \mathbb{R}, x \in \mathbb{R} \\
 \end{equation}
 La fonction inconnue u représente la densité de population dans un espace donné. Il s'agit donc d'un nombre d'habitants par kilomètre carré. En théorie, $u\in [0;+\infty]$. Toutefois, en pratique et dans le cas considéré (population d'Homme de Néandertal et d'\textit{Homo Sapiens}),$u\in [0;1]$. Nous limiterons donc notre étude à cet intervalle.\\
 \newline
-Il est important dans un premier temps de comprendre l'évolution de la densité de population par rapport au temps. En supposant que le temps est continu on obtient des équations différentielles ordinaires que nous pouvons étudier. $f(u(t,x))$ correspond à la partie réaction qui modélise la croissance de la population. On proposera différentes fonction $f$ en fonction des différents modèles de croissance de population utilisés. Cette fonction dépend de la croissance de la population, mais peut aussi faire intervenir des facteurs limitants. D'autre part, on peut aussi modéliser les interactions entre plusieurs populations en étudiant des systèmes
-d'équations differentielles.\\
+Il est important dans un premier temps de comprendre l'évolution de la densité de population par rapport au temps. En supposant que le temps est continu on obtient des équations différentielles ordinaires que nous pouvons étudier. $f(u(t,x))$ correspond à la partie réaction qui modélise la croissance de la population. On proposera différentes fonction $f$ en fonction des différents modèles de croissance de population utilisés. Cette fonction dépend de la croissance de la population, mais peut aussi faire intervenir des facteurs limitant. D'autre part, on peut aussi modéliser les interactions entre plusieurs populations en étudiant des systèmes
+d'équations différentielles.\\
 \newline
 On ne s'intéresse pas à l'apparition de la population sur le territoire. Dans tout notre projet, nous avons considéré une fonction $f: \mathbb{R} \times \mathbb{R}^+ \to \mathbb{R}$  de classe $C^1$. \\
 
 On doit ensuite incorporer les mouvements dans l'espace de la population. Pour cela, on souhaite modéliser la marche aléatoire des individus. Chaque marche aléatoire suit une loi particulière mais de manière générale l'agglomérat de population se déplace selon un processus macroscopique que l'on nomme processus de diffusion.
 L'ajout d'un terme de diffusion $d\Delta u(t,x)$ permet ainsi de modéliser le mouvement aléatoire des individus dans l'espace.\\
 \newline
- En combinant ces deux processus de reaction f et  de  diffusion, on obtient une équation de réaction-diffusion.
+ En combinant ces deux processus de réaction f et  de  diffusion, on obtient une équation de réaction-diffusion.
 On considère donc le problème de Cauchy suivant : 
 \begin{equation}\label{PbCauchy}
 \left\{
@@ -91,7 +85,7 @@ u(0,.) &=& u_0\\
 \right.
 \end{equation}
 L'objectif principal est de déterminer les situations où l'espèce \textit{Homo Neanderthalensis} s'éteint. Mathématiquement, cela nécessite de caractériser l'état de l'équilibre 0. On pourra traiter deux types de stabilité dans notre travail.
-On dit que l'état d'équilibre 0 est uniformément asymptotiquement stable si pour une condition initiale $u_0$ assez proche de 0, la solution u de \ref{PbCauchy} converge uniformément vers 0 quand t tend vers l'infini. On dit aussi que l'état 0 est inconditionellement stable dans le cas où cette convergence vers 0 est vérifiée quelque soit la condition intiale $u_0$. Pour répondre à notre problème, le premier type de stabilité mentionné ici est plus restrictif que le second car il nécessite que la population ne soit pas trop grosse pour qu'elle puisse s'éteindre.   
+On dit que l'état d'équilibre 0 est uniformément asymptotiquement stable si pour une condition initiale $u_0$ assez proche de 0, la solution u de \ref{PbCauchy} converge uniformément vers 0 quand t tend vers l'infini. On dit aussi que l'état 0 est inconditionnellement stable dans le cas où cette convergence vers 0 est vérifiée quelque soit la condition initiale $u_0$. Pour répondre à notre problème, le premier type de stabilité mentionné ici est plus restrictif que le second car il nécessite que la population ne soit pas trop grosse pour qu'elle puisse s'éteindre.   
 
 
 
@@ -127,7 +121,7 @@ k=\frac{4}{(1-A)^2}
 \end{equation}
 
 \subsection{Système de Lotka-Volterra}
-On sait que \textit{Homo sapiens} et \textit{Homo Neanderthalensis} ont connu une période de cohabitation, située entre l’apparition du premier véritable Homme Moderne (il y a 45.000 ans) et l’extinction de l'Homme de Néandertal (il y a 40.000 ans). Nous nous sommes intéressées aux interactions entre ces deux populations à l'aide du système de Lotka-Volterra. Dans ce modèle, on considère que les populations sont en compétition.\\
+On sait que \textit{Homo sapiens} et \textit{Homo Neanderthalensis} ont connu une période de cohabitation, située entre l'apparition du premier véritable Homme Moderne (il y a 45.000 ans) et l'extinction de l'Homme de Néandertal (il y a 40.000 ans). Nous nous sommes intéressées aux interactions entre ces deux populations à l'aide du système de Lotka-Volterra. Dans ce modèle, on considère que les populations sont en compétition.\\
 $$\begin{cases} \frac{\partial u(t,x)}{\partial t} = f(u,v) + d_1\Delta u\\ \frac{\partial v(t,x)}{\partial t} = g(u,v) + d_2 \Delta v \\ 
 \end{cases}$$
 $$\text{Avec : } f(u,v) = \alpha_1 u\left(1-\frac{u}{K_1}-\gamma_1\frac{v}{K_1}\right) \text{ et } g(u,v) = \alpha_2 v\left(1-\frac{v}{K_2}-\gamma_2\frac{u}{K_2}\right)$$
@@ -147,7 +141,7 @@ On étudie d'abord les points d'équilibre et leur stabilité pour l'équation s
 avec $\alpha>0$ et $K>0$.
 \newline
 
-\noindent\underline{Equilibres :} Les équilibres sont les fonctions u qui vérifient $\frac{du}{dt}=0$. On a donc :
+\noindent\underline{Équilibres :} Les équilibres sont les fonctions u qui vérifient $\frac{du}{dt}=0$. On a donc :
 \[
 \left\{
 \begin{array}{r c l}
@@ -160,33 +154,30 @@ u_K &=& K\\
 $$f^\prime(u)= \alpha - 2 \alpha \dfrac{u}{K} $$
 
 \begin{itemize}
-    	\item[*] $f^\prime(0)=\alpha >0 \Rightarrow $ 0 équilibre instable
-        \item[*] $f^\prime(K)= -\alpha <0 \Rightarrow $ K équilibre stable
+    	\item[*] $f^\prime(0)=\alpha >0 \Rightarrow $ équilibre instable
+        \item[*] $f^\prime(K)= -\alpha <0 \Rightarrow $ équilibre stable
 	\end{itemize}
 
 
 \subsubsection{Analyse de la réaction-diffusion}
 \setcounter{equation}{0}
 L'idée est de représenter la solution de notre équation de
-réaction-diffusion sous forme d'un front d'onde qui se deplace dans l'espace à vitesse constante.
+réaction-diffusion sous forme d'un front qui se déplace dans l'espace a une vitesse constante.
 Soit u la solution de notre équation de réaction-diffusion dans $\mathbb{R}$.
 
 \noindent On pose $z=x-ct$, $U:z\rightarrow U(z)$.\\
-
-On ecrit alors notre solution sous la forme
-\begin{equation}
+On écrit alors notre solution sous la forme
+\begin{equation*}
 u(t,x)=U(x-ct)=U(z)
-\label{Eq1}
-\end{equation}
+\end{equation*}
 U est la forme de l'onde et c sa vitesse.\\
 
-\noindent On peut montrer (Voir Annexe 1) que ~\eqref{Eq1} est équivalent à :
-
+On peut montrer (Voir Annexe 1) qu'on a :
 \begin{equation*}
-dU"(z)+c U'(z)+\alpha U(z)(1-\dfrac{U(Z)}{K})=0
+dU"(z)+c U'(z)+\alpha U(z)(1-\dfrac{U(Z)}{K})=0\\
 \end{equation*} 
 
-\noindent On a donc (U, c) solution du problème suivant :
+On a donc (U, c) solution du problème suivant :
 \begin{equation} 
 \left\{
 \begin{array}{lcl}
@@ -204,7 +195,7 @@ $|c|$.\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.40\linewidth]{SimulationKPP/FrontOnde}\hfill
-	\caption{Profil U se déplacant à la vitesse c}
+	\caption{Profil U se déplaçant à la vitesse c}
 \end{figure}
 
 
@@ -253,9 +244,9 @@ Matrice jacobienne : $$\mathcal{J}_{F_{(U,V)}}=\begin{pmatrix} 0 & 1 \\ -\dfrac{
 Pour connaître la nature du point, il faut étudier le déterminant : $\Delta = tr^2 -4 det= c^2-4 \frac{\alpha}{d}$\\
             c est une vitesse, elle est donc positive. Ainsi on a :
       	\begin{itemize}[label=$\rightarrow$]
-			\item si $c>2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta >0$ : Noeud Localement Asymptotiquement Stable
-            \item si $c=2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta =0$ : Etoile ou Noeud Dégénéré Asymptotiquement Stable
-            \item si $0<c<2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta <0$ : Foyer Asymptotiquement Stable. Cependant U étant une population, elle ne peut être négative. Or avec un Foyer assymptotiquement stable autour de l'équilibre (0,0) U deviendrait négatif. On ne considère donc pas ce cas.
+			\item si $c>2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta >0$ : Nœud Localement Asymptotiquement Stable
+            \item si $c=2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta =0$ : Étoile ou Nœud Dégénéré Asymptotiquement Stable
+            \item si $0<c<2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta <0$ : Foyer Asymptotiquement Stable. Cependant U étant une population, elle ne peut être négative. Or avec un Foyer asymptotiquement stable autour de l'équilibre (0,0) U deviendrait négatif. On ne considère donc pas ce cas.
 		\end{itemize}
 \end{itemize}
 
@@ -277,28 +268,19 @@ On donc a  $f(u) < f'(0)u$, $f(0) = f(K) = 0$ et f est positive sur [0,K]. Cette
 
 f possède deux équilibres $0$ et $K$ tels que $0 < K$ :\\
 	\begin{itemize}
-    	\item[*] $f^\prime(0)= \alpha >0 \Rightarrow $ 0 est instable
-        \item[*] $f^\prime(K)= -\alpha <0 \Rightarrow $ K est stable\\
+    	\item[*] $f^\prime(0)= \alpha >0 \Rightarrow $ instable
+        \item[*] $f^\prime(K)= -\alpha <0 \Rightarrow $ stable\\
 	\end{itemize}
     
     
     Le plus petit équilibre $0$ est instable et le plus grand $K$ est stable donc l'équation de réaction-diffusion est \textbf{monostable}. \\
 
-
-Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le probleme (\ref{PbKPP }) a une solution, et donc une infinite de solutions (U,c). Plus precisesement, pour le cas KPP et monostable, il existe un vitesse minimale c$_0 >0$ unique telle que quelque soit $c  \geqslant c_0$ l'equation (\ref{PbKPP }) a une solution $U_c$ unique a translation près.
-
-    Il existe donc une vitesse minimale $c_0$ telle que pour toute vitesse supérieure, on a existence d'un front d'onde U(z) monotone, solution de l'EDO avec les conditions aux bords $\lim_{z \to +\infty} U(z)=0$ et $\lim_{z \to -\infty} U(z)=K$. \\
-    
-    De plus comme $ f^\prime(u)< f^\prime(0)$ pour un voisinnage de $0$ alors : \\
-    $c_0=2 \sqrt{f^\prime(0)}= 2 \sqrt{\alpha - 2 \frac{\alpha}{K} \times 0} = 2 \sqrt{\alpha}$\\
-
-Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le problème \ref{PbKPP } a une solution, et donc une infinité de solutions (U,c). Plus precisément, pour le cas KPP et monostable, il existe un vitesse minimale c$_0 >0$ unique telle que quelque soit $c  \geqslant c_0$ l'equation \ref{PbKPP } a une solution $U_c$ unique à translation près.
+Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le problème \ref{PbKPP } a une solution, et donc une infinité de solutions (U,c). Plus précisément, pour le cas KPP et monostable, il existe un vitesse minimale c$_0 >0$ unique telle que quelque soit $c  \geqslant c_0$ l'équation \ref{PbKPP } a une solution $U_c$ unique a translation près.
 
     Il existe donc une vitesse minimale $c_0$ telle que pour toute vitesse supérieure, on a existence d'un front d'onde U(z) monotone, solution de l'EDO avec les conditions aux bords $\lim_{z \to +\infty} U(z)=0$ et $\lim_{z \to -\infty} U(z)=K$. \\
     
     De plus comme $ f^\prime(u)< f^\prime(0)$ pour un voisinage de $0$ alors : \\
     $c_0=2 \sqrt{f^\prime(0)}= 2 \sqrt{\alpha - 2 \frac{\alpha}{K} \times 0} = 2 \sqrt{\alpha}$
-
     On peut donc déterminer la vitesse de cette propagation. \\
     
     
@@ -312,7 +294,7 @@ Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel 
 \subsection{Effet Allee}
 \subsubsection{Analyse de la partie réaction}
 On étudie d'abord les points d'équilibre et leur stabilité pour l'équation sans diffusion : $$\frac{du}{dt}=ku(1-u)(u-A)$$
-\underline{Equilibres :} Les équilibres sont les fonctions u qui vérifient $\frac{du}{dt}=0$. On a donc :
+\underline{Équilibres :} Les équilibres sont les fonctions u qui vérifient $\frac{du}{dt}=0$. On a donc :
 \[
 \left\{
 \begin{array}{r c l}
@@ -340,7 +322,7 @@ u(t,x)=U(x-ct)=U(z)
 \label{Eq1}
 \end{equation}
 U est la forme de l'onde et c sa vitesse.\\
-On peut montrer (Voir Annexe 1) que ~\eqref{Eq1} est équivalent à :
+On peut montrer (Voir Annexe 1) qu'on a :
 \begin{equation}
 dU"(z)+cU'(z)+kU(z)(1-U(z))(U(z)-A)
 \tag{2}
@@ -391,15 +373,15 @@ Matrice jacobienne : $$\mathcal{J}_{F_{(U,V)}}=\begin{pmatrix} 0 & 1 \\ 3kU^2-2k
             \item $A<1 \Rightarrow det (\mathcal{J}_{F_{(0,0)}})>0$. Pour connaitre la nature du point, il faut étudier le déterminant : $\Delta = tr^2 -4 det= \frac{c}{d}^2+4kA(A-1)$\\
             On pose $c_1=2d\sqrt(kA(1-A))=4d\sqrt{\frac{A}{1-A}}$ d'après \eqref{Eqk}
             \begin{itemize}[label=$\rightarrow$]
-				\item $c>c_1 \Rightarrow \Delta >0$ : Noeud Localement Asymptotiquement Stable
-                \item $c=c_1 \Rightarrow \Delta =0$ : Etoile ou Noeud Dégénéré Asymptotiquement Stable
+				\item $c>c_1 \Rightarrow \Delta >0$ : Nœud Localement Asymptotiquement Stable
+                \item $c=c_1 \Rightarrow \Delta =0$ : Étoile ou Nœud Dégénéré Asymptotiquement Stable
                 \item $c<c_1 \Rightarrow \Delta <0$ : Foyer Asymptotiquement Stable. Toutefois, ce cas n'est pas possible car U deviendrait négatif. Or U étant une population, il est forcément positif.
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
-\noindent \underline{Etude des fronts d'ondes}\\
+\noindent \underline{Étude des fronts d'ondes}\\
 Comme on l'a montré dans la partie sans diffusion, l'équation admet trois équilibres :
 
 $$u_+=1 \text{ stable,} u_-=0 \text{ stable,} u_s=A \text{ instable}$$
@@ -428,7 +410,7 @@ $$\begin{cases}
 \frac{\partial u}{\partial t} = f(u,v) = \alpha_1 u\left(1-\frac{u}{K_1}-\gamma_1\frac{v}{K_1}\right)\\
 \frac{\partial v}{\partial t} = g(u,v) = \alpha_2 v\left(1 - \frac{v}{K_2} - \gamma_2\frac{u}{K_2}\right)
 \end{cases}$$
-\noindent \underline{Equilibres :}\\
+\noindent \underline{Équilibres :}\\
 
 $\begin{cases}
 \frac{\partial u}{\partial t} = 0\\
@@ -455,7 +437,7 @@ La matrice Jacobienne s'écrit : $$\mathcal{J}_{(u,v)}=\begin{pmatrix} \alpha_1\
 \begin{itemize}[label=$\bullet$]
 \item $\mathcal{J}_{(0,0)} = \begin{pmatrix} \alpha_1 & 0 \\ 0 & \alpha_2 
 \end{pmatrix}$
- : l'équilibre est instable. Si $\alpha_1 \neq \alpha_2$, on peut dire que c'est un Noeud Instable.
+ : l'équilibre est instable. Si $\alpha_1 \neq \alpha_2$, on peut dire que c'est un Nœud Instable.
  
  \item $\mathcal{J}_{(K_1,0)} = \begin{pmatrix} -\alpha_1 & -\alpha_1\gamma_1 \\ 0 & \alpha_2\left(1- \dfrac{\gamma_2 K_1}{K_2}\right)
 \end{pmatrix} $\\
@@ -547,7 +529,6 @@ $$c^* = 2\sqrt{\alpha D(1-\gamma_1)}$$
 
 \section{Simulations numériques}
 \subsection{Valeurs des paramètres}
-%Est-ce qu'on le laisse là ou est-ce qu'on le met à la fin des modèles ou dans une section à part??? 
 \paragraph{Densité} D'après Winterhalder, 1988, la densité de population de l'Homme de Néandertal peut être estimée entre 0.006 et 1 $hab/km^2$. Nous n'avons pas pu trouver d'estimations plus précises. Nous prendrons donc arbitrairement nos valeurs initiales dans cet intervalle. \\
 La densité de population d'\textit{Homo Sapiens} a été estimée différemment selon les études (les lieux d'étude ne sont pas forcément les mêmes). Elle appartient à l'intervalle $[0.003;0.21]$ en -45000:
 \begin{itemize}
@@ -571,7 +552,7 @@ En pratique, nous n'avons pas accès à ces valeurs. Nous testerons donc différ
 \subsection{Type de simulations réalisées}
 \paragraph{Modélisation 1D}
 On considère la diffusion selon une seule dimension. L'espace est donc représenté par une droite x allant de -50 à 50.\\
-On sait que la population se répartit souvent selon une gaussienne à un endroit. Pour cela, on considère comme condition initiale une population qui se répartit selon une loi :  $u_0 e^{-0.01*x^2}$ . (On fait varier $u_0$ en fonction des simulations).
+On sait que la population se répartie souvent selon une gaussienne à un endroit. Pour cela, on considère comme condition initiale une population qui se répartit selon une loi :  $u_0 e^{-0.01*x^2}$ . (On fait varier $u_0$ en fonction des simulations).
 On a choisi  de représenter les fronts d'ondes pour différents temps ainsi que de réaliser le graphique 3D de u en fonction de x et t
 
 \paragraph{Modélisation 2D}
@@ -582,22 +563,23 @@ On considère comme condition initiale une population qui suit la loi : $u_0 e^{
 
 \subsection{Croissance Logistique}
 \subsubsection{Simulation propagation fronts d'onde}
-\paragraph{On prend comme valeur des paramètres d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.5$}
+\paragraph{Cas 1.1 : d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.5$}
 \noindent
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.45\linewidth]{SimulationKPP/figures1/fu}\hfill
-	\caption{Fonction logistique de type KPP}
-	\label{fu}
+	\caption{Fonction de type KPP}
 \end{figure}
 \noindent
-Le graphe de la figure \ref{fu} nous donne la représentation de la fonction logistique. 
+
+On observe comme prévu dans la partie analytique un équilibre 0 instable et un équilibre K= 0.5 stable. La fonction est de type monostable.
 
 On cherche ici à représenter la propagation d'un front d'onde. On prend comme condition initiale u$_0=0.5$ pour x < -10 et 0 ailleur. 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.55\linewidth]{SimulationKPP/figures1/FrontOnde2}\hfill
 	\includegraphics[width=0.40\linewidth]{SimulationKPP/figures1/FrontOnde1}\hfill
+<<<<<<< HEAD
 	\caption{Propagation du front d'onde en 1D}
 	\label{front}
 \end{figure}
@@ -609,73 +591,71 @@ On observe sur la figure \ref{front} la propagation du front d'onde. Comme la co
 \paragraph{On prend comme valeure des paramètres d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.1$ }
 
 \begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.45\linewidth]{SimulationKPP/TrigerEffect/fronts}\hfill
-	\includegraphics[width=0.55\linewidth]{SimulationKPP/TrigerEffect/Surf}\hfill
-	\caption{Propagation du front d'onde en 1D avec une petite perturbation initiale}
+=======
+	\caption{Diffusion 1D de propagation de front d'ondes}
 \end{figure}
 \noindent
-On observe qu'avec une toute petite condition initiale, la population augmente et tend vers l'équilibre K.  
 
+On observe la propagation du front d'onde.
+
+\subsubsection{Simulation de l'effet hair trigger}
+\begin{figure}[H]
+>>>>>>> 5c782c82806b52318554c6321f6de7a549714b9c
+	\centering
+	\includegraphics[width=0.45\linewidth]{SimulationKPP/Trigger/Fig2}\hfill
+	\includegraphics[width=0.55\linewidth]{SimulationKPP/Trigger/fig1}\hfill
+	\caption{Diffusion 1D de propagation de front d'ondes}
+\end{figure}
+\noindent
+
+
+\subsubsection{Constante de diffusion d=0.5}
+On réalise une première série de simulations avec une constante de diffusion égale à 0.5 :
+\paragraph{Cas 1.1 : d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.5$}
+\noindent
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\linewidth]{SimulationKPP/KPP11}\hfill
+	\includegraphics[width=0.45\linewidth]{SimulationKPP/KPP12.jpg}
+    \includegraphics[width=0.45\linewidth]{SimulationKPP/KPP14.jpg}
+    \caption{Diffusion 1D}
+\end{figure}
+\noindent
+On observe que la population 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{SimulationKPP/KPP13}\hfill
     \includegraphics[width=1\linewidth]{SimulationKPP/KPP15}
-    \caption{Propagation du front d'onde en 2D }
+    \caption{Diffusion 2D}
 \end{figure}
 
-On observe que la population grandit jusqu'à atteindre sa capacité maximale, et elle envahit l'espace.
 
-\subsubsection{Effets de barrières ou variations géographiques }
-On décide ici de modéliser des barrières géographiques tels que des montagnes ou le pôle nord qui pourrait avoir une influence sur la survie et la diffusion des population.
+\subsubsection{Effets de barrières géographiques ou variations environnementales}
+On décide ici de modéliser des barrières géographiques tels que des montagnes, le pôle nord qui pourrait avoir une influence sur la survie et la diffusion des population.
 Pour cela on considère alors notre environnement comme hétérogène. On fait varier la capacité du milieu en fonction de la position dans l'espace.\\
+\textbf{Effet d'une montagne}
+On décide de modéliser l'effet d'une montagne. La montagne est représentée par la diagonale. Plus on s'éloigne de la diagonale, c'est à dire de la montagne, plus le coefficient K est élevé. On initialise une petite population et on observe une évolution et une dispersion de la population comme suit : 
 
-\textbf{Effet d'une barrière géographique franchissable}
-On décide de modéliser l'effet d'une barrière géographique franchissable comme une montagne. La montagne est représentée par la diagonale. Plus on s'éloigne de la diagonale, c'est à dire de la montagne, plus le coefficient K est élevé car les ressources y sont plus importantes. On initialise une petite population à droite de la montagne et on observe une évolution et une dispersion de la population sur les graphiques  \ref{Montagne} et \ref{MontagneBis} : 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.5\linewidth]{SimulationKPP/Enviro/montagne1}\hfill
-	\includegraphics[width=0.5\linewidth]{SimulationKPP/Enviro/montagne3}\hfill
-	\includegraphics[width=0.5\linewidth]{SimulationKPP/Enviro/montagne5}\hfill
-	\includegraphics[width=0.5\linewidth]{SimulationKPP/Enviro/montagne8}
-	\caption{Diffusion 2D de la population face à une montagne}
-	\label{Montagne}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{SimulationKPP/Enviro/montagneVueHaut}
-	\caption{Diffusion 2D de la population face à une montagne vue de haut}
-	\label{MontagneBis}
-\end{figure}
+On observe que la présence de la montagne n'a pas d'effets sur la population, qui arrive à la dépasser pour rejoindre une autre zone. Une fois la population de l'autre côté elle arrive à croitre sans problème.
+
+\textbf{Effet d'un changement de climat}
+On modélise ici le changment de climat entre deux zones, par exemple avec le pôle nord où la température est plus faible et les ressources moins importantes. En prend donc un K très petit sur une large zone. 
 
 
 
-On observe que la présence de la montagne n'a pas d'effet sur la population, qui parvient à la franchir pour rejoindre une autre zone. Une fois la population de l'autre côté elle peut croître à nouveau.
 
 
-\textbf{Effet d'une barrière géographique infranchissable}
-On modélise ici par exemple un océan ou le pôle nord qui par un changement de climat entre les deux zones rend la vie impossible. En effet la température y est plus faible et les ressources moins importantes. En prend donc un K très petit sur une large zone, à gauche de la diagonale. 
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.5\linewidth]{SimulationKPP/Enviro/poleNord1}\hfill
-	\includegraphics[width=0.5\linewidth]{SimulationKPP/Enviro/poleNord3}\hfill
-	\includegraphics[width=0.5\linewidth]{SimulationKPP/Enviro/poleNord5}\hfill
-	\includegraphics[width=0.5\linewidth]{SimulationKPP/Enviro/poleNord8}
-	\caption{Diffusion 2D}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{SimulationKPP/Enviro/PolenordVueHaut}
-	\caption{Diffusion 2D}
-\end{figure}
-
-On observe que la population se répend dans la zone où elle peut survivre.
-Toutefois, on voit que le modèle de croissance logistique ne prend pas en compte l'effet d'une toute petite population sur sa survie. 
-
+Toutefois, on vois que le modèle de croissance logique ne prend pas en compte l'effet d'une toute petite population sur sa survie. 
 \subsection{Effet Allee}
+\subsubsection{Fonction de réaction}
+On a tout d'abord chercher à représenter la fonction :$f(u)=u(1-u)(u-A)$ qui représente la partie réaction dans le modèle avec effet Allee. On a représenter cette fonction pour différentes valeurs de A. On retrouve bien une fonction de type bistable avec deux équilibres stables et un équilibre intermédiaire instable. On peut également retrouver les conclusions trouvées dans la partie analyse à propos de l'équilibre qui envahit l'autre en fonction de la valeur de A. En effet, par exemple, pour $A<0.5$ la première aire sous la courbe est plus petite que la seconde, ce  qui induit une aire totale positive donc une vitesse positive.
+\noindent
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Allee/fu_Allee}
+	\caption{Fonction avec effet Allee}
+\end{figure}
 
 \subsubsection{Constante de diffusion d=0.5}
 On réalise une première série de simulations avec une constante de diffusion égale à 0.5 :
@@ -868,53 +848,20 @@ On se situe enfin dans le cas où $A>0.5$ et $u_0>A$. Comme dans le cas 1.4, la 
 
 Dans cette simulation, les paramètres sont choisis de façon à vérifier les hypothèses énoncées lors de l'analyse mathématique, à savoir : $\gamma_1 < \frac{K_1}{K_2}$ et $\gamma_2 > \frac{K_2}{K_1}$. On supposera de plus que $\alpha_1 = \alpha_2 = 0.6$ et que $K_1 = K_2 = 0.2$. On choisit donc $\gamma_1 = 0.5$ et $\gamma_2 = 1.5$.\\
 Les constantes de diffusion sont $d_1 = 0.5$ (pour les Hommes Modernes) et $d_2 = 0.05$ (pour Néandertal).\\
-On prend des densités de population initiales $u(0,0) = 0.03$ et $v(0,0) = K = 0.2$.\\
 
-D'après les paramètres choisis, l'évolution des populations sans diffusion est représentée en figure
-\ref{pop}.
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.3]{Comp/pop.png}
-\caption{Evolution des populations au cours du temps}
-\label{pop}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.45\linewidth]{Comp/neand.png}
-\includegraphics[width=0.45\linewidth]{Comp/homo.png}
-\caption{Evolution des fronts d'onde au cours du temps}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.3]{Comp/CompDiff2.png}
-\caption{Diffusion 1D}
-\end{figure}
-
-La population d'\textit{Homo Sapiens} croît très rapidement au cours du temps jusqu'à atteindre la capacité de soutien $K$, et grâce au phénomène de diffusion colonise également l'espace, ici représenté par une droite. La constante de diffusion choisie très faible pour Néandertal rend sa disparition rapide, mais n'influence pas l'état d'équilibre final. La croissance rapide d'\textit{Homo Sapiens} contraint Néandertal à reculer vers des zones moins peuplées, puis à disparaître.
-Finalement, la supplantation progressive de Néandertal par l'Homme Moderne s'explique surtout par la valeur des coefficients de compétition, qu'on avait choisis de façon à favoriser Homo Sapiens dans le modèle de compétition. Les résultats obtenus correspondent donc aux résultats prévus par l'analyse mathématique.
-
-\section{Conclusion}
-
-Les processus ayant mené à l'extinction de Néandertal ne sont pas encore parfaitement compris. Les données biologiques disponibles sont encore insuffisantes pour construire un modèle mathématique parfaitement pertinent.
-De plus, les interactions de Néandertal avec Homo Sapiens sont complexes et pas encore bien connues. On sait que les deux espèces se sont croisées, hybridées, et que Néandertal a transmis à l'Homme Moderne une partie de son génôme.\\
-Les modèles logistique et Allee permettent, sous réserve que les paramètres vérifient certaines conditions, de faire apparaître l'extinction de la population Néandertalienne. \\
-Cependant, l'hypothèse la plus couramment invoquée pour expliquer l'extinction de \textit{Homo Neanderthalensis} est celle de la compétition avec \textit{Homo Sapiens}, qui aurait forcé Néandertal à reculer dans des zones plus isolées.\\
-Bien que le modèle de compétition choisi dans ce projet ne rende pas compte de la complexité du monde vivant à cette époque ni des pressions de l'environnement qui ont influencé l'évolution de toutes les populations d'Homme, il nous permet de visualiser une évolution simplifiée des populations, qui conduit à l'extinction définitive de \textit{Homo Neanderthalensis}.
+\section{Interprétation biologique}
 \section{Bibliographie}
 \begin{itemize}
-    \item MURRAY J.D. Mathematical Biology, II : Spatial Models and Biomedical Applications. Springer.
-    \item CURRAT M. EXCOFFIER L. (2004) Modern Humans Did Not Admix with Neanderthals during Their Range Expansion into Europe. PLoS Biol 2(12): e421. Disponible sur : \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC532389/}
+    \item J.D. MURRAY. \textit{Mathematical Biology, II : Spatial Models and Biomedical Applications}. Springer.
 	\item V FABRE. Réponse démographique des Néandertaliens face aux pressions environnementales du stade isotopique3 : approche par modélisation écologique.[en ligne] Thèse Anthropologie Biologique. Aix-Marseille : Université d'Aix Marseille, 2011, 395p. Disponible sur : \url{ https://www.researchgate.net/publication/299411516_Reponse_demographique_des_Neandertaliens_face_aux_pressions_environnementales_du_stade_isotopique_3_approche_par_modelisation_ecologique}
-	\item STEELE J. (2009). Human Dispersals: Mathematical Models and the Archaeological Record. Human Biology: Vol. 81: Iss. 2-3, Article 2. Disponible sur: \url{http://digitalcommons.wayne.edu/humbiol/vol81/iss2/2}
-    \item UNIVERSITY OF CAMBRIDGE (2011) Teaching Reaction diffusion equations Michaelmas [en ligne]. Disponible sur : \url{https://homepage.univie.ac.at/marie-therese.wolfram/teaching.html} (consulté le 26.05.2016)
+	\item STEELE, James (2009) "Human Dispersals: Mathematical Models and the Archaeological Record," Human Biology: Vol. 81: Iss. 2-3, Article 2. Disponible sur: \url{http://digitalcommons.wayne.edu/humbiol/vol81/iss2/2}
+    \item UNIVERSITY OF CAMBRIDGE. Teaching Reaction diffusion equations Michaelmas  2011 [en ligne]. Disponible sur : \url{https://homepage.univie.ac.at/marie-therese.wolfram/teaching.html} (consulté le 26.05.2016)
     \item A.KANDLER R.UNGER. Population Dispersal Via Diffusion-reaction Equations [en ligne].Techn. Univ., Fak. für Mathematik, 2010, 62p. Disponible sur \url{https://www-user.tu-chemnitz.de/~uro/publications/Kandler-Unger--Population_dispersal_via_diffusion-reaction_equations.pdf}
 \end{itemize}
 
 \section{Annexe}
-\subsection{Démonstration Equation ~\eqref{Eq2}}
+\subsection{Démonstration Equation ~\eqref{EqGen}}
 
 \[
 \left\{
