@@ -529,7 +529,6 @@ $$c^* = 2\sqrt{\alpha D(1-\gamma_1)}$$
 
 \section{Simulations numériques}
 \subsection{Valeurs des paramètres}
-%Est-ce qu'on le laisse là ou est-ce qu'on le met à la fin des modèles ou dans une section à part??? 
 \paragraph{Densité} D'après Winterhalder, 1988, la densité de population de l'Homme de Néandertal peut être estimée entre 0.006 et 1 $hab/km^2$. Nous n'avons pas pu trouver d'estimations plus précises. Nous prendrons donc arbitrairement nos valeurs initiales dans cet intervalle. \\
 La densité de population d'\textit{Homo Sapiens} a été estimée différemment selon les études (les lieux d'étude ne sont pas forcément les mêmes). Elle appartient à l'intervalle $[0.003;0.21]$ en -45000:
 \begin{itemize}
@@ -619,7 +618,7 @@ On observe que la population
 
 \subsubsection{Effets de barrières géographiques ou variations environnementales}
 On décide ici de modéliser des barrières géographiques tels que des montagnes, le pôle nord qui pourrait avoir une influence sur la survie et la diffusion des population.
-Pour cela on considère alors notre environnement comme hétérogène. On fait varier la capacité du milieu en fonction de la position dans l'espace.
+Pour cela on considère alors notre environnement comme hétérogène. On fait varier la capacité du milieu en fonction de la position dans l'espace.\\
 \textbf{Effet d'une montagne}
 On décide de modéliser l'effet d'une montagne. La montagne est représentée par la diagonale. Plus on s'éloigne de la diagonale, c'est à dire de la montagne, plus le coefficient K est élevé. On initialise une petite population et on observe une évolution et une dispersion de la population comme suit : 
 
@@ -634,6 +633,14 @@ On modélise ici le changment de climat entre deux zones, par exemple avec le p�
 
 Toutefois, on vois que le modèle de croissance logique ne prend pas en compte l'effet d'une toute petite population sur sa survie. 
 \subsection{Effet Allee}
+\subsubsection{Fonction de réaction}
+On a tout d'abord chercher à représenter la fonction :$f(u)=u(1-u)(u-A)$ qui représente la partie réaction dans le modèle avec effet Allee. On a représenter cette fonction pour différentes valeurs de A. On retrouve bien une fonction de type bistable avec deux équilibres stables et un équilibre intermédiaire instable. On peut également retrouver les conclusions trouvées dans la partie analyse à propos de l'équilibre qui envahit l'autre en fonction de la valeur de A. En effet, par exemple, pour $A<0.5$ la première aire sous la courbe est plus petite que la seconde, ce  qui induit une aire totale positive donc une vitesse positive.
+\noindent
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Allee/fu_Allee}
+	\caption{Fonction avec effet Allee}
+\end{figure}
 
 \subsubsection{Constante de diffusion d=0.5}
 On réalise une première série de simulations avec une constante de diffusion égale à 0.5 :
