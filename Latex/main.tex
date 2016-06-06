@@ -47,7 +47,7 @@
 \setcounter{page}{1}
 
 \section{Contexte biologique}
-	Nous avons souhaité nous intéresser à l'évolution de la population de l'Homme de Néandertal, durant le stade isotopique 3 (période interglacière d'environ -60 000 à -30 000). Cette étude porte en fait sur la période de la transition entre le paléolithique moyen (de -300 000 à -30 000 ans avant le présent) et  le paléolithique supérieur (entre -45 000 et -10 000 ans avant le présent). A cette période l'Homme de Néandertal avait colonisé une grande partie de l'Europe ce qui a pu être constaté par la découverte de nombreux sites archéologiques présentant des traces de l'Homme de Néandertal. La carte ci-dessous (Figure \ref{C1}) permet de situer ceux présentant des traces datant de -50000 à -40000. De nombreux restes ont également été trouvés sur ces sites ou sur d'autres sur des périodes variant de -120000 à -30000 an environ.\\ 
+	Nous avons souhaité nous intéresser à l'évolution de la population de l'Homme de Néandertal, durant le stade isotopique 3 (période interglaciaire d'environ -60 000 à -30 000). Cette étude porte en fait sur la période de la transition entre le paléolithique moyen (de -300 000 à -30 000 ans avant le présent) et  le paléolithique supérieur (entre -45 000 et -10 000 ans avant le présent). A cette période l'Homme de Néandertal avait colonisé une grande partie de l'Europe ce qui a pu être constaté par la découverte de nombreux sites archéologiques présentant des traces de l'Homme de Néandertal. La carte ci-dessous (Figure \ref{C1}) permet de situer ceux présentant des traces datant de -50000 à -40000. De nombreux restes ont également été trouvés sur ces sites ou sur d'autres sur des périodes variant de -120000 à -30000 an environ.\\ 
 \begin{figure}[H]
 	\centering
     \includegraphics[width=10cm]{SiteArche.jpg}
@@ -60,21 +60,21 @@ Nous avons d'abord souhaité étudier plusieurs modèles permettant d'étudier l
 
 \section{Présentation des modèles étudiés}
 \subsection{Cadre général}
-Le but de notre projet est d'étudier l'évolution de la population de Néandertal en la modélisant par une équation de réction-diffusion du type : \\
-\begin{equation}
+Le but de notre projet est d'étudier l'évolution de la population de Néandertal en la modélisant par une équation de réaction-diffusion du type : \\
+\begin{equation}\label{EqGen}
 \frac{\partial u(t,x)}{\partial t}=f(u(t,x))+d\Delta u(t,x), \quad t \in \mathbb{R}, x \in \mathbb{R} \\
 \end{equation}
 La fonction inconnue u représente la densité de population dans un espace donné. Il s'agit donc d'un nombre d'habitants par kilomètre carré. En théorie, $u\in [0;+\infty]$. Toutefois, en pratique et dans le cas considéré (population d'Homme de Néandertal et d'\textit{Homo Sapiens}),$u\in [0;1]$. Nous limiterons donc notre étude à cet intervalle.\\
 \newline
-Il est important dans un premier temps de comprendre l'évolution de la densité de population par rapport au temps. En supposant que le temps est continu on obtient des équations différentielles ordinaires que nous pouvons étudier. $f(u(t,x))$ correspond à la partie réaction qui modélise la croissance de la population. On proposera différentes fonction $f$ en fonction des différents modèles de croissance de population utilisés. Cette fonction dépend de la croissance de la population, mais peut aussi faire intervenir des facteurs limitants. D'autre part, on peut aussi modéliser les interactions entre plusieurs populations en étudiant des systèmes
-d'équations differentielles.\\
+Il est important dans un premier temps de comprendre l'évolution de la densité de population par rapport au temps. En supposant que le temps est continu on obtient des équations différentielles ordinaires que nous pouvons étudier. $f(u(t,x))$ correspond à la partie réaction qui modélise la croissance de la population. On proposera différentes fonction $f$ en fonction des différents modèles de croissance de population utilisés. Cette fonction dépend de la croissance de la population, mais peut aussi faire intervenir des facteurs limitant. D'autre part, on peut aussi modéliser les interactions entre plusieurs populations en étudiant des systèmes
+d'équations différentielles.\\
 \newline
 On ne s'intéresse pas à l'apparition de la population sur le territoire. Dans tout notre projet, nous avons considéré une fonction $f: \mathbb{R} \times \mathbb{R}^+ \to \mathbb{R}$  de classe $C^1$. \\
 
 On doit ensuite incorporer les mouvements dans l'espace de la population. Pour cela, on souhaite modéliser la marche aléatoire des individus. Chaque marche aléatoire suit une loi particulière mais de manière générale l'agglomérat de population se déplace selon un processus macroscopique que l'on nomme processus de diffusion.
 L'ajout d'un terme de diffusion $d\Delta u(t,x)$ permet ainsi de modéliser le mouvement aléatoire des individus dans l'espace.\\
 \newline
- En combinant ces deux processus de reaction f et  de  diffusion, on obtient une équation de réaction-diffusion.
+ En combinant ces deux processus de réaction f et  de  diffusion, on obtient une équation de réaction-diffusion.
 On considère donc le problème de Cauchy suivant : 
 \begin{equation}\label{PbCauchy}
 \left\{
@@ -85,7 +85,7 @@ u(0,.) &=& u_0\\
 \right.
 \end{equation}
 L'objectif principal est de déterminer les situations où l'espèce \textit{Homo Neanderthalensis} s'éteint. Mathématiquement, cela nécessite de caractériser l'état de l'équilibre 0. On pourra traiter deux types de stabilité dans notre travail.
-On dit que l'état d'équilibre 0 est uniformément asymptotiquement stable si pour une condition initiale $u_0$ assez proche de 0, la solution u de \ref{PbCauchy} converge uniformément vers 0 quand t tend vers l'infini. On dit aussi que l'état 0 est inconditionellement stable dans le cas où cette convergence vers 0 est vérifiée quelque soit la condition intiale $u_0$. Pour répondre à notre problème, le premier type de stabilité mentionné ici est plus restrictif que le second car il nécessite que la population ne soit pas trop grosse pour qu'elle puisse s'éteindre.   
+On dit que l'état d'équilibre 0 est uniformément asymptotiquement stable si pour une condition initiale $u_0$ assez proche de 0, la solution u de \ref{PbCauchy} converge uniformément vers 0 quand t tend vers l'infini. On dit aussi que l'état 0 est inconditionnellement stable dans le cas où cette convergence vers 0 est vérifiée quelque soit la condition initiale $u_0$. Pour répondre à notre problème, le premier type de stabilité mentionné ici est plus restrictif que le second car il nécessite que la population ne soit pas trop grosse pour qu'elle puisse s'éteindre.   
 
 
 
@@ -121,7 +121,7 @@ k=\frac{4}{(1-A)^2}
 \end{equation}
 
 \subsection{Système de Lotka-Volterra}
-On sait que \textit{Homo sapiens} et \textit{Homo Neanderthalensis} ont connu une période de cohabitation, située entre l’apparition du premier véritable Homme Moderne (il y a 45.000 ans) et l’extinction de l'Homme de Néandertal (il y a 40.000 ans). Nous nous sommes intéressées aux interactions entre ces deux populations à l'aide du système de Lotka-Volterra. Dans ce modèle, on considère que les populations sont en compétition.\\
+On sait que \textit{Homo sapiens} et \textit{Homo Neanderthalensis} ont connu une période de cohabitation, située entre l'apparition du premier véritable Homme Moderne (il y a 45.000 ans) et l'extinction de l'Homme de Néandertal (il y a 40.000 ans). Nous nous sommes intéressées aux interactions entre ces deux populations à l'aide du système de Lotka-Volterra. Dans ce modèle, on considère que les populations sont en compétition.\\
 $$\begin{cases} \frac{\partial u(t,x)}{\partial t} = f(u,v) + d_1\Delta u\\ \frac{\partial v(t,x)}{\partial t} = g(u,v) + d_2 \Delta v \\ 
 \end{cases}$$
 $$\text{Avec : } f(u,v) = \alpha_1 u\left(1-\frac{u}{K_1}-\gamma_1\frac{v}{K_1}\right) \text{ et } g(u,v) = \alpha_2 v\left(1-\frac{v}{K_2}-\gamma_2\frac{u}{K_2}\right)$$
@@ -141,7 +141,7 @@ On étudie d'abord les points d'équilibre et leur stabilité pour l'équation s
 avec $\alpha>0$ et $K>0$.
 \newline
 
-\noindent\underline{Equilibres :} Les équilibres sont les fonctions u qui vérifient $\frac{du}{dt}=0$. On a donc :
+\noindent\underline{Équilibres :} Les équilibres sont les fonctions u qui vérifient $\frac{du}{dt}=0$. On a donc :
 \[
 \left\{
 \begin{array}{r c l}
@@ -161,18 +161,18 @@ $$f^\prime(u)= \alpha - 2 \alpha \dfrac{u}{K} $$
 
 \subsubsection{Analyse de la réaction-diffusion}
 \setcounter{equation}{0}
-L'idee est de representer la solution de notre equation de
-reaction-diusion sous forme d'un front qui se deplace dans l'espace a une vitesse constante.
-Soit u la solution de notre équation de reaction-diffusion dans $\mathbb{R}$.
+L'idée est de représenter la solution de notre équation de
+réaction-diffusion sous forme d'un front qui se déplace dans l'espace a une vitesse constante.
+Soit u la solution de notre équation de réaction-diffusion dans $\mathbb{R}$.
 
 \noindent On pose $z=x-ct$, $U:z\rightarrow U(z)$.\\
-On ecrit alors notre solution sous la forme
+On écrit alors notre solution sous la forme
 \begin{equation*}
 u(t,x)=U(x-ct)=U(z)
 \end{equation*}
 U est la forme de l'onde et c sa vitesse.\\
 
-On peut montrer (Voir Annexe 1) que ~\eqref{Eq1} est équivalent à :
+On peut montrer (Voir Annexe 1) qu'on a :
 \begin{equation*}
 dU"(z)+c U'(z)+\alpha U(z)(1-\dfrac{U(Z)}{K})=0\\
 \end{equation*} 
@@ -195,7 +195,7 @@ $|c|$.\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.40\linewidth]{SimulationKPP/FrontOnde}\hfill
-	\caption{Profil U se déplacant à la vitesse c}
+	\caption{Profil U se déplaçant à la vitesse c}
 \end{figure}
 
 
@@ -244,9 +244,9 @@ Matrice jacobienne : $$\mathcal{J}_{F_{(U,V)}}=\begin{pmatrix} 0 & 1 \\ -\dfrac{
 Pour connaître la nature du point, il faut étudier le déterminant : $\Delta = tr^2 -4 det= c^2-4 \frac{\alpha}{d}$\\
             c est une vitesse, elle est donc positive. Ainsi on a :
       	\begin{itemize}[label=$\rightarrow$]
-			\item si $c>2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta >0$ : Noeud Localement Asymptotiquement Stable
-            \item si $c=2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta =0$ : Etoile ou Noeud Dégénéré Asymptotiquement Stable
-            \item si $0<c<2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta <0$ : Foyer Asymptotiquement Stable. Cependant U étant une population, elle ne peut être négative. Or avec un Foyer assymptotiquement stable autour de l'équilibre (0,0) U deviendrait négatif. On ne considère donc pas ce cas.
+			\item si $c>2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta >0$ : Nœud Localement Asymptotiquement Stable
+            \item si $c=2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta =0$ : Étoile ou Nœud Dégénéré Asymptotiquement Stable
+            \item si $0<c<2\sqrt{\frac{\alpha}{d}} \Rightarrow \Delta <0$ : Foyer Asymptotiquement Stable. Cependant U étant une population, elle ne peut être négative. Or avec un Foyer asymptotiquement stable autour de l'équilibre (0,0) U deviendrait négatif. On ne considère donc pas ce cas.
 		\end{itemize}
 \end{itemize}
 
@@ -275,11 +275,11 @@ f possède deux équilibres $0$ et $K$ tels que $0 < K$ :\\
     
     Le plus petit équilibre $0$ est instable et le plus grand $K$ est stable donc l'équation de réaction-diffusion est \textbf{monostable}. \\
 
-Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le probleme \ref{PbKPP } a une solution, et donc une infinite de solutions (U,c). Plus precisesement, pour le cas KPP et monostable, il existe un vitesse minimale c$_0 >0$ unique telle que quelque soit $c  \geqslant c_0$ l'equation \ref{PbKPP } a une solution $U_c$ unique a translation près.
+Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel que le problème \ref{PbKPP } a une solution, et donc une infinité de solutions (U,c). Plus précisément, pour le cas KPP et monostable, il existe un vitesse minimale c$_0 >0$ unique telle que quelque soit $c  \geqslant c_0$ l'équation \ref{PbKPP } a une solution $U_c$ unique a translation près.
 
     Il existe donc une vitesse minimale $c_0$ telle que pour toute vitesse supérieure, on a existence d'un front d'onde U(z) monotone, solution de l'EDO avec les conditions aux bords $\lim_{z \to +\infty} U(z)=0$ et $\lim_{z \to -\infty} U(z)=K$. \\
     
-    De plus comme $ f^\prime(u)< f^\prime(0)$ pour un voisinnage de $0$ alors : \\
+    De plus comme $ f^\prime(u)< f^\prime(0)$ pour un voisinage de $0$ alors : \\
     $c_0=2 \sqrt{f^\prime(0)}= 2 \sqrt{\alpha - 2 \frac{\alpha}{K} \times 0} = 2 \sqrt{\alpha}$
     On peut donc déterminer la vitesse de cette propagation. \\
     
@@ -294,7 +294,7 @@ Dans le cas KPP et monostable on a l'existence d'un continuum de vitesses c tel 
 \subsection{Effet Allee}
 \subsubsection{Analyse de la partie réaction}
 On étudie d'abord les points d'équilibre et leur stabilité pour l'équation sans diffusion : $$\frac{du}{dt}=ku(1-u)(u-A)$$
-\underline{Equilibres :} Les équilibres sont les fonctions u qui vérifient $\frac{du}{dt}=0$. On a donc :
+\underline{Équilibres :} Les équilibres sont les fonctions u qui vérifient $\frac{du}{dt}=0$. On a donc :
 \[
 \left\{
 \begin{array}{r c l}
@@ -322,7 +322,7 @@ u(t,x)=U(x-ct)=U(z)
 \label{Eq1}
 \end{equation}
 U est la forme de l'onde et c sa vitesse.\\
-On peut montrer (Voir Annexe 1) que ~\eqref{Eq1} est équivalent à :
+On peut montrer (Voir Annexe 1) qu'on a :
 \begin{equation}
 dU"(z)+cU'(z)+kU(z)(1-U(z))(U(z)-A)
 \tag{2}
@@ -373,15 +373,15 @@ Matrice jacobienne : $$\mathcal{J}_{F_{(U,V)}}=\begin{pmatrix} 0 & 1 \\ 3kU^2-2k
             \item $A<1 \Rightarrow det (\mathcal{J}_{F_{(0,0)}})>0$. Pour connaitre la nature du point, il faut étudier le déterminant : $\Delta = tr^2 -4 det= \frac{c}{d}^2+4kA(A-1)$\\
             On pose $c_1=2d\sqrt(kA(1-A))=4d\sqrt{\frac{A}{1-A}}$ d'après \eqref{Eqk}
             \begin{itemize}[label=$\rightarrow$]
-				\item $c>c_1 \Rightarrow \Delta >0$ : Noeud Localement Asymptotiquement Stable
-                \item $c=c_1 \Rightarrow \Delta =0$ : Etoile ou Noeud Dégénéré Asymptotiquement Stable
+				\item $c>c_1 \Rightarrow \Delta >0$ : Nœud Localement Asymptotiquement Stable
+                \item $c=c_1 \Rightarrow \Delta =0$ : Étoile ou Nœud Dégénéré Asymptotiquement Stable
                 \item $c<c_1 \Rightarrow \Delta <0$ : Foyer Asymptotiquement Stable. Toutefois, ce cas n'est pas possible car U deviendrait négatif. Or U étant une population, il est forcément positif.
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
-\noindent \underline{Etude des fronts d'ondes}\\
+\noindent \underline{Étude des fronts d'ondes}\\
 Comme on l'a montré dans la partie sans diffusion, l'équation admet trois équilibres :
 
 $$u_+=1 \text{ stable,} u_-=0 \text{ stable,} u_s=A \text{ instable}$$
@@ -410,7 +410,7 @@ $$\begin{cases}
 \frac{\partial u}{\partial t} = f(u,v) = \alpha_1 u\left(1-\frac{u}{K_1}-\gamma_1\frac{v}{K_1}\right)\\
 \frac{\partial v}{\partial t} = g(u,v) = \alpha_2 v\left(1 - \frac{v}{K_2} - \gamma_2\frac{u}{K_2}\right)
 \end{cases}$$
-\noindent \underline{Equilibres :}\\
+\noindent \underline{Équilibres :}\\
 
 $\begin{cases}
 \frac{\partial u}{\partial t} = 0\\
@@ -437,7 +437,7 @@ La matrice Jacobienne s'écrit : $$\mathcal{J}_{(u,v)}=\begin{pmatrix} \alpha_1\
 \begin{itemize}[label=$\bullet$]
 \item $\mathcal{J}_{(0,0)} = \begin{pmatrix} \alpha_1 & 0 \\ 0 & \alpha_2 
 \end{pmatrix}$
- : l'équilibre est instable. Si $\alpha_1 \neq \alpha_2$, on peut dire que c'est un Noeud Instable.
+ : l'équilibre est instable. Si $\alpha_1 \neq \alpha_2$, on peut dire que c'est un Nœud Instable.
  
  \item $\mathcal{J}_{(K_1,0)} = \begin{pmatrix} -\alpha_1 & -\alpha_1\gamma_1 \\ 0 & \alpha_2\left(1- \dfrac{\gamma_2 K_1}{K_2}\right)
 \end{pmatrix} $\\
@@ -846,7 +846,7 @@ Les constantes de diffusion sont $d_1 = 0.5$ (pour les Hommes Modernes) et $d_2 
 \end{itemize}
 
 \section{Annexe}
-\subsection{Démonstration Equation ~\eqref{Eq2}}
+\subsection{Démonstration Equation ~\eqref{EqGen}}
 
 \[
 \left\{
