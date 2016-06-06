@@ -1,0 +1,38 @@
+function LotkaVolterra
+clear; close all;
+
+L = 50; maxt = 50;
+P(1) = 0.6; %alpha1
+P(2) = 0.6; %alpha2
+P(3) = 0.2; %K1
+P(4) = 0.2; %K2
+P(5) = 0.5; %gamma1
+P(6) = 1.5; %gamma2
+P(7) = 0.5; %d1
+P(8) = 0.05; %d2
+
+m = 0;
+t = linspace(0,maxt,100);
+x = linspace(0,L,100);
+
+sol = pdepe(m,#
+
+    function [c,f,s] = LVfun(x,t,u,dudx,P)
+        c = [1;1];
+        f = [P(7);P(8)].*dudx;
+        s = [P(1)*u(1)*(1-u(1)/P(3)-P(5)/P(3)*u(2));
+        P(2)*u(2)*(1-u(2)/P(4)-P(6)/P(4)*u(1))];      
+    end
+
+    function u0 = ICfun(x,P)
+        ui=0.03*exp(-0.01*x(i)^2);
+        vi=K2*exp(-0.01*x(i)^2);
+        u0 = [ui;vi];
+    end
+
+    function [pl,ql,pr,qr] = fun(xl,ul,xr,ur,t,P)
+        p1 = [0;0]; q1 = [1;1];
+        pr = [0;0]; qr = [1;1];
+    end
+
+end
