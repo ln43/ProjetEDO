@@ -593,20 +593,22 @@ On considère comme condition initiale une population qui suit la loi : $u_0 e^{
 \noindent
 Le graphe de la figure \ref{fu} nous donne la représentation de la fonction logistique. 
 
-\begin{figure}[H]
+On cherche ici à représenter la propagation d'un front d'onde. On prend comme condition initiale u$_0=0.5$ pour x < -10 et 0 ailleur. 
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.55\linewidth]{SimulationKPP/figures1/FrontOnde2}\hfill
 	\includegraphics[width=0.40\linewidth]{SimulationKPP/figures1/FrontOnde1}\hfill
 	\caption{Propagation du front d'onde en 1D}
+	\label{front}
 \end{figure}
 \noindent
-On a pris ici comme condition initiale u$_0=0.5$ pour x < -10 et 0 ailleur.
-On observe la propagation du front d'onde. Comme la condition initiale est égale à la capacité K, la taille de la population reste constante. On voit qu'une fois le front d'onde formé, la forme du front d'onde reste la même et progresse à une vitesse c>0.  
+
+On observe sur la figure \ref{front} la propagation du front d'onde. Comme la condition initiale est égale à la capacité K, la taille de la population reste constante. On voit qu'une fois le front d'onde formé, la forme du front d'onde reste la même et progresse à une vitesse c>0.  
 
 \subsubsection{Simulation de l'effet "hair trigger"}
-\paragraph{Cas 1.1 : d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.1$}
+\paragraph{On prend comme valeure des paramètres d=0.5, K=0.5, $\alpha =0.5$, $u_0=0.1$ }
 
-\begin{figure}[H]
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.45\linewidth]{SimulationKPP/TrigerEffect/fronts}\hfill
 	\includegraphics[width=0.55\linewidth]{SimulationKPP/TrigerEffect/Surf}\hfill
