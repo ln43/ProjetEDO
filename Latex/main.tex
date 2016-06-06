@@ -826,11 +826,10 @@ On se situe enfin dans le cas où $A>0.5$ et $u_0>A$. Comme dans le cas 1.4, la 
 \subsection{Système de Lotka-Volterra}
 
 Dans cette simulation, les paramètres sont choisis de façon à vérifier les hypothèses énoncées lors de l'analyse mathématique, à savoir : $\gamma_1 < \frac{K_1}{K_2}$ et $\gamma_2 > \frac{K_2}{K_1}$. On supposera de plus que $\alpha_1 = \alpha_2 = 0.6$ et que $K_1 = K_2 = 0.2$. On choisit donc $\gamma_1 = 0.5$ et $\gamma_2 = 1.5$.\\
-Les constantes de diffusion sont $d_1 = 0.5$ (pour les Hommes Modernes) et $d_2 = 0.05$ (pour Néandertal).\\
-On prend des densités de population initiales $u(0,0) = 0.03$ et $v(0,0) = K = 0.2$.\\
 
+On prend d'abord des densités de population initiales $u(0,0) = 0.03$ et $v(0,0) = K = 0.2$ réparties de façon homogène dans l'espace.\\
 D'après les paramètres choisis, l'évolution des populations sans diffusion est représentée en figure
-\ref{pop}.
+\ref{pop}.\\
 
 \begin{figure}[H]
 \centering
@@ -838,6 +837,19 @@ D'après les paramètres choisis, l'évolution des populations sans diffusion es
 \caption{Evolution des populations au cours du temps}
 \label{pop}
 \end{figure}
+
+Si l'on rajoute des constantes de diffusion $d1 = d2 = 0.5$, on obtient la figure \ref{diffcomp} ci-dessous.\\
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{Comp/lvfig1.png}
+\caption{Evolution des densités de population dans l'espace au cours du temps}
+\label{diffcomp}
+\end{figure}
+
+\textit{Homo Sapiens} atteint donc rapidement sa capacité de charge, tandis que la densité de Néandertal décroît rapidement jusqu'à une densité nulle.\\
+
+Dans la suite, on considère que les populations sont réparties selon une gaussienne centrée en 0, et que leur coefficients de diffusion associés sont différents. On prendra $d2 = 0.05$ pour observer une décroissance plus rapide de la population de Néandertal.
 
 \begin{figure}[H]
 \centering
